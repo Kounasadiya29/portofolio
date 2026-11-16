@@ -20,18 +20,19 @@
                     colors: {
                         cream: {
                             50: '#FAF8F5',
-                            100: '#F5F0EB',
-                            200: '#EBE2D8',
+                            100: '#F3EFE6',
+                            200: '#E5DECB',
                         },
                         sage: {
                             50: '#F2F6F3',
                             100: '#E1EBE4',
                             300: '#A3C4B0',
+                            500: '#5A7862',
                             600: '#4A7C59',
-                            700: '#3A6346',
-                            800: '#2C4C36',
+                            700: '#384F3E',
+                            800: '#2C3E31',
+                            900: '#1E2B22',
                         },
-                        slateDark: '#1E293B',
                         earthAccent: '#8C6D58'
                     },
                     fontFamily: {
@@ -48,11 +49,8 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(225, 235, 228, 0.7);
         }
-        .badge-chip {
-            transition: all 0.2s ease-in-out;
-        }
-        .badge-chip:hover {
-            transform: translateY(-2px);
+        .btn-arrow-hover:hover .arrow-icon {
+            transform: translateX(4px);
         }
     </style>
 </head>
@@ -64,11 +62,11 @@
             <!-- Brand / Name -->
             <a href="#hero" class="flex flex-col">
                 <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-sage-800">Kouna Sadiya Mbaye</span>
-                <span class="text-xs uppercase tracking-widest text-earthAccent font-semibold">Portfolio R&D & Agroalimentaire</span>
+                <span class="text-xs uppercase tracking-widest text-earthAccent font-semibold">Technologie Laitière & R&D</span>
             </a>
 
             <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-700">
+            <nav class="hidden lg:flex items-center space-x-5 text-xs xl:text-sm font-medium text-slate-700">
                 <a href="#about" class="hover:text-sage-600 transition-colors" data-i18n="nav_about">À propos</a>
                 <a href="#experience" class="hover:text-sage-600 transition-colors" data-i18n="nav_exp">Expériences</a>
                 <a href="#skills" class="hover:text-sage-600 transition-colors" data-i18n="nav_skills">Compétences</a>
@@ -79,13 +77,12 @@
                 <a href="#contact" class="hover:text-sage-600 transition-colors" data-i18n="nav_contact">Contact</a>
             </nav>
 
-            <!-- Language Switches & Actions -->
+            <!-- Language Switcher & Controls -->
             <div class="flex items-center space-x-3">
-                <!-- Language Switcher Buttons -->
                 <div class="inline-flex p-1 bg-cream-200 rounded-lg text-xs font-semibold">
-                    <button onclick="setLanguage('fr')" id="lang-fr" class="px-2.5 py-1 rounded-md transition-all duration-200 bg-sage-600 text-white shadow-sm">FR</button>
-                    <button onclick="setLanguage('en')" id="lang-en" class="px-2.5 py-1 rounded-md transition-all duration-200 text-slate-700 hover:text-sage-600">EN</button>
-                    <button onclick="setLanguage('tr')" id="lang-tr" class="px-2.5 py-1 rounded-md transition-all duration-200 text-slate-700 hover:text-sage-600">TR</button>
+                    <button onclick="setLanguage('fr')" id="lang-fr" class="px-2.5 py-1 rounded-md transition-all duration-200 bg-sage-700 text-white shadow-sm">FR</button>
+                    <button onclick="setLanguage('en')" id="lang-en" class="px-2.5 py-1 rounded-md transition-all duration-200 text-slate-700 hover:text-sage-700">EN</button>
+                    <button onclick="setLanguage('tr')" id="lang-tr" class="px-2.5 py-1 rounded-md transition-all duration-200 text-slate-700 hover:text-sage-700">TR</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -115,7 +112,7 @@
                 <!-- Profile Avatar Badge -->
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-800 text-xs font-semibold tracking-wide uppercase border border-sage-300/50 shadow-sm">
                     <span class="w-2.5 h-2.5 rounded-full bg-sage-600 animate-pulse"></span>
-                    <span data-i18n="hero_badge">Mobilité Internationale Open</span>
+                    <span data-i18n="hero_badge">Mobilité Internationale Ouverte</span>
                 </div>
 
                 <!-- Main Name Header -->
@@ -124,8 +121,8 @@
                 </h1>
 
                 <!-- Subtitle Chips -->
-                <p class="text-base sm:text-xl text-sage-800 font-medium max-w-3xl mx-auto leading-relaxed uppercase tracking-wider">
-                    <span data-i18n="hero_subtitle">TECHNOLOGIE LAITIÈRE | BIOTECHNOLOGIE | QUALITÉ ET SÉCURITÉ ALIMENTAIRE | R&D ET INNOVATION</span>
+                <p class="text-xs sm:text-base text-sage-800 font-medium max-w-3xl mx-auto leading-relaxed uppercase tracking-wider">
+                    <span data-i18n="hero_subtitle">TECHNOLOGIE LAITIÈRE | BIOTECHNOLOGIE | QUALITÉ ET SÉCURITÉ ALIMENTAIRE | RECHERCHE, DÉVELOPPEMENT ET INNOVATION</span>
                 </p>
 
                 <!-- Short Hero Intro -->
@@ -139,11 +136,11 @@
                         <i class="fa-regular fa-envelope"></i>
                         <span data-i18n="btn_contact">Me contacter</span>
                     </a>
-                    <!-- CV Download Button with Clean Arrow Icon (No Visible URL) -->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-white border border-sage-300 hover:bg-sage-50 text-sage-800 font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2 group">
-                        <i class="fa-solid fa-file-arrow-down"></i>
-                        <span data-i18n="btn_cv">Télécharger mon CV (PDF)</span>href="https://drive.google.com/file/d/1d3q8jxZm9trnVkJXZIOAeBWfdxiPRRzc/view?usp=drive_link" target="_blank" rel="noopener noreferrer"
-                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    <!-- Direct Clean Link to CV PDF -->
+                    <a href="https://drive.google.com/file/d/1d3q8jxZm9trnVkJXZIOAeBWfdxiPRRzc/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-white border border-sage-300 hover:bg-sage-50 text-sage-800 font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2 group btn-arrow-hover">
+                        <i class="fa-solid fa-file-arrow-down text-sage-600"></i>
+                        <span data-i18n="btn_cv">Télécharger mon CV (PDF)</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform arrow-icon"></i>
                     </a>
                 </div>
 
@@ -161,7 +158,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <!-- Section Header Column -->
                 <div class="lg:col-span-4 space-y-4">
-                    <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">01 — Profile</span>
+                    <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">01 — Profil</span>
                     <h2 class="text-3xl font-serif font-bold text-slate-900" data-i18n="about_title">À propos de moi</h2>
                     <div class="w-16 h-1 bg-sage-600 rounded"></div>
                 </div>
@@ -192,19 +189,19 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div class="p-4 rounded-xl bg-white border border-cream-200 hover:border-sage-300 transition-all flex items-center gap-3">
                                 <div class="w-8 h-8 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0"><i class="fa-solid fa-microscope text-sm"></i></div>
-                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_1">Assistante qualité — Lait & produits laitiers</span>
+                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_1">Assistante qualité — Lait et produits laitiers.</span>
                             </div>
                             <div class="p-4 rounded-xl bg-white border border-cream-200 hover:border-sage-300 transition-all flex items-center gap-3">
                                 <div class="w-8 h-8 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0"><i class="fa-solid fa-flask text-sm"></i></div>
-                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_2">Assistante de laboratoire — Analyses physico-chimiques & microbiologiques</span>
+                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_2">Assistante de laboratoire — Analyses physico-chimiques et microbiologiques.</span>
                             </div>
                             <div class="p-4 rounded-xl bg-white border border-cream-200 hover:border-sage-300 transition-all flex items-center gap-3">
                                 <div class="w-8 h-8 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0"><i class="fa-solid fa-vial text-sm"></i></div>
-                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_3">Assistante R&D — Formulation alimentaire</span>
+                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_3">Assistante R&D — Développement et formulation de produits alimentaires.</span>
                             </div>
                             <div class="p-4 rounded-xl bg-white border border-cream-200 hover:border-sage-300 transition-all flex items-center gap-3">
                                 <div class="w-8 h-8 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0"><i class="fa-solid fa-gears text-sm"></i></div>
-                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_4">Innovation & Optimisation des procédés</span>
+                                <span class="text-xs sm:text-sm font-medium text-slate-800" data-i18n="interest_4">Assistante en innovation et optimisation des procédés.</span>
                             </div>
                         </div>
                     </div>
@@ -212,25 +209,25 @@
             </div>
         </section>
 
-        <!-- 02 — EXPÉRIENCES PROFESSIONNELLES (TIMELINE) -->
+        <!-- 02 — EXPÉRIENCES PROFESSIONNELLES (TIMELINE CORRIGÉE - NO TEXT OVERLAP) -->
         <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 bg-cream-100/50">
             <div class="max-w-5xl mx-auto space-y-12">
                 <div class="text-center space-y-3">
                     <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">02 — Parcours Professionnel</span>
                     <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="exp_title">Expériences Professionnelles</h2>
-                    <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="exp_subtitle">Présentation chronologique de mes expériences sur le terrain et en laboratoire</p>
+                    <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="exp_subtitle">Présentation sous forme de chronogramme, de l’expérience la plus récente à la plus ancienne.</p>
                 </div>
 
-                <!-- Timeline Container -->
-                <div class="relative border-l-2 border-sage-300/70 ml-4 sm:ml-32 space-y-10 pl-6 sm:pl-8">
+                <!-- Clean Timeline Container with Correct Offsets -->
+                <div class="relative border-l-2 border-sage-300 ml-4 sm:ml-48 space-y-10 pl-6 sm:pl-10">
                     <!-- Exp 1 -->
                     <div class="relative group">
-                        <!-- Date Badge on Desktop -->
-                        <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-bold uppercase tracking-wider text-sage-700 bg-sage-100 sm:bg-transparent px-2 py-1 rounded inline-block mb-2 sm:mb-0">
-                            Mai 2023 – Août 2023
+                        <!-- Date Label positioned to the left without text collision -->
+                        <div class="sm:absolute sm:-left-52 sm:top-2 text-xs font-bold uppercase tracking-wider text-sage-800 bg-sage-100 sm:bg-transparent px-3 py-1 rounded inline-block mb-3 sm:mb-0 sm:text-right sm:w-44">
+                            Mai 2023 — Août 2023
                         </div>
-                        <!-- Circle Indicator -->
-                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform"></div>
+                        <!-- Circle Dot Marker -->
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-2.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform z-10"></div>
                         
                         <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
@@ -247,10 +244,10 @@
 
                     <!-- Exp 2 -->
                     <div class="relative group">
-                        <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-bold uppercase tracking-wider text-sage-700 bg-sage-100 sm:bg-transparent px-2 py-1 rounded inline-block mb-2 sm:mb-0">
-                            Mars 2023 – Avril 2023
+                        <div class="sm:absolute sm:-left-52 sm:top-2 text-xs font-bold uppercase tracking-wider text-sage-800 bg-sage-100 sm:bg-transparent px-3 py-1 rounded inline-block mb-3 sm:mb-0 sm:text-right sm:w-44">
+                            Mars 2023 — Avril 2023
                         </div>
-                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform"></div>
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-2.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform z-10"></div>
 
                         <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
@@ -267,10 +264,10 @@
 
                     <!-- Exp 3 -->
                     <div class="relative group">
-                        <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-bold uppercase tracking-wider text-sage-700 bg-sage-100 sm:bg-transparent px-2 py-1 rounded inline-block mb-2 sm:mb-0">
-                            Juil 2022 – Sept 2022
+                        <div class="sm:absolute sm:-left-52 sm:top-2 text-xs font-bold uppercase tracking-wider text-sage-800 bg-sage-100 sm:bg-transparent px-3 py-1 rounded inline-block mb-3 sm:mb-0 sm:text-right sm:w-44">
+                            Juil 2022 — Sept 2022
                         </div>
-                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform"></div>
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-2.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform z-10"></div>
 
                         <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
@@ -287,15 +284,15 @@
 
                     <!-- Exp 4 -->
                     <div class="relative group">
-                        <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-bold uppercase tracking-wider text-sage-700 bg-sage-100 sm:bg-transparent px-2 py-1 rounded inline-block mb-2 sm:mb-0">
-                            2019 – 2022
+                        <div class="sm:absolute sm:-left-52 sm:top-2 text-xs font-bold uppercase tracking-wider text-sage-800 bg-sage-100 sm:bg-transparent px-3 py-1 rounded inline-block mb-3 sm:mb-0 sm:text-right sm:w-44">
+                            2019 — 2022
                         </div>
-                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform"></div>
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-2.5 w-4 h-4 rounded-full bg-sage-600 border-4 border-cream-50 group-hover:scale-125 transition-transform z-10"></div>
 
                         <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
                             <div class="flex flex-wrap items-center justify-between gap-2">
-                                <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="exp4_role">Stages & Expériences pratiques</h3>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cream-100 text-earthAccent" data-i18n="exp4_loc">Kaffrine, Bambey & Dakar | Sénégal</span>
+                                <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="exp4_role">Stages et expériences pratiques en médecine vétérinaire et élevage</h3>
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cream-100 text-earthAccent" data-i18n="exp4_loc">Kaffrine, Bambey et Dakar | Sénégal</span>
                             </div>
                             <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside leading-relaxed">
                                 <li data-i18n="exp4_bullet1">Participation au suivi sanitaire des animaux en clinique et en élevage.</li>
@@ -312,7 +309,7 @@
         <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
             <div class="text-center space-y-3">
                 <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">03 — Expertise</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="skills_title">Compétences Techniques</h2>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="skills_title">Compétences</h2>
                 <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="skills_subtitle">Maîtrise des procédés laitiers, de l'analyse de laboratoire et du contrôle sanitaire</p>
             </div>
 
@@ -322,13 +319,13 @@
                     <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl">
                         <i class="fa-solid fa-cow"></i>
                     </div>
-                    <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="skill_cat1_title">Technologie Laitière</h3>
+                    <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="skill_cat1_title">Technologie laitière</h3>
                     <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_1">Transformation & valorisation du lait</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_2">Produits laitiers fermentés</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_3">Technologie fromagère</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_4">Procédés de transformation laitière</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_5">Formulation & développement</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_1">Transformation et valorisation du lait.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_2">Fabrication de produits laitiers fermentés.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_3">Technologie fromagère.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_4">Procédés de transformation laitière.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_1_5">Formulation et développement de produits.</span></li>
                     </ul>
                 </div>
 
@@ -337,13 +334,13 @@
                     <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl">
                         <i class="fa-solid fa-vials"></i>
                     </div>
-                    <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="skill_cat2_title">Analyses & Laboratoire</h3>
+                    <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="skill_cat2_title">Analyses et laboratoire</h3>
                     <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_1">Analyses physico-chimiques</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_2">Analyses microbiologiques</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_3">Caractérisation des produits</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_4">Évaluation sensorielle & Stabilité</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_5">Protocoles expérimentaux</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_1">Analyses physico-chimiques.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_2">Analyses microbiologiques.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_3">Caractérisation des produits laitiers.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_4">Évaluation sensorielle et Suivi de stabilité.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_2_5">Application de protocoles expérimentaux.</span></li>
                     </ul>
                 </div>
 
@@ -352,13 +349,13 @@
                     <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
-                    <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="skill_cat3_title">Qualité & Hygiène</h3>
+                    <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="skill_cat3_title">Qualité et hygiène</h3>
                     <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_1">Contrôle qualité des aliments</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_2">Bonnes pratiques d’hygiène (BPH)</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_3">Hygiène de traite & conditionnement</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_4">Contrôle matières premières/produits</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_5">Manipulation & conservation</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_1">Contrôle de la qualité des produits alimentaires.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_2">Bonnes pratiques d’hygiène (BPH).</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_3">Hygiène de la traite et du conditionnement du lait.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_4">Contrôle des matières premières et produits finis.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600 text-xs"></i> <span data-i18n="skill_3_5">Manipulation et conservation des produits.</span></li>
                     </ul>
                 </div>
             </div>
@@ -369,72 +366,98 @@
             <div class="max-w-5xl mx-auto space-y-12">
                 <div class="text-center space-y-3">
                     <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">04 — Éducation</span>
-                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="edu_title">Formation Académique</h2>
-                    <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="edu_subtitle">Diplômes universitaires et spécialisations internationales</p>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="edu_title">Formation</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="edu_subtitle">Chronogramme académique, de la formation actuelle à la formation initiale.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Edu 1 -->
                     <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm flex flex-col justify-between space-y-4">
                         <div class="space-y-3">
-                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-sage-100 text-sage-800 inline-block">2025 – 2027</span>
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-sage-100 text-sage-800 inline-block">2025 — 2027</span>
                             <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="edu1_title">Master en technologie laitière — En cours</h3>
                             <p class="text-xs font-semibold text-earthAccent" data-i18n="edu1_inst">Université d’Ankara | Türkiye</p>
-                            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="edu1_desc">Formation spécialisée dans les technologies de transformation du lait, produits laitiers, procédés de fabrication et évaluation de la qualité.</p>
+                            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="edu1_desc">Formation spécialisée dans les technologies de transformation du lait, les produits laitiers, leurs procédés de fabrication et l’évaluation de leur qualité.</p>
                         </div>
                     </div>
 
                     <!-- Edu 2 -->
                     <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm flex flex-col justify-between space-y-4">
                         <div class="space-y-3">
-                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-cream-200 text-slate-700 inline-block">2022 – 2024</span>
-                            <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="edu2_title">Master en biotechnologie & valorisation pastorale</h3>
-                            <p class="text-xs font-semibold text-earthAccent" data-i18n="edu2_inst">CERPP | Niamey, Niger</p>
-                            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="edu2_desc">Centre d’Excellence Régional des Productions Pastorales. Spécialisation produits animaux: lait, viande, cuirs et peaux.</p>
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-cream-200 text-slate-700 inline-block">2022 — 2024</span>
+                            <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="edu2_title">Master en biotechnologie, production et valorisation des produits pastoraux</h3>
+                            <p class="text-xs font-semibold text-earthAccent" data-i18n="edu2_inst">Centre d’Excellence Régional des Productions Pastorales (CERPP) | Niamey, Niger</p>
+                            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="edu2_desc">Spécialisation dans les produits animaux : lait, viande, cuirs et peaux.</p>
                         </div>
                     </div>
 
                     <!-- Edu 3 -->
                     <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm flex flex-col justify-between space-y-4">
                         <div class="space-y-3">
-                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-cream-200 text-slate-700 inline-block">2019 – 2022</span>
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-cream-200 text-slate-700 inline-block">2019 — 2022</span>
                             <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="edu3_title">Diplôme d’ingénieur en élevage</h3>
-                            <p class="text-xs font-semibold text-earthAccent" data-i18n="edu3_inst">ISFAR — Univ. de Bambey | Sénégal</p>
-                            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="edu3_desc">Institut Supérieur de Formation Agricole et Rurale. Formation polyvalente en production animale, hygiène et agronomie.</p>
+                            <p class="text-xs font-semibold text-earthAccent" data-i18n="edu3_inst">Institut Supérieur de Formation Agricole et Rurale (ISFAR) | Université de Bambey, Sénégal</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 05 — RECHERCHES & TRAVAUX SCIENTIFIQUES -->
+        <!-- 05 — RECHERCHES ET TRAVAUX SCIENTIFIQUES -->
         <section id="research" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
             <div class="text-center space-y-3">
                 <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">05 — R&D</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="res_title">Recherches & Travaux Scientifiques</h2>
-                <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="res_subtitle">Projets de recherche appliquée, travaux de thèse et séminaires</p>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="res_title">Recherches et travaux scientifiques</h2>
+                <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="res_subtitle">Travaux de recherche universitaire, thèses et séminaires académiques</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Research Card 1 (Current Master) -->
+                <!-- Research Card 1 -->
                 <div class="p-6 rounded-2xl bg-white border-2 border-sage-300 shadow-sm space-y-4 relative">
                     <span class="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-sage-600 text-white" data-i18n="tag_ongoing">En cours</span>
-                    <span class="text-xs font-semibold text-sage-700 uppercase tracking-widest" data-i18n="res1_type">Mémoire de Master</span>
-                    <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="res1_title">Production et évaluation d’un yaourt brassé probiotique à la mangue enrichi en levure nutritionnelle (S. cerevisiae)</h3>
+                    <span class="text-xs font-semibold text-sage-700 uppercase tracking-widest" data-i18n="res1_type">MÉMOIRE DE MASTER — EN COURS</span>
+                    <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="res1_title">Production et évaluation d’un yaourt brassé probiotique à la mangue enrichi en levure nutritionnelle issue de la biomasse de Saccharomyces cerevisiae</h3>
                     <ul class="space-y-1.5 text-xs text-slate-600 list-disc list-inside">
                         <li data-i18n="res1_b1">Mise au point des formulations et fabrication du produit.</li>
                         <li data-i18n="res1_b2">Évaluation des propriétés physico-chimiques, rhéologiques, microbiologiques, antioxydantes et sensorielles.</li>
-                        <li data-i18n="res1_b3">Suivi de l’évolution des caractéristiques au cours du stockage.</li>
+                        <li data-i18n="res1_b3">Suivi de l’évolution des caractéristiques du produit au cours du stockage.</li>
                     </ul>
                 </div>
-        <!-- 07 — RÉFLEXIONS & DOCUMENTS PDF -->
+
+                <!-- Research Card 2 -->
+                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-4">
+                    <span class="text-xs font-semibold text-sage-700 uppercase tracking-widest" data-i18n="res2_type">SÉMINAIRE — 2025</span>
+                    <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="res2_title">Utilisation des sources de protéines microbiennes dans le lait et les produits laitiers et évaluation des pratiques de production</h3>
+                    <ul class="space-y-1.5 text-xs text-slate-600 list-disc list-inside">
+                        <li data-i18n="res2_b1">Étude des sources de protéines microbiennes et de leur utilisation potentielle dans les matrices laitières.</li>
+                        <li data-i18n="res2_b2">Analyse de leurs caractéristiques et de leurs applications dans le développement de produits alimentaires.</li>
+                    </ul>
+                </div>
+
+                <!-- Research Card 3 -->
+                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
+                    <span class="text-xs font-semibold text-sage-700 uppercase tracking-widest" data-i18n="res3_type">MÉMOIRE DE MASTER — 2024</span>
+                    <h3 class="font-serif font-bold text-base text-slate-900" data-i18n="res3_title">Évaluation des pratiques d’hygiène de la traite et de la qualité du lait cru de chamelle (Camelus dromedarius) : cas de la ferme laitière Habsou à Youri, Niger.</h3>
+                </div>
+
+                <!-- Research Card 4 -->
+                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
+                    <span class="text-xs font-semibold text-sage-700 uppercase tracking-widest" data-i18n="res4_type">MÉMOIRE DE LICENCE — 2022</span>
+                    <h3 class="font-serif font-bold text-base text-slate-900" data-i18n="res4_title">Étude comparative de méthodes morphométriques d’estimation du poids chez le poney Mbayar</h3>
+                    <p class="text-xs text-slate-500 font-medium">Bambey, Sénégal.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 & 07 — VEILLE SCIENTIFIQUE, RÉFLEXIONS ET RESSOURCES (PDF DOCUMENTS) -->
         <section id="publications" class="py-20 px-4 sm:px-6 lg:px-8 bg-cream-100/50">
             <div class="max-w-6xl mx-auto space-y-16">
                 <!-- 06 Veille -->
                 <div class="space-y-6">
                     <div class="text-center space-y-3">
                         <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">06 — Références</span>
-                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900" data-i18n="ref_title">Veille Scientifique & Références Techniques</h2>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900" data-i18n="ref_title">Veille scientifique et références techniques</h2>
+                        <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="ref_subtitle">Ouvrages et ressources techniques consultés</p>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
                         <div class="p-4 rounded-xl bg-white border border-cream-200 text-center space-y-2">
@@ -450,12 +473,12 @@
                         <div class="p-4 rounded-xl bg-white border border-cream-200 text-center space-y-2">
                             <i class="fa-solid fa-wine-glass text-sage-600 text-lg"></i>
                             <p class="text-xs font-bold text-slate-800">Codex Alimentarius</p>
-                            <p class="text-[11px] text-slate-500">Milk & Milk Products 2e ed.</p>
+                            <p class="text-[11px] text-slate-500">Milk and Milk Products, 2e ed.</p>
                         </div>
                         <div class="p-4 rounded-xl bg-white border border-cream-200 text-center space-y-2">
                             <i class="fa-solid fa-industry text-sage-600 text-lg"></i>
                             <p class="text-xs font-bold text-slate-800">COWI Assessment</p>
-                            <p class="text-[11px] text-slate-500">Cleaner Production Dairy</p>
+                            <p class="text-[11px] text-slate-500">Cleaner Production in Dairy</p>
                         </div>
                         <div class="p-4 rounded-xl bg-white border border-cream-200 text-center space-y-2">
                             <i class="fa-solid fa-cheese text-sage-600 text-lg"></i>
@@ -465,12 +488,14 @@
                     </div>
                 </div>
 
-                <!-- 07 Réflexions & Documents PDF -->
+                <!-- 07 Réflexions & Documents PDF (Clean Action Buttons, No Raw Links) -->
                 <div class="space-y-8">
                     <div class="text-center space-y-3">
                         <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">07 — Publications</span>
-                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="pub_title">Réflexions & Documents Téléchargeables</h2>
-                        <p class="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto" data-i18n="pub_subtitle">Réflexions personnelles et analyses de la filière agroalimentaire accessibles au format PDF</p>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="pub_title">Réflexions et ressources</h2>
+                        <p class="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto leading-relaxed" data-i18n="pub_subtitle">
+                            Cette rubrique rassemble des réflexions personnelles et des documents consacrés aux filières agroalimentaires, à la transformation laitière, aux innovations technologiques et aux enjeux de souveraineté alimentaire.
+                        </p>
                     </div>
 
                     <div class="space-y-4 max-w-4xl mx-auto">
@@ -478,13 +503,12 @@
                         <div class="p-5 rounded-xl bg-white border border-cream-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-sage-300 transition-all">
                             <div class="space-y-1">
                                 <span class="text-xs font-semibold text-slate-400">15 août 2025</span>
-                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf1_title">1. Transformation stratégique de la filière laitière sénégalaise</h4>
+                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf1_title">01. Transformation stratégique de la filière laitière sénégalaise</h4>
                             </div>
-                            <!-- Remplacer '#' par le lien Google Drive / PDF réel -->
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
+                            <a href="https://drive.google.com/file/d/1Js_EbvTFXunOKz21vMgJ1qJjJ7SF7V_w/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-800 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 btn-arrow-hover">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
-                                <span data-i18n="btn_pdf">Consulter PDF</span>
-                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                                <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                             </a>
                         </div>
 
@@ -492,12 +516,12 @@
                         <div class="p-5 rounded-xl bg-white border border-cream-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-sage-300 transition-all">
                             <div class="space-y-1">
                                 <span class="text-xs font-semibold text-slate-400">29 mai 2026</span>
-                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf2_title">2. 8 technologies révolutionnaires</h4>
+                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf2_title">02. 8 technologies révolutionnaires</h4>
                             </div>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
+                            <a href="https://drive.google.com/file/d/1TroAWnt9YY9JojJKvXL1YiYWdxYvOiOA/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-800 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 btn-arrow-hover">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
-                                <span data-i18n="btn_pdf">Consulter PDF</span>
-                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                                <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                             </a>
                         </div>
 
@@ -505,12 +529,12 @@
                         <div class="p-5 rounded-xl bg-white border border-cream-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-sage-300 transition-all">
                             <div class="space-y-1">
                                 <span class="text-xs font-semibold text-slate-400">10 juillet 2026</span>
-                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf3_title">3. Protéines microbiennes et produits laitiers : une solution durable ?</h4>
+                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf3_title">03. Protéines microbiennes et produits laitiers : une solution durable pour l’alimentation de demain ?</h4>
                             </div>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
+                            <a href="https://drive.google.com/file/d/1KSkqU53MH9MVCEuwzxeVxv1SoFP5Z8MQ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-800 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 btn-arrow-hover">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
-                                <span data-i18n="btn_pdf">Consulter PDF</span>
-                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                                <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                             </a>
                         </div>
 
@@ -518,12 +542,12 @@
                         <div class="p-5 rounded-xl bg-white border border-cream-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-sage-300 transition-all">
                             <div class="space-y-1">
                                 <span class="text-xs font-semibold text-slate-400">13 juillet 2026</span>
-                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf4_title">4. La filière laitière au Sénégal vers la souveraineté alimentaire</h4>
+                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf4_title">04. La filière laitière au Sénégal vers la souveraineté alimentaire</h4>
                             </div>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
+                            <a href="https://drive.google.com/file/d/1YW3qV4xKSlOBiaA4MZKEGLjTfndWOP3w/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-800 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 btn-arrow-hover">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
-                                <span data-i18n="btn_pdf">Consulter PDF</span>
-                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                                <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                             </a>
                         </div>
 
@@ -531,12 +555,12 @@
                         <div class="p-5 rounded-xl bg-white border border-cream-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-sage-300 transition-all">
                             <div class="space-y-1">
                                 <span class="text-xs font-semibold text-slate-400">15 août 2026</span>
-                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf5_title">5. La révolution silencieuse : microbes et insectes dans nos assiettes</h4>
+                                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf5_title">05. La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes</h4>
                             </div>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
+                            <a href="https://drive.google.com/file/d/1dv2RpIFdMdpi2h8lQzkjDiuaNaiXZAXl/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-800 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 btn-arrow-hover">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
-                                <span data-i18n="btn_pdf">Consulter PDF</span>
-                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                                <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                             </a>
                         </div>
                     </div>
@@ -544,122 +568,101 @@
             </div>
         </section>
 
-        <!-- 08 — CERTIFICATIONS ET ENGAGEMENTS (LIMIT 4-5 + SEE MORE) -->
+        <!-- 08 — CERTIFICATIONS ET ENGAGEMENTS (EXACT LINKS & SHOW MORE BUTTON) -->
         <section id="certifications" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
             <div class="text-center space-y-3">
                 <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">08 — Accréditations</span>
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">
-                    <span data-i18n="cert_title">Certifications & Engagements</span>
-                    <span class="text-sage-600 text-2xl font-sans" id="cert-count">(14)</span>
+                    <span data-i18n="cert_title">Certifications et engagements</span>
+                    <span class="text-sage-600 text-2xl font-sans" id="cert-count">(15)</span>
                 </h2>
-                <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="cert_subtitle">Certificats de l'Académie e-learning FAO, certifications linguistiques et techniques</p>
+                <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto" data-i18n="cert_subtitle">Certifications officielles FAO, Alison, TÖMER et formations complémentaires</p>
             </div>
 
             <!-- List Grid Container -->
             <div id="cert-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Cert 1 (FAO) -->
+                <!-- Cert 1 (Alison HACCP) -->
+                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-emerald-50 text-emerald-700">Alison</span>
+                            <span class="text-xs text-slate-400">ID: 5690-61676269</span>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c1_title">Hazard Analysis Critical Control Points (HACCP)</h4>
+                    </div>
+                    <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
+                        <a href="https://alison.com/verify/ac2c01f27b" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_cert">Consulter le certificat</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 2 (FAO Bio) -->
                 <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
                             <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO e-learning Academy</span>
                             <span class="text-xs text-slate-400">ID: 3994065122KM</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c1_title">Biodiversité et systèmes agroalimentaires — Introduction</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c2_title">Biodiversité et systèmes agroalimentaires — Introduction</h4>
                     </div>
-                    <!-- Boutons PDF et Badge Numérique avec flèches (Pas d'URL visible) -->
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1DidHyXjMVc-qDbIIMbdsW7WMrOlVKEYC/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Cert 2 (FAO) -->
+                <!-- Cert 3 (FAO Anti) -->
                 <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
                             <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO e-learning Academy</span>
                             <span class="text-xs text-slate-400">ID: 0479428079KM</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c2_title">Raising Awareness on Responsible Use of Antibiotics in Livestock</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c3_title">Raising Awareness on the Responsible Use of Antibiotics in Livestock</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1fE6Mq4MjvnzuNbJaQU3z0eXoGqeGA_l9/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Cert 3 (FAO) -->
+                <!-- Cert 4 (FAO Codex Part) -->
                 <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO e-learning / Codex</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO / Codex</span>
                             <span class="text-xs text-slate-400">ID: 3779344916KM</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c3_title">Participation au Codex Alimentarius (Octobre 2026)</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c4_title">Participation au Codex — Octobre 2026</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1Pu8CZrbmJSakG5W3qAal2wCTfOAprxaE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Cert 4 (FAO) -->
-                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO e-learning / Codex</span>
-                            <span class="text-xs text-slate-400">ID: 4290371082KM</span>
-                        </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c4_title">Collaboration régionale au sein du Codex (Octobre 2026)</h4>
-                    </div>
-                    <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- EXTRA CERTS (Hidden by default) -->
+                <!-- HIDDEN EXTRA CERTS (Revealed by "Voir plus") -->
                 <!-- Cert 5 -->
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO e-learning / Codex</span>
-                            <span class="text-xs text-slate-400">ID: 4040145929KM</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO / Codex</span>
+                            <span class="text-xs text-slate-400">ID: 4290371082KM</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c5_title">Science et analyse des risques au sein du Codex</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c5_title">Collaboration régionale au sein du Codex — Octobre 2026</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1gAfEQybmcZMoT1TmXwukuRYdpOqHUyj9/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -668,19 +671,15 @@
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO e-learning / Codex</span>
-                            <span class="text-xs text-slate-400">ID: 5537443528KM</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO / Codex</span>
+                            <span class="text-xs text-slate-400">ID: 4040145929KM</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c6_title">Introduction au Codex Alimentarius</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c6_title">Science et analyse des risques au sein du Codex — Octobre 2026</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1LbpQ6Xm7ckVPg59DnUc509rEuC_SnVbl/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -689,15 +688,15 @@
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-purple-50 text-purple-700">TÖMER — Univ. d’Ankara</span>
-                            <span class="text-xs text-slate-400">2023 – 2024</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">FAO / Codex</span>
+                            <span class="text-xs text-slate-400">ID: 5537443528KM</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c7_title">Certificat de langue turque — Niveau C2</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c7_title">Introduction au Codex — Octobre 2026</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1qxIxdAShvUph1ARsKPiHH0C2m3pLCAdP/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -709,12 +708,13 @@
                             <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-amber-50 text-amber-700">Cabinet NigLab</span>
                             <span class="text-xs text-slate-400">Avril 2026</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c8_title">Télédétection et SIG (ArcGIS, KoboToolbox)</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c8_title">Télédétection et systèmes d’information géographique (SIG)</h4>
+                        <p class="text-xs text-slate-500">ArcGIS, analyse spatiale, géoréférencement, KoboToolbox.</p>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_cert">Consulter le certificat</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -729,9 +729,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c9_title">Ambassadeurs bénévoles de la santé</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1nOWt3ITt2wxHojW0zFrXfDXeVPyvlEX3/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -740,15 +740,15 @@
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">AFD (Agence Française de Développement)</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">Agence française de développement (AFD)</span>
                             <span class="text-xs text-slate-400">Février 2025</span>
                         </div>
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c10_title">Suivi et évaluation des projets de développement</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1yfn08dcexnluZ8xYOp8kLa1aZ1FEs7Wi/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -757,15 +757,15 @@
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-teal-50 text-teal-700">Agricultural Expertise Center</span>
-                            <span class="text-xs text-slate-400">Juin 2023</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-purple-50 text-purple-700">TÖMER, Université d’Ankara</span>
+                            <span class="text-xs text-slate-400">2023–2024</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c11_title">Appui à la durabilité des systèmes pastoraux</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c11_title">Certificat de langue turque — Niveau C2</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1kf8VdF6YI8xOQgpNuYpYajwHGfw4sSue/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -774,15 +774,15 @@
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-rose-50 text-rose-700">DER / FJ Sénégal</span>
-                            <span class="text-xs text-slate-400">Août 2022</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-teal-50 text-teal-700">Agricultural Expertise Center</span>
+                            <span class="text-xs text-slate-400">Juin 2023</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c12_title">Programme SEEDS — Entrepreneuriat & Innovation</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c12_title">Appui à la durabilité des systèmes pastoraux</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1sviWOj5dgkdxmVVrEYGD5leU2-ySvBIF/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -791,15 +791,15 @@
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700">IUCN-PAPACO MOOC</span>
-                            <span class="text-xs text-slate-400">Décembre 2020</span>
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-rose-50 text-rose-700">DER / FJ Sénégal</span>
+                            <span class="text-xs text-slate-400">Août 2022</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c13_title">Gouvernance & Lois dans les aires protégées</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c13_title">Programme SEEDS — Entrepreneuriat et innovation</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1aIIjO5ABlECW8Cl_5-aCoMD5k6o6LRmZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -808,24 +808,41 @@
                 <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700">IUCN-PAPACO</span>
+                            <span class="text-xs text-slate-400">Décembre 2020</span>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c14_title">Application des lois et gouvernance dans les aires protégées — MOOC</h4>
+                    </div>
+                    <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
+                        <a href="https://drive.google.com/file/d/1kZap-SBKWOTUT-SwsoVNq-9gH00twyrl/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 15 -->
+                <div class="cert-extra hidden p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
                             <span class="text-[11px] font-bold px-2.5 py-0.5 rounded bg-orange-50 text-orange-700">Agroconseil ONG</span>
                             <span class="text-xs text-slate-400">Septembre 2020</span>
                         </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c14_title">Formation en Cuniculture</h4>
+                        <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c15_title">Cuniculture</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
-                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
-                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://drive.google.com/file/d/1L95b6OR68Qh_HMp5WMOArO0eLZSXZIR6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors btn-arrow-hover">
+                            <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter le document (PDF)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform arrow-icon"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Voir Plus Toggle Button -->
+            <!-- Voir Plus / Voir Moins Toggle Button -->
             <div class="text-center pt-4">
                 <button onclick="toggleCerts()" id="btn-toggle-certs" class="px-8 py-3 rounded-full bg-sage-700 hover:bg-sage-800 text-white font-medium text-sm transition-all shadow-sm flex items-center gap-2 mx-auto">
-                    <span id="txt-toggle-certs" data-i18n="btn_more_certs">Voir plus (10 autres)</span>
+                    <span id="txt-toggle-certs" data-i18n="btn_more_certs">Voir plus (11 autres)</span>
                     <i class="fa-solid fa-chevron-down text-xs" id="icon-toggle-certs"></i>
                 </button>
             </div>
@@ -845,11 +862,11 @@
                     <div class="p-8 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-4 hover:border-sage-300 transition-all">
                         <div class="flex items-center justify-between">
                             <span class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-trophy"></i></span>
-                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cream-100 text-slate-600">Université de Bambey | Janv 2022</span>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cream-100 text-slate-600">Université de Bambey | Janvier 2022</span>
                         </div>
                         <h3 class="font-serif font-bold text-xl text-slate-900">GREEN CORNER</h3>
-                        <p class="text-xs sm:text-sm font-semibold text-sage-700" data-i18n="p1_award">3e Lauréate du MAENUC — Marathon Entreprendre Université Communauté</p>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="p1_desc">Participation à un projet entrepreneurial à fort impact environnemental et valorisation de ressources locales sélectionné dans le cadre du Marathon Entreprendre.</p>
+                        <p class="text-xs sm:text-sm font-semibold text-sage-700" data-i18n="p1_award">3e lauréate du MAENUC — Marathon Entreprendre Université Communauté</p>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="p1_desc">Participation à un projet entrepreneurial sélectionné dans le cadre du Marathon Entreprendre Université Communauté.</p>
                     </div>
 
                     <!-- Project 2 -->
@@ -859,8 +876,8 @@
                             <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cream-100 text-slate-600">POESAM | Août 2022</span>
                         </div>
                         <h3 class="font-serif font-bold text-xl text-slate-900">RABBIT INNOVATION</h3>
-                        <p class="text-xs sm:text-sm font-semibold text-sage-700" data-i18n="p2_award">Top 3 Finalistes du POESAM Orange</p>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="p2_desc">Prix Orange de l’Entrepreneur Social en Afrique et au Moyen-Orient. Projet innovant de valorisation cunicole retenu parmi les 3 meilleurs projets nationaux.</p>
+                        <p class="text-xs sm:text-sm font-semibold text-sage-700" data-i18n="p2_award">Projet sélectionné parmi les trois finalistes du POESAM</p>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="p2_desc">Prix Orange de l’Entrepreneur Social en Afrique et au Moyen-Orient. Projet entrepreneurial sélectionné parmi les trois finalistes du concours POESAM.</p>
                     </div>
                 </div>
             </div>
@@ -870,69 +887,75 @@
         <section id="tools" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
             <div class="text-center space-y-3">
                 <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">10 — Méthodologie</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="tools_title">Méthodes & Outils Numériques</h2>
-                <p class="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto" data-i18n="tools_subtitle">Mon approche scientifique repose sur l'expérimentation, l'analyse rigoureuse des données et l'amélioration continue.</p>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="tools_title">Méthodes et outils</h2>
+                <p class="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto leading-relaxed" data-i18n="tools_subtitle">
+                    Mon approche repose sur l’expérimentation, l’observation, l’analyse des résultats et l’amélioration des pratiques. Ma formation et mes expériences pratiques m’ont permis de développer des connaissances dans les méthodes d’analyse, les procédés de transformation laitière, le contrôle de la qualité et la recherche expérimentale.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Method 1 -->
                 <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
-                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m1_title">1. Analyses & Contrôle Quality</h4>
+                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m1_title">01. Analyses et contrôle qualité</h4>
                     <ul class="text-xs text-slate-600 space-y-1.5">
-                        <li data-i18n="m1_1">• Analyses physico-chimiques du lait</li>
-                        <li data-i18n="m1_2">• Mesure pH & Acidité titrable</li>
-                        <li data-i18n="m1_3">• Analyses microbiologiques</li>
-                        <li data-i18n="m1_4">• Évaluation sensorielle & Stabilité</li>
+                        <li data-i18n="m1_1">• Analyses physico-chimiques du lait.</li>
+                        <li data-i18n="m1_2">• Mesure du pH et acidité titrable.</li>
+                        <li data-i18n="m1_3">• Analyses microbiologiques.</li>
+                        <li data-i18n="m1_4">• Évaluation sensorielle.</li>
+                        <li data-i18n="m1_5">• Suivi de la stabilité des produits.</li>
                     </ul>
                 </div>
 
                 <!-- Method 2 -->
                 <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
-                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m2_title">2. Techno Laitière</h4>
+                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m2_title">02. Technologie laitière</h4>
                     <ul class="text-xs text-slate-600 space-y-1.5">
-                        <li data-i18n="m2_1">• Préparation & traitment du lait</li>
-                        <li data-i18n="m2_2">• Fabrication yaourts & fromages</li>
-                        <li data-i18n="m2_3">• Fermentation & Coagulation</li>
-                        <li data-i18n="m2_4">• Formulation & Enrichissement</li>
+                        <li data-i18n="m2_1">• Préparation et traitement du lait.</li>
+                        <li data-i18n="m2_2">• Fabrication yaourts & fromages.</li>
+                        <li data-i18n="m2_3">• Fermentation & Coagulation.</li>
+                        <li data-i18n="m2_4">• Formulation & Enrichissement.</li>
+                        <li data-i18n="m2_5">• Évaluation des produits finis.</li>
                     </ul>
                 </div>
 
                 <!-- Method 3 -->
                 <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
-                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m3_title">3. Hygiène & HACCP</h4>
+                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m3_title">03. Hygiène & sécurité</h4>
                     <ul class="text-xs text-slate-600 space-y-1.5">
-                        <li data-i18n="m3_1">• Bonnes Pratiques d'Hygiène (BPH)</li>
-                        <li data-i18n="m3_2">• Approche des 5M (Ishikawa)</li>
-                        <li data-i18n="m3_3">• Prélèvements & Échantillons</li>
-                        <li data-i18n="m3_4">• Principes méthode HACCP</li>
+                        <li data-i18n="m3_1">• Bonnes pratiques d’hygiène (BPH).</li>
+                        <li data-i18n="m3_2">• Approche 5M (Ishikawa).</li>
+                        <li data-i18n="m3_3">• Prélèvement des échantillons.</li>
+                        <li data-i18n="m3_4">• Identification des risques.</li>
+                        <li data-i18n="m3_5">• Principes méthode HACCP.</li>
                     </ul>
                 </div>
 
                 <!-- Method 4 -->
                 <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-3">
-                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m4_title">4. Démarche Recherche</h4>
+                    <h4 class="font-serif font-bold text-base text-slate-900 border-b border-cream-200 pb-2" data-i18n="m4_title">04. Démarche recherche</h4>
                     <ul class="text-xs text-slate-600 space-y-1.5">
-                        <li data-i18n="m4_1">• Recherche bibliographique</li>
-                        <li data-i18n="m4_2">• Essais expérimentaux</li>
-                        <li data-i18n="m4_3">• Traitement statistique Minitab</li>
-                        <li data-i18n="m4_4">• Rédaction scientifique</li>
+                        <li data-i18n="m4_1">• Recherche bibliographique.</li>
+                        <li data-i18n="m4_2">• Essais expérimentaux.</li>
+                        <li data-i18n="m4_3">• Suivi des paramètres.</li>
+                        <li data-i18n="m4_4">• Organisation des résultats.</li>
+                        <li data-i18n="m4_5">• Rédaction scientifique.</li>
                     </ul>
                 </div>
             </div>
 
             <!-- Software Chips -->
             <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-4">
-                <h4 class="font-serif font-bold text-base text-slate-900 text-center" data-i18n="sw_title">Logiciels & Outils Numériques Utilisés</h4>
+                <h4 class="font-serif font-bold text-base text-slate-900 text-center" data-i18n="sw_title">Outils numériques et bibliographie</h4>
                 <div class="flex flex-wrap justify-center gap-2">
-                    <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-chart-simple text-sage-600 mr-1.5"></i> Minitab</span>
                     <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-regular fa-file-word text-blue-600 mr-1.5"></i> MS Word</span>
                     <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-regular fa-file-excel text-emerald-600 mr-1.5"></i> MS Excel</span>
                     <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-regular fa-file-powerpoint text-orange-600 mr-1.5"></i> MS PowerPoint</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-chart-simple text-sage-600 mr-1.5"></i> Minitab</span>
                     <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-brands fa-google-drive text-amber-500 mr-1.5"></i> Google Drive</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-robot text-teal-600 mr-1.5"></i> ChatGPT / Gemini / Claude</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-graduation-cap text-indigo-600 mr-1.5"></i> Google Scholar</span>
                     <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-quote-right text-red-500 mr-1.5"></i> Mendeley / Zotero</span>
                     <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-shield-cat text-purple-600 mr-1.5"></i> Turnitin / Compilatio</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-robot text-teal-600 mr-1.5"></i> ChatGPT / Gemini / Claude</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-cream-100 text-slate-700 text-xs font-semibold"><i class="fa-solid fa-map-location-dot text-indigo-600 mr-1.5"></i> ArcGIS / KoboToolbox</span>
                 </div>
             </div>
         </section>
@@ -942,9 +965,9 @@
             <div class="max-w-5xl mx-auto space-y-12">
                 <div class="text-center space-y-3">
                     <span class="text-xs font-bold text-earthAccent uppercase tracking-widest">11 — Échange</span>
-                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="contact_title">Me Contacter</h2>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900" data-i18n="contact_title">Contact</h2>
                     <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed" data-i18n="contact_subtitle">
-                        Je suis ouverte aux opportunités professionnelles, aux stages et aux collaborations dans les domaines de la technologie laitière, de la qualité et de la R&D agroalimentaire.
+                        Je suis ouverte aux opportunités professionnelles, aux stages et aux collaborations dans les domaines de la technologie laitière, de la qualité et de la sécurité sanitaire des aliments, ainsi que de la recherche et du développement agroalimentaire.
                     </p>
                 </div>
 
@@ -953,7 +976,7 @@
                     <div class="lg:col-span-5 p-8 rounded-2xl bg-sage-800 text-white space-y-6 shadow-md">
                         <h3 class="font-serif font-bold text-xl text-cream-100" data-i18n="cinfo_title">Coordonnées</h3>
                         <p class="text-xs sm:text-sm text-sage-100 leading-relaxed" data-i18n="cinfo_desc">
-                            Vous avez une opportunité, un projet ou une idée de collaboration ? N'hésitez pas à me contacter directement.
+                            Vous avez une opportunité, un projet ou une idée de collaboration ? Je serais ravie d’échanger avec vous.
                         </p>
 
                         <div class="space-y-4 pt-2 text-xs sm:text-sm">
@@ -969,25 +992,25 @@
                                 <div class="w-9 h-9 rounded-lg bg-sage-700 flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
                                 <span>Ankara, Türkiye</span>
                             </div>
-                            <a href="https://www.linkedin.com/in/kouna-sadiya-mbaye-037068239" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-cream-50 hover:text-sage-300 transition-colors group">
+                            <a href="https://www.linkedin.com/in/kouna-sadiya-mbaye-037068239" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-cream-50 hover:text-sage-300 transition-colors group btn-arrow-hover">
                                 <div class="w-9 h-9 rounded-lg bg-sage-700 flex items-center justify-center shrink-0"><i class="fa-brands fa-linkedin-in"></i></div>
                                 <span>Profil LinkedIn</span>
-                                <i class="fa-solid fa-arrow-right text-xs ml-auto transition-transform group-hover:translate-x-1"></i>
+                                <i class="fa-solid fa-arrow-right text-xs ml-auto transition-transform arrow-icon"></i>
                             </a>
                         </div>
 
                         <div class="pt-6 border-t border-sage-700/60">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-cream-50 text-sage-900 font-semibold text-xs sm:text-sm hover:bg-cream-200 transition-colors flex items-center justify-center gap-2 shadow group">
-                                <i class="fa-solid fa-file-arrow-down"></i>
+                            <a href="https://drive.google.com/file/d/1d3q8jxZm9trnVkJXZIOAeBWfdxiPRRzc/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-cream-50 text-sage-900 font-semibold text-xs sm:text-sm hover:bg-cream-200 transition-colors flex items-center justify-center gap-2 shadow group btn-arrow-hover">
+                                <i class="fa-solid fa-file-arrow-down text-sage-600"></i>
                                 <span data-i18n="btn_cv">Télécharger mon CV (PDF)</span>
-                                <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                                <i class="fa-solid fa-arrow-right text-xs transition-transform arrow-icon"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Contact Interactive Form -->
                     <div class="lg:col-span-7 p-8 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-6">
-                        <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="form_title">Envoyer un message</h3>
+                        <h3 class="font-serif font-bold text-xl text-slate-900" data-i18n="form_title">Envoyer un message direct</h3>
                         <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="lbl_name">Nom & Prénom</label>
@@ -1001,16 +1024,16 @@
 
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="lbl_subject">Sujet du message</label>
-                                <input type="text" required placeholder="Proposition de stage / Recherche / Collaboration" class="w-full px-4 py-2.5 rounded-lg border border-cream-200 text-xs sm:text-sm focus:outline-none focus:border-sage-600">
+                                <input type="text" required placeholder="Opportunité / Recherche / Collaboration" class="w-full px-4 py-2.5 rounded-lg border border-cream-200 text-xs sm:text-sm focus:outline-none focus:border-sage-600">
                             </div>
 
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="lbl_msg">Votre Message</label>
-                                <textarea rows="4" required placeholder="Expliquez brièvement votre demande..." class="w-full px-4 py-2.5 rounded-lg border border-cream-200 text-xs sm:text-sm focus:outline-none focus:border-sage-600"></textarea>
+                                <textarea rows="4" required placeholder="Votre message..." class="w-full px-4 py-2.5 rounded-lg border border-cream-200 text-xs sm:text-sm focus:outline-none focus:border-sage-600"></textarea>
                             </div>
 
                             <button type="submit" class="w-full py-3.5 rounded-lg bg-sage-700 hover:bg-sage-800 text-white font-semibold text-xs sm:text-sm transition-colors shadow">
-                                <span data-i18n="btn_send">Envoyer le message</span>
+                                <span data-i18n="btn_send">Me contacter par e-mail</span>
                             </button>
                         </form>
                     </div>
@@ -1023,49 +1046,11 @@
     <footer class="bg-slate-900 text-slate-400 py-10 px-4 text-center text-xs space-y-3">
         <p class="font-serif text-slate-200 font-bold text-sm">KOUNA SADIYA MBAYE</p>
         <p>© 2026 Kouna Sadiya Mbaye. Tous droits réservés.</p>
-        <p class="text-[11px] text-slate-500">Technologie Laitière • Biotechnologie • Qualité & Sécurité Alimentaire</p>
+        <p class="text-[11px] text-slate-500">Technologie laitière • Biotechnologie • Qualité & Sécurité alimentaire</p>
     </footer>
 
-    <!-- MODAL FOR PDF DOWNLOAD PLACEHOLDER -->
-    <div id="pdf-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 space-y-4 text-center shadow-xl">
-            <div class="w-12 h-12 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center mx-auto text-xl">
-                <i class="fa-regular fa-file-pdf"></i>
-            </div>
-            <h3 class="font-serif font-bold text-lg text-slate-900" id="modal-pdf-title">Document PDF</h3>
-            <p class="text-xs text-slate-600 leading-relaxed" id="modal-pdf-desc">
-                Ce document PDF est prêt à être associé à votre serveur ou lien de téléchargement final.
-            </p>
-            <div class="pt-2 flex justify-center gap-3">
-                <button onclick="closeModal('pdf-modal')" class="px-5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold">Fermer</button>
-                <a id="modal-pdf-link" href="javascript:void(0)" onclick="alert('Lien PDF simule avec succes !')" class="px-5 py-2 rounded-lg bg-sage-700 hover:bg-sage-800 text-white text-xs font-semibold">Ouvrir le fichier</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL FOR DIGITAL BADGE PLACEHOLDER -->
-    <div id="badge-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 space-y-4 text-center shadow-xl">
-            <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto text-xl">
-                <i class="fa-solid fa-award"></i>
-            </div>
-            <h3 class="font-serif font-bold text-lg text-slate-900" id="modal-badge-title">Badge Numérique Officiel</h3>
-            <p class="text-xs text-slate-600 leading-relaxed" id="modal-badge-desc">
-                Vous pouvez insérer le lien de vérification officiel de la plateforme FAO e-learning Academy.
-            </p>
-            <div class="p-3 bg-cream-100 rounded-lg text-xs font-mono text-slate-700" id="modal-badge-id">
-                ID: 0000000000KM
-            </div>
-            <div class="pt-2 flex justify-center gap-3">
-                <button onclick="closeModal('badge-modal')" class="px-5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold">Fermer</button>
-                <a href="https://elearning.fao.org/" target="_blank" class="px-5 py-2 rounded-lg bg-sage-700 hover:bg-sage-800 text-white text-xs font-semibold">Vérifier sur FAO</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- INTERACTIVE JAVASCRIPT DIRECTORY AND TRANSLATION DICTIONARY -->
+    <!-- INTERACTIVE TRANSLATION DICTIONARY (FR / EN / TR) -->
     <script>
-        // TRANSLATIONS DICTIONARY (FR, EN, TR)
         const i18nData = {
             fr: {
                 nav_about: "À propos",
@@ -1077,22 +1062,22 @@
                 nav_cert: "Certifications",
                 nav_contact: "Contact",
                 hero_badge: "Mobilité Internationale Ouverte",
-                hero_subtitle: "TECHNOLOGIE LAITIÈRE | BIOTECHNOLOGIE | QUALITÉ ET SÉCURITÉ ALIMENTAIRE | R&D ET INNOVATION",
+                hero_subtitle: "TECHNOLOGIE LAITIÈRE | BIOTECHNOLOGIE | QUALITÉ ET SÉCURITÉ ALIMENTAIRE | RECHERCHE, DÉVELOPPEMENT ET INNOVATION",
                 hero_desc: "Spécialiste en transformation laitière, sécurité alimentaire et biotechnologie appliquée. Orientée vers la recherche, l'optimisation des procédés et la création de solutions alimentaires durables.",
                 btn_contact: "Me contacter",
                 btn_cv: "Télécharger mon CV (PDF)",
                 about_title: "À propos de moi",
                 about_p1: "Titulaire d’un Master en biotechnologie et actuellement en Master de technologie laitière à l’Université d’Ankara, je me spécialise dans la transformation et la valorisation des produits laitiers.",
-                about_p2: "Je m’intéresse particulièrement au contrôle qualité, à la sécurité alimentaire, aux produits fermentés et au développement de nouvelles formulations. Je souhaite contribuer à des projets de R&D et d'innovation.",
+                about_p2: "Je m’intéresse particulièrement au contrôle qualité, à la sécurité alimentaire, aux produits fermentés et au développement de nouvelles formulations. Je souhaite contribuer à des projets de recherche et développement, d’innovation et d’amélioration des procédés dans l’industrie laitière et agroalimentaire.",
                 about_mobility_title: "Mobilité internationale",
                 about_mobility_desc: "Ouverte aux opportunités professionnelles et aux stages en Europe et à l’étranger.",
                 about_interests_title: "Postes & Domaines d’intérêt",
-                interest_1: "Assistante qualité — Lait & produits laitiers",
-                interest_2: "Assistante de laboratoire — Analyses physico-chimiques & microbiologiques",
-                interest_3: "Assistante R&D — Formulation alimentaire",
-                interest_4: "Innovation & Optimisation des procédés",
+                interest_1: "Assistante qualité — Lait et produits laitiers.",
+                interest_2: "Assistante de laboratoire — Analyses physico-chimiques et microbiologiques.",
+                interest_3: "Assistante R&D — Développement et formulation de produits alimentaires.",
+                interest_4: "Assistante en innovation et optimisation des procédés.",
                 exp_title: "Expériences Professionnelles",
-                exp_subtitle: "Présentation chronologique de mes expériences sur le terrain et en laboratoire",
+                exp_subtitle: "Présentation sous forme de chronogramme, de l’expérience la plus récente à la plus ancienne.",
                 exp1_role: "Stagiaire — Hygiène et qualité du lait",
                 exp1_loc: "Ferme laitière Habsou | Niamey, Niger",
                 exp1_bullet1: "Évaluation des pratiques d’hygiène lors de la traite et du conditionnement du lait cru.",
@@ -1100,135 +1085,138 @@
                 exp1_bullet3: "Analyse des pratiques de production au regard des bonnes pratiques d’hygiène (BPH).",
                 exp2_role: "Stagiaire — Agroalimentaire, hygiène et qualité",
                 exp2_loc: "Marina Market | Niamey, Niger",
-                exp2_bullet1: "Participation à la préparation et à la transformation de produits de charcuterie.",
-                exp2_bullet2: "Application des pratiques d’hygiène et manipulation des matières premières.",
-                exp2_bullet3: "Participation au contrôle de la qualité et respect des conditions de production.",
-                exp3_role: "Responsable adjointe — Clinique & Labo Vétérinaire",
+                exp2_bullet1: "Participation à la préparation et à la transformation de produits de boucherie-charcuterie.",
+                exp2_bullet2: "Application des pratiques d’hygiène et de manipulation des matières premières et des produits finis.",
+                exp2_bullet3: "Participation au contrôle de la qualité et au respect des conditions de production.",
+                exp3_role: "Responsable adjointe — Clinique et laboratoire vétérinaire",
                 exp3_loc: "Diamniadio, Sénégal",
                 exp3_bullet1: "Réalisation d’analyses microbiologiques et d’antibiogrammes.",
                 exp3_bullet2: "Participation au diagnostic des maladies infectieuses.",
                 exp3_bullet3: "Appui à la gestion technique d’une ferme laitière et avicole.",
-                exp4_role: "Stages & Expériences pratiques",
-                exp4_loc: "Kaffrine, Bambey & Dakar | Sénégal",
+                exp4_role: "Stages et expériences pratiques en médecine vétérinaire et élevage",
+                exp4_loc: "Kaffrine, Bambey et Dakar | Sénégal",
                 exp4_bullet1: "Participation au suivi sanitaire des animaux en clinique et en élevage.",
-                exp4_bullet2: "Observation et prévention des maladies infectieuses.",
-                exp4_bullet3: "Initiation aux mesures de biosécurité (formation ISFAR).",
-                skills_title: "Compétences Techniques",
+                exp4_bullet2: "Observation et participation aux activités de diagnostic et de prévention des maladies.",
+                exp4_bullet3: "Initiation aux mesures de biosécurité et aux pratiques de suivi sanitaire (formation ISFAR).",
+                skills_title: "Compétences",
                 skills_subtitle: "Maîtrise des procédés laitiers, de l'analyse de laboratoire et du contrôle sanitaire",
-                skill_cat1_title: "Technologie Laitière",
-                skill_1_1: "Transformation & valorisation du lait",
-                skill_1_2: "Produits laitiers fermentés",
-                skill_1_3: "Technologie fromagère",
-                skill_1_4: "Procédés de transformation laitière",
-                skill_1_5: "Formulation & développement",
-                skill_cat2_title: "Analyses & Laboratoire",
-                skill_2_1: "Analyses physico-chimiques",
-                skill_2_2: "Analyses microbiologiques",
-                skill_2_3: "Caractérisation des produits",
-                skill_2_4: "Évaluation sensorielle & Stabilité",
-                skill_2_5: "Protocoles expérimentaux",
-                skill_cat3_title: "Qualité & Hygiène",
-                skill_3_1: "Contrôle qualité des aliments",
-                skill_3_2: "Bonnes pratiques d’hygiène (BPH)",
-                skill_3_3: "Hygiène de traite & conditionnement",
-                skill_3_4: "Contrôle matières premières/produits",
-                skill_3_5: "Manipulation & conservation",
-                edu_title: "Formation Académique",
-                edu_subtitle: "Diplômes universitaires et spécialisations internationales",
+                skill_cat1_title: "Technologie laitière",
+                skill_1_1: "Transformation et valorisation du lait.",
+                skill_1_2: "Fabrication de produits laitiers fermentés.",
+                skill_1_3: "Technologie fromagère.",
+                skill_1_4: "Procédés de transformation laitière.",
+                skill_1_5: "Formulation et développement de produits.",
+                skill_cat2_title: "Analyses et laboratoire",
+                skill_2_1: "Analyses physico-chimiques.",
+                skill_2_2: "Analyses microbiologiques.",
+                skill_2_3: "Caractérisation des produits laitiers.",
+                skill_2_4: "Évaluation sensorielle et Suivi de stabilité.",
+                skill_2_5: "Application de protocoles expérimentaux.",
+                skill_cat3_title: "Qualité et hygiène",
+                skill_3_1: "Contrôle de la qualité des produits alimentaires.",
+                skill_3_2: "Bonnes pratiques d’hygiène (BPH).",
+                skill_3_3: "Hygiène de la traite et du conditionnement du lait.",
+                skill_3_4: "Contrôle des matières premières et produits finis.",
+                skill_3_5: "Manipulation et conservation des produits.",
+                edu_title: "Formation",
+                edu_subtitle: "Chronogramme académique, de la formation actuelle à la formation initiale.",
                 edu1_title: "Master en technologie laitière — En cours",
                 edu1_inst: "Université d’Ankara | Türkiye",
-                edu1_desc: "Spécialisation dans les technologies de transformation du lait, biochimie laitière et procédés.",
-                edu2_title: "Master Biotechnologie & Productions Pastorales",
+                edu1_desc: "Formation spécialisée dans les technologies de transformation du lait, les produits laitiers, leurs procédés de fabrication et l’évaluation de leur qualité.",
+                edu2_title: "Master en biotechnologie, production et valorisation des produits pastoraux",
                 edu2_inst: "CERPP | Niamey, Niger",
-                edu2_desc: "Centre d’Excellence Régional. Spécialisation filières animales: lait, viande, cuirs.",
+                edu2_desc: "Centre d’Excellence Régional des Productions Pastorales. Spécialisation produits animaux: lait, viande, cuirs et peaux.",
                 edu3_title: "Diplôme d’ingénieur en élevage",
-                edu3_inst: "ISFAR — Univ. de Bambey | Sénégal",
-                edu3_desc: "Formation polyvalente en zootechnie, santé animale et agronomie.",
-                res_title: "Recherches & Travaux Scientifiques",
-                res_subtitle: "Projets de recherche appliquée, travaux de thèse et séminaires",
+                edu3_inst: "ISFAR | Université de Bambey, Sénégal",
+                res_title: "Recherches et travaux scientifiques",
+                res_subtitle: "Travaux de recherche universitaire, thèses et séminaires académiques",
                 tag_ongoing: "En cours",
-                res1_type: "Mémoire de Master",
-                res1_title: "Production et évaluation d’un yaourt brassé probiotique à la mangue enrichi en levure nutritionnelle (S. cerevisiae)",
+                res1_type: "MÉMOIRE DE MASTER — EN COURS",
+                res1_title: "Production et évaluation d’un yaourt brassé probiotique à la mangue enrichi en levure nutritionnelle issue de la biomasse de Saccharomyces cerevisiae",
                 res1_b1: "Mise au point des formulations et fabrication du produit.",
-                res1_b2: "Évaluation physico-chimique, rhéologique, microbiologique et sensorielle.",
-                res1_b3: "Suivi de la stabilité au cours du stockage.",
-                res2_type: "Séminaire — 2025",
-                res2_title: "Utilisation des sources de protéines microbiennes dans le lait",
-                res2_b1: "Étude des protéines microbiennes et incorporation dans les matrices laitières.",
-                res2_b2: "Applications dans le développement de nouveaux aliments.",
-                res3_type: "Mémoire de Master — 2024",
-                res3_title: "Hygiène de traite et qualité du lait cru de chamelle",
-                res3_desc: "Ferme Habsou à Youri, Niger. Diagnostic microbiologique et recommandations.",
-                res4_type: "Mémoire de Licence — 2022",
-                res4_title: "Estimation du poids chez le poney Mbayar",
-                res4_desc: "Bambey, Sénégal. Étude morphométrique comparative.",
-                ref_title: "Veille Scientifique & Références Techniques",
-                pub_title: "Réflexions & Documents Téléchargeables",
-                pub_subtitle: "Réflexions personnelles et analyses de la filière agroalimentaire",
-                pdf1_title: "1. Transformation stratégique de la filière laitière sénégalaise",
-                pdf2_title: "2. 8 technologies révolutionnaires",
-                pdf3_title: "3. Protéines microbiennes et produits laitiers : une solution durable ?",
-                pdf4_title: "4. La filière laitière au Sénégal vers la souveraineté alimentaire",
-                pdf5_title: "5. La révolution silencieuse : microbes et insectes dans nos assiettes",
-                btn_pdf: "Consulter PDF",
-                btn_badge: "Badge Numérique",
-                cert_title: "Certifications & Engagements",
-                cert_subtitle: "Accréditations FAO, certificats linguistiques et formations spécialisées",
-                btn_more_certs: "Voir plus (10 autres)",
+                res1_b2: "Évaluation des propriétés physico-chimiques, rhéologiques, microbiologiques, antioxydantes et sensorielles.",
+                res1_b3: "Suivi de l’évolution des caractéristiques du produit au cours du stockage.",
+                res2_type: "SÉMINAIRE — 2025",
+                res2_title: "Utilisation des sources de protéines microbiennes dans le lait et les produits laitiers et évaluation des pratiques de production",
+                res2_b1: "Étude des sources de protéines microbiennes et de leur utilisation potentielle dans les matrices laitières.",
+                res2_b2: "Analyse de leurs caractéristiques et de leurs applications dans le développement de produits alimentaires.",
+                res3_type: "MÉMOIRE DE MASTER — 2024",
+                res3_title: "Évaluation des pratiques d’hygiène de la traite et de la qualité du lait cru de chamelle (Camelus dromedarius) : cas de la ferme laitière Habsou à Youri, Niger.",
+                res4_type: "MÉMOIRE DE LICENCE — 2022",
+                res4_title: "Étude comparative de méthodes morphométriques d’estimation du poids chez le poney Mbayar",
+                ref_title: "Veille scientifique et références techniques",
+                ref_subtitle: "Ouvrages et ressources techniques consultés",
+                pub_title: "Réflexions et ressources",
+                pub_subtitle: "Réflexions personnelles et documents consacrés aux filières agroalimentaires, à la transformation laitière et aux innovations technologiques.",
+                pdf1_title: "01. Transformation stratégique de la filière laitière sénégalaise",
+                pdf2_title: "02. 8 technologies révolutionnaires",
+                pdf3_title: "03. Protéines microbiennes et produits laitiers : une solution durable pour l’alimentation de demain ?",
+                pdf4_title: "04. La filière laitière au Sénégal vers la souveraineté alimentaire",
+                pdf5_title: "05. La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes",
+                btn_pdf: "Consulter le document (PDF)",
+                btn_cert: "Consulter le certificat",
+                cert_title: "Certifications et engagements",
+                cert_subtitle: "Certifications officielles FAO, Alison, TÖMER et formations complémentaires",
+                btn_more_certs: "Voir plus (11 autres)",
                 btn_less_certs: "Voir moins",
                 proj_title: "Projets Sélectionnés",
                 proj_subtitle: "Initiatives entrepreneuriales et distinctions académiques",
-                p1_award: "3e Lauréate du MAENUC — Marathon Entreprendre",
-                p1_desc: "Projet entrepreneurial sélectionné dans le cadre du Marathon Entreprendre Université Communauté.",
-                p2_award: "Top 3 Finalistes du POESAM Orange",
-                p2_desc: "Prix Orange de l’Entrepreneur Social en Afrique et au Moyen-Orient.",
-                tools_title: "Méthodes & Outils Numériques",
-                tools_subtitle: "Une démarche axée sur la rigueur scientifique et l'analyse de données",
-                m1_title: "1. Analyses & Contrôle Quality",
-                m1_1: "• Analyses physico-chimiques du lait",
-                m1_2: "• Mesure pH & Acidité titrable",
-                m1_3: "• Analyses microbiologiques",
-                m1_4: "• Évaluation sensorielle & Stabilité",
-                m2_title: "2. Techno Laitière",
-                m2_1: "• Préparation & traitement du lait",
-                m2_2: "• Fabrication yaourts & fromages",
-                m2_3: "• Fermentation & Coagulation",
-                m2_4: "• Formulation & Enrichissement",
-                m3_title: "3. Hygiène & HACCP",
-                m3_1: "• Bonnes Pratiques d'Hygiène (BPH)",
-                m3_2: "• Approche des 5M (Ishikawa)",
-                m3_3: "• Prélèvements & Échantillons",
-                m3_4: "• Principes méthode HACCP",
-                m4_title: "4. Démarche Recherche",
-                m4_1: "• Recherche bibliographique",
-                m4_2: "• Essais expérimentaux",
-                m4_3: "• Traitement statistique Minitab",
-                m4_4: "• Rédaction scientifique",
-                sw_title: "Logiciels & Outils Numériques Utilisés",
-                contact_title: "Me Contacter",
-                contact_subtitle: "Ouverte aux opportunités professionnelles, stages et collaborations en technologie laitière et R&D.",
+                p1_award: "3e lauréate du MAENUC — Marathon Entreprendre Université Communauté",
+                p1_desc: "Participation à un projet entrepreneurial sélectionné dans le cadre du Marathon Entreprendre Université Communauté.",
+                p2_award: "Projet sélectionné parmi les trois finalistes du POESAM",
+                p2_desc: "Prix Orange de l’Entrepreneur Social en Afrique et au Moyen-Orient. Projet sélectionné parmi les 3 finalistes du concours POESAM.",
+                tools_title: "Méthodes et outils",
+                tools_subtitle: "Mon approche repose sur l’expérimentation, l’observation, l’analyse des résultats et l’amélioration des pratiques.",
+                m1_title: "01. Analyses et contrôle qualité",
+                m1_1: "• Analyses physico-chimiques du lait.",
+                m1_2: "• Mesure du pH et acidité titrable.",
+                m1_3: "• Analyses microbiologiques.",
+                m1_4: "• Évaluation sensorielle.",
+                m1_5: "• Suivi de la stabilité des produits.",
+                m2_title: "02. Technologie laitière",
+                m2_1: "• Préparation et traitement du lait.",
+                m2_2: "• Fabrication yaourts & fromages.",
+                m2_3: "• Fermentation & Coagulation.",
+                m2_4: "• Formulation & Enrichissement.",
+                m2_5: "• Évaluation des produits finis.",
+                m3_title: "03. Hygiène & sécurité",
+                m3_1: "• Bonnes pratiques d’hygiène (BPH).",
+                m3_2: "• Approche 5M (Ishikawa).",
+                m3_3: "• Prélèvement des échantillons.",
+                m3_4: "• Identification des risques.",
+                m3_5: "• Principes méthode HACCP.",
+                m4_title: "04. Démarche recherche",
+                m4_1: "• Recherche bibliographique.",
+                m4_2: "• Essais expérimentaux.",
+                m4_3: "• Suivi des paramètres.",
+                m4_4: "• Organisation des résultats.",
+                m4_5: "• Rédaction scientifique.",
+                sw_title: "Outils numériques et bibliographie",
+                contact_title: "Contact",
+                contact_subtitle: "Je suis ouverte aux opportunités professionnelles, aux stages et aux collaborations dans les domaines de la technologie laitière et R&D.",
                 cinfo_title: "Coordonnées",
-                cinfo_desc: "Une opportunité ou un projet de collaboration ? Échangeons !",
-                form_title: "Envoyer un message",
+                cinfo_desc: "Vous avez une opportunité, un projet ou une idée de collaboration ? Je serais ravie d’échanger avec vous.",
+                form_title: "Envoyer un message direct",
                 lbl_name: "Nom & Prénom",
                 lbl_email: "Adresse E-mail",
                 lbl_subject: "Sujet du message",
                 lbl_msg: "Votre Message",
-                btn_send: "Envoyer le message",
-                c1_title: "Biodiversité et systèmes agroalimentaires — Introduction",
-                c2_title: "Raising Awareness on Responsible Use of Antibiotics in Livestock",
-                c3_title: "Participation au Codex Alimentarius (Octobre 2026)",
-                c4_title: "Collaboration régionale au sein du Codex (Octobre 2026)",
-                c5_title: "Science et analyse des risques au sein du Codex",
-                c6_title: "Introduction au Codex Alimentarius",
-                c7_title: "Certificat de langue turque — Niveau C2 (TÖMER)",
-                c8_title: "Télédétection et SIG (ArcGIS, KoboToolbox)",
-                c9_title: "Ambassadeurs bénévoles de la santé (USHAŞ)",
-                c10_title: "Suivi et évaluation des projets de développement (AFD)",
-                c11_title: "Appui à la durabilité des systèmes pastoraux",
-                c12_title: "Programme SEEDS — Entrepreneuriat & Innovation",
-                c13_title: "Gouvernance & Lois dans les aires protégées (IUCN)",
-                c14_title: "Formation en Cuniculture (Agroconseil)"
+                btn_send: "Me contacter par e-mail",
+                c1_title: "Hazard Analysis Critical Control Points (HACCP)",
+                c2_title: "Biodiversité et systèmes agroalimentaires — Introduction",
+                c3_title: "Raising Awareness on the Responsible Use of Antibiotics in Livestock",
+                c4_title: "Participation au Codex — Octobre 2026",
+                c5_title: "Collaboration régionale au sein du Codex — Octobre 2026",
+                c6_title: "Science et analyse des risques au sein du Codex — Octobre 2026",
+                c7_title: "Introduction au Codex — Octobre 2026",
+                c8_title: "Télédétection et systèmes d’information géographique (SIG)",
+                c9_title: "Ambassadeurs bénévoles de la santé",
+                c10_title: "Suivi et évaluation des projets de développement",
+                c11_title: "Certificat de langue turque — Niveau C2",
+                c12_title: "Appui à la durabilité des systèmes pastoraux",
+                c13_title: "Programme SEEDS — Entrepreneuriat et innovation",
+                c14_title: "Application des lois et gouvernance dans les aires protégées — MOOC",
+                c15_title: "Cuniculture"
             },
             en: {
                 nav_about: "About",
@@ -1240,27 +1228,27 @@
                 nav_cert: "Certifications",
                 nav_contact: "Contact",
                 hero_badge: "Open for International Mobility",
-                hero_subtitle: "DAIRY TECHNOLOGY | BIOTECHNOLOGY | FOOD QUALITY & SAFETY | R&D AND INNOVATION",
+                hero_subtitle: "DAIRY TECHNOLOGY | BIOTECHNOLOGY | FOOD QUALITY & SAFETY | RESEARCH, DEVELOPMENT & INNOVATION",
                 hero_desc: "Specialist in dairy processing, food safety, and applied biotechnology. Focused on research, process optimization, and creating sustainable food solutions.",
                 btn_contact: "Contact Me",
                 btn_cv: "Download CV (PDF)",
                 about_title: "About Me",
-                about_p1: "Holding a Master’s degree in Biotechnology and currently pursuing a Master’s in Dairy Technology at Ankara University, I specialize in dairy product processing and valorization.",
-                about_p2: "My interests focus on quality control, food safety, fermented products, and formulation of new dairy matrices.",
+                about_p1: "Holding a Master’s in Biotechnology and currently pursuing a Master’s in Dairy Technology at Ankara University, I specialize in dairy product processing and valorization.",
+                about_p2: "My focus includes quality control, food safety, fermented products, and formulation of new dairy products.",
                 about_mobility_title: "International Mobility",
                 about_mobility_desc: "Open for professional opportunities and internships across Europe and worldwide.",
                 about_interests_title: "Key Areas of Interest",
-                interest_1: "Quality Control Assistant — Dairy Sector",
-                interest_2: "Laboratory Assistant — Physico-chemical & Microbiological",
-                interest_3: "R&D Assistant — Food Product Formulation",
-                interest_4: "Process Innovation & Optimization",
-                exp_title: "Work Experience",
+                interest_1: "Quality Assistant — Milk and dairy products.",
+                interest_2: "Laboratory Assistant — Physico-chemical and microbiological analyses.",
+                interest_3: "R&D Assistant — Food product formulation and development.",
+                interest_4: "Assistant in process innovation and optimization.",
+                exp_title: "Professional Experience",
                 exp_subtitle: "Chronological summary of practical field and laboratory experience",
-                exp1_role: "Intern — Milk Hygiene & Quality",
+                exp1_role: "Intern — Milk Hygiene and Quality",
                 exp1_loc: "Habsou Dairy Farm | Niamey, Niger",
-                exp1_bullet1: "Evaluation of hygiene practices during milking and raw milk packaging.",
+                exp1_bullet1: "Hygiene assessment during milking and raw milk packaging.",
                 exp1_bullet2: "Observation of factors influencing milk preservation quality.",
-                exp1_bullet3: "Assessment according to Good Hygiene Practices (GHP).",
+                exp1_bullet3: "Analysis according to Good Hygiene Practices (GHP).",
                 exp2_role: "Intern — Food Processing & Quality",
                 exp2_loc: "Marina Market | Niamey, Niger",
                 exp2_bullet1: "Participation in meat product preparation and processing.",
@@ -1271,127 +1259,130 @@
                 exp3_bullet1: "Microbiological analyses and antibiograms.",
                 exp3_bullet2: "Infectious disease diagnostic support.",
                 exp3_bullet3: "Technical support for dairy and poultry farm management.",
-                exp4_role: "Practical Internships in Livestock",
-                exp4_loc: "Kaffrine, Bambey & Dakar | Senegal",
+                exp4_role: "Practical Internships in Veterinary Science & Breeding",
+                exp4_loc: "Kaffrine, Bambey and Dakar | Senegal",
                 exp4_bullet1: "Animal health monitoring in clinics and farms.",
                 exp4_bullet2: "Disease prevention and diagnostic observation.",
                 exp4_bullet3: "Biosecurity measures implementation (ISFAR training).",
-                skills_title: "Technical Expertise",
+                skills_title: "Skills",
                 skills_subtitle: "Mastery of dairy processes, laboratory analysis, and sanitary control",
                 skill_cat1_title: "Dairy Technology",
-                skill_1_1: "Milk processing & valorization",
-                skill_1_2: "Fermented dairy products",
-                skill_1_3: "Cheese making technology",
-                skill_1_4: "Dairy processing equipment",
-                skill_1_5: "Product formulation & R&D",
+                skill_1_1: "Milk processing & valorization.",
+                skill_1_2: "Fermented dairy products manufacturing.",
+                skill_1_3: "Cheese making technology.",
+                skill_1_4: "Dairy transformation processes.",
+                skill_1_5: "Product formulation and development.",
                 skill_cat2_title: "Laboratory Analysis",
-                skill_2_1: "Physico-chemical testing",
-                skill_2_2: "Microbiological analysis",
-                skill_2_3: "Dairy matrix characterization",
-                skill_2_4: "Sensory evaluation & Stability",
-                skill_2_5: "Experimental protocols",
+                skill_2_1: "Physico-chemical analyses.",
+                skill_2_2: "Microbiological analyses.",
+                skill_2_3: "Dairy product characterization.",
+                skill_2_4: "Sensory evaluation & Stability monitoring.",
+                skill_2_5: "Experimental protocol application.",
                 skill_cat3_title: "Quality & Hygiene",
-                skill_3_1: "Food quality assurance",
-                skill_3_2: "Good Hygiene Practices (GHP)",
-                skill_3_3: "Milking hygiene & packaging",
-                skill_3_4: "Raw material & product control",
-                skill_3_5: "Handling & storage safety",
-                edu_title: "Academic Background",
-                edu_subtitle: "University degrees and international specializations",
+                skill_3_1: "Food product quality control.",
+                skill_3_2: "Good Hygiene Practices (GHP).",
+                skill_3_3: "Milking and packaging hygiene.",
+                skill_3_4: "Raw material and finished product control.",
+                skill_3_5: "Food product handling and storage.",
+                edu_title: "Education",
+                edu_subtitle: "Academic timeline from current degree to initial training.",
                 edu1_title: "Master’s in Dairy Technology — Ongoing",
                 edu1_inst: "Ankara University | Türkiye",
-                edu1_desc: "Specialization in milk processing technologies, dairy biochemistry, and quality evaluation.",
+                edu1_desc: "Specialized training in milk processing technologies, dairy products, manufacturing processes, and quality evaluation.",
                 edu2_title: "Master’s in Biotechnology & Pastoral Products",
                 edu2_inst: "CERPP | Niamey, Niger",
                 edu2_desc: "Regional Center of Excellence. Focus on animal products: milk, meat, leather.",
                 edu3_title: "Livestock Engineering Degree",
-                edu3_inst: "ISFAR — Univ. of Bambey | Senegal",
-                edu3_desc: "Comprehensive engineering program in animal production and agronomy.",
+                edu3_inst: "ISFAR | University of Bambey, Senegal",
                 res_title: "Research & Scientific Work",
                 res_subtitle: "Applied research projects, Master theses, and academic seminars",
                 tag_ongoing: "In Progress",
-                res1_type: "Master’s Thesis",
+                res1_type: "MASTER'S THESIS — ONGOING",
                 res1_title: "Production and evaluation of a mango probiotic stirred yogurt enriched with nutritional yeast (S. cerevisiae)",
                 res1_b1: "Formulation optimization and product manufacturing.",
-                res1_b2: "Physico-chemical, rheological, microbiological, and sensory analysis.",
+                res1_b2: "Physico-chemical, rheological, microbiological, antioxydant, and sensory evaluation.",
                 res1_b3: "Storage stability and shelf-life monitoring.",
-                res2_type: "Seminar — 2025",
-                res2_title: "Microbial protein sources in milk and dairy products",
-                res2_b1: "Study of single-cell proteins and application in dairy matrices.",
-                res2_b2: "Evaluation for sustainable food formulation.",
-                res3_type: "Master’s Thesis — 2024",
-                res3_title: "Milking hygiene and raw camel milk quality evaluation",
-                res3_desc: "Habsou farm in Youri, Niger. Microbiological assessment.",
-                res4_type: "Bachelor’s Thesis — 2022",
-                res4_title: "Morphometric estimation of weight in Mbayar ponies",
-                res4_desc: "Bambey, Senegal. Comparative growth morphometrics.",
-                ref_title: "Scientific & Technical References",
-                pub_title: "Publications & PDF Documents",
-                pub_subtitle: "Technical articles and policy reflections downloadable as PDF",
-                pdf1_title: "1. Strategic Transformation of the Senegalese Dairy Sector",
-                pdf2_title: "2. 8 Revolutionary Food Technologies",
-                pdf3_title: "3. Microbial Proteins & Dairy: A Sustainable Solution?",
-                pdf4_title: "4. Senegalese Dairy Sector towards Food Sovereignty",
-                pdf5_title: "5. The Silent Revolution: Microbes & Insects in Foods",
-                btn_pdf: "View PDF",
-                btn_badge: "Digital Badge",
+                res2_type: "SEMINAR — 2025",
+                res2_title: "Use of microbial protein sources in milk and dairy products and production practice evaluation",
+                res2_b1: "Study of microbial protein sources and potential incorporation in dairy matrices.",
+                res2_b2: "Analysis of applications in new food development.",
+                res3_type: "MASTER'S THESIS — 2024",
+                res3_title: "Milking hygiene practices and raw camel milk quality evaluation: case of Habsou dairy farm in Youri, Niger.",
+                res4_type: "BACHELOR'S THESIS — 2022",
+                res4_title: "Comparative morphometric study of weight estimation in Mbayar ponies",
+                ref_title: "Technical & Scientific References",
+                ref_subtitle: "Consulted books and technical resources",
+                pub_title: "Reflections & Resources",
+                pub_subtitle: "Personal reflections and papers dedicated to food supply chains and technological innovations.",
+                pdf1_title: "01. Strategic Transformation of the Senegalese Dairy Sector",
+                pdf2_title: "02. 8 Revolutionary Food Technologies",
+                pdf3_title: "03. Microbial Proteins & Dairy Products: A Sustainable Solution for Tomorrow?",
+                pdf4_title: "04. Senegalese Dairy Sector Towards Food Sovereignty",
+                pdf5_title: "05. The Silent Revolution in Dairy: Microbes & Insects on Our Plates",
+                btn_pdf: "View Document (PDF)",
+                btn_cert: "View Certificate",
                 cert_title: "Certifications & Commitments",
-                cert_subtitle: "FAO e-learning accreditation, language certifications, and technical diplomas",
-                btn_more_certs: "Show More (10 more)",
+                cert_subtitle: "Official FAO, Alison, TÖMER certifications and complementary training",
+                btn_more_certs: "Show More (11 more)",
                 btn_less_certs: "Show Less",
                 proj_title: "Selected Projects",
-                proj_subtitle: "Entrepreneurship awards and academic achievements",
-                p1_award: "3rd Place MAENUC Entrepreneurship Marathon",
+                proj_subtitle: "Entrepreneurial initiatives and academic awards",
+                p1_award: "3rd Laureate MAENUC — University Community Entrepreneurship Marathon",
                 p1_desc: "Selected startup project focused on local resources valorization.",
                 p2_award: "Top 3 Finalist POESAM Orange Award",
                 p2_desc: "Orange Social Entrepreneur Award in Africa & Middle East.",
-                tools_title: "Methods & Software Tools",
-                tools_subtitle: "Rigorously applying scientific methods and statistical tools",
-                m1_title: "1. Analysis & Quality Control",
-                m1_1: "• Physico-chemical milk analysis",
-                m1_2: "• pH & Titratable acidity",
-                m1_3: "• Microbiological testing",
-                m1_4: "• Sensory evaluation & Shelf-life",
-                m2_title: "2. Dairy Technology",
-                m2_1: "• Milk processing & pasteurization",
-                m2_2: "• Yogurt & cheese processing",
-                m2_3: "• Fermentation & Coagulation",
-                m2_4: "• Product formulation",
-                m3_title: "3. Food Safety & HACCP",
-                m3_1: "• Good Hygiene Practices (GHP)",
-                m3_2: "• 5M Ishikawa Cause-Effect",
-                m3_3: "• Sampling & Protocol",
-                m3_4: "• HACCP principles",
-                m4_title: "4. Research Methodology",
-                m4_1: "• Literature review & synthesis",
-                m4_2: "• Experimental lab trials",
-                m4_3: "• Minitab statistical analysis",
-                m4_4: "• Scientific report writing",
+                tools_title: "Methods & Tools",
+                tools_subtitle: "My approach is built on experimentation, observation, data analysis, and continuous improvement.",
+                m1_title: "01. Analysis & Quality Control",
+                m1_1: "• Physico-chemical milk analyses.",
+                m1_2: "• pH measurement & titratable acidity.",
+                m1_3: "• Microbiological testing.",
+                m1_4: "• Sensory evaluation.",
+                m1_5: "• Shelf-life stability monitoring.",
+                m2_title: "02. Dairy Technology",
+                m2_1: "• Milk preparation & treatment.",
+                m2_2: "• Yogurt & cheese processing.",
+                m2_3: "• Fermentation & coagulation.",
+                m2_4: "• Formulation & enrichment.",
+                m2_5: "• Finished product evaluation.",
+                m3_title: "03. Hygiene & Safety",
+                m3_1: "• Good Hygiene Practices (GHP).",
+                m3_2: "• 5M Ishikawa method.",
+                m3_3: "• Sample collection.",
+                m3_4: "• Risk identification.",
+                m3_5: "• HACCP principles.",
+                m4_title: "04. Research Methodology",
+                m4_1: "• Literature review.",
+                m4_2: "• Experimental trials.",
+                m4_3: "• Parameter tracking.",
+                m4_4: "• Data organization.",
+                m4_5: "• Scientific report writing.",
                 sw_title: "Digital Software & Analytical Tools",
-                contact_title: "Get In Touch",
-                contact_subtitle: "Available for professional opportunities, internships, and research collaborations in dairy tech & food R&D.",
+                contact_title: "Contact",
+                contact_subtitle: "Available for professional opportunities, internships, and R&D research collaborations.",
                 cinfo_title: "Contact Details",
-                cinfo_desc: "Have an offer or project? Let's connect!",
+                cinfo_desc: "Have a project or opportunity? I would be glad to connect with you.",
                 form_title: "Send a Direct Message",
                 lbl_name: "Full Name",
                 lbl_email: "Email Address",
                 lbl_subject: "Subject",
                 lbl_msg: "Your Message",
-                btn_send: "Send Message",
-                c1_title: "Biodiversity and Agri-food Systems — Introduction",
-                c2_title: "Raising Awareness on Responsible Use of Antibiotics in Livestock",
-                c3_title: "Participation in Codex Alimentarius (Oct 2026)",
-                c4_title: "Regional Collaboration within Codex (Oct 2026)",
-                c5_title: "Science and Risk Analysis in Codex",
-                c6_title: "Introduction to Codex Alimentarius",
-                c7_title: "Turkish Language Certificate — Level C2 (TÖMER)",
+                btn_send: "Contact Me by Email",
+                c1_title: "Hazard Analysis Critical Control Points (HACCP)",
+                c2_title: "Biodiversity and Agri-food Systems — Introduction",
+                c3_title: "Raising Awareness on Responsible Use of Antibiotics in Livestock",
+                c4_title: "Participation in Codex — October 2026",
+                c5_title: "Regional Collaboration within Codex — October 2026",
+                c6_title: "Science and Risk Analysis in Codex — October 2026",
+                c7_title: "Introduction to Codex — October 2026",
                 c8_title: "Remote Sensing & GIS (ArcGIS, KoboToolbox)",
-                c9_title: "Volunteer Health Ambassador (USHAŞ)",
-                c10_title: "Project Monitoring & Evaluation (AFD)",
-                c11_title: "Sustainability of Pastoral Systems Support",
-                c12_title: "SEEDS Entrepreneurship & Innovation Program",
-                c13_title: "Governance & Law in Protected Areas (IUCN)",
-                c14_title: "Rabbit Farming Training Certificate (Agroconseil)"
+                c9_title: "Volunteer Health Ambassador",
+                c10_title: "Development Project Monitoring & Evaluation",
+                c11_title: "Turkish Language Certificate — Level C2",
+                c12_title: "Pastoral Systems Sustainability Support",
+                c13_title: "SEEDS Entrepreneurship & Innovation Program",
+                c14_title: "Governance & Law in Protected Areas — MOOC",
+                c15_title: "Rabbit Farming (Cuniculture)"
             },
             tr: {
                 nav_about: "Hakkımda",
@@ -1403,22 +1394,22 @@
                 nav_cert: "Sertifikalar",
                 nav_contact: "İletişim",
                 hero_badge: "Uluslararası Mobiliteye Açık",
-                hero_subtitle: "SÜT TEKNOLOJİSİ | BİYOTEKNOLOJİ | GIDA KALİTE VE GÜVENLİĞİ | AR-GE VE İNOVASYON",
+                hero_subtitle: "SÜT TEKNOLOJİSİ | BİYOTEKNOLOJİ | GIDA KALİTE VE GÜVENLİĞİ | ARAŞTIRMA, GELİŞTİRME VE İNOVASYON",
                 hero_desc: "Süt işleme teknolojisi, gıda güvenliği ve uygulamalı biyoteknoloji uzmanı. Araştırma, süreç optimizasyonu ve sürdürülebilir gıda çözümlerine odaklı.",
                 btn_contact: "İletişime Geç",
                 btn_cv: "CV İndir (PDF)",
                 about_title: "Hakkımda",
                 about_p1: "Biyoteknoloji yüksek lisans mezunuyum ve şu anda Ankara Üniversitesi Süt Teknolojisi Bölümü'nde Yüksek Lisans yapmaktayım.",
-                about_p2: "Özellikle kalite kontrol, gıda güvenliği, fermente süt ürünleri ve yeni ürün formülasyonları üzerine odaklanmaktayım.",
+                about_p2: "Özellikle kalite kontrol, gıda güvenliği, fermente süt ürünleri ve yeni ürün formülasyonları üzerine odaklanmaktayım. Süt ve gıda sektöründe Ar-Ge projelerine katkıda bulunmayı hedefliyorum.",
                 about_mobility_title: "Uluslararası Mobilite",
                 about_mobility_desc: "Avrupa ve dünya genelinde iş ve staj fırsatlarına açığım.",
                 about_interests_title: "İlgi Alanları ve Pozisyonlar",
-                interest_1: "Kalite Kontrol Asistanı — Süt ve Ürünleri",
-                interest_2: "Laboratuvar Asistanı — Fizikokimyasal ve Mikrobiyolojik",
-                interest_3: "Ar-Ge Asistanı — Ürün Formülasyonu",
-                interest_4: "İnovasyon ve Süreç Optimizasyonu",
-                exp_title: "İş Deneyimi",
-                exp_subtitle: "Saha ve laboratuvar deneyimlerimin kronolojik özeti",
+                interest_1: "Kalite Kontrol Asistanı — Süt ve Ürünleri.",
+                interest_2: "Laboratuvar Asistanı — Fizikokimyasal ve Mikrobiyolojik Analizler.",
+                interest_3: "Ar-Ge Asistanı — Ürün Geliştirme ve Formülasyon.",
+                interest_4: "İnovasyon ve Süreç Optimizasyonu Asistanı.",
+                exp_title: "Mesleki Deneyim",
+                exp_subtitle: "En son deneyimden en eskiye doğru kronolojik sıralama.",
                 exp1_role: "Stajyer — Süt Hijyeni ve Kalitesi",
                 exp1_loc: "Habsou Çiftliği | Niamey, Nijer",
                 exp1_bullet1: "Sağım ve ham süt ambalajlama süreçlerinde hijyen değerlendirmesi.",
@@ -1435,146 +1426,146 @@
                 exp3_bullet2: "Bulaşıcı hastalıkların teşhisine katılım.",
                 exp3_bullet3: "Süt ve kanatlı çiftliği teknik yönetim desteği.",
                 exp4_role: "Pratik Stajlar ve Saha Deneyimi",
-                exp4_loc: "Kaffrine, Bambey & Dakar | Senegal",
+                exp4_loc: "Kaffrine, Bambey ve Dakar | Senegal",
                 exp4_bullet1: "Klinik ve çiftliklerde hayvan sağlığı takibi.",
                 exp4_bullet2: "Hastalık önleme ve teşhis faaliyetleri.",
                 exp4_bullet3: "Biyogüvenlik önlemleri eğitimi (ISFAR).",
-                skills_title: "Teknik Beceriler",
+                skills_title: "Beceriler",
                 skills_subtitle: "Süt teknolojisi, laboratuvar analizi ve hijyen kontrolü",
                 skill_cat1_title: "Süt Teknolojisi",
-                skill_1_1: "Süt işleme ve değerlendirme",
-                skill_1_2: "Fermente süt ürünleri (Yoğurt, Ayran)",
-                skill_1_3: "Peynir teknolojisi",
-                skill_1_4: "Süt işleme prosesleri",
-                skill_1_5: "Formülasyon ve Ar-Ge",
+                skill_1_1: "Süt işleme ve değerlendirme.",
+                skill_1_2: "Fermente süt ürünleri üretimi.",
+                skill_1_3: "Peynir teknolojisi.",
+                skill_1_4: "Süt işleme prosesleri.",
+                skill_1_5: "Formülasyon ve Ar-Ge.",
                 skill_cat2_title: "Laboratuvar ve Analiz",
-                skill_2_1: "Fizikokimyasal analizler",
-                skill_2_2: "Mikrobiyolojik analizler",
-                skill_2_3: "Ürün karakterizasyonu",
-                skill_2_4: "Duyusal değerlendirme & Stabilite",
-                skill_2_5: "Deneysel protokoller",
+                skill_2_1: "Fizikokimyasal analizler.",
+                skill_2_2: "Mikrobiyolojik analizler.",
+                skill_2_3: "Ürün karakterizasyonu.",
+                skill_2_4: "Duyusal değerlendirme ve raf ömrü takibi.",
+                skill_2_5: "Deneysel protokol uygulamaları.",
                 skill_cat3_title: "Kalite ve Hijyen",
-                skill_3_1: "Gıda kalite kontrolü",
-                skill_3_2: "İyi Hijyen Uygulamaları (İHU)",
-                skill_3_3: "Sağım ve ambalaj hijyeni",
-                skill_3_4: "Hammadde ve ürün kontrolü",
-                skill_3_5: "Gıda muhafaza yöntemleri",
+                skill_3_1: "Gıda ürünleri kalite kontrolü.",
+                skill_3_2: "İyi Hijyen Uygulamaları (İHU).",
+                skill_3_3: "Sağım ve ambalaj hijyeni.",
+                skill_3_4: "Hammadde ve ürün kontrolü.",
+                skill_3_5: "Gıda muhafaza yöntemleri.",
                 edu_title: "Eğitim Geçmişi",
-                edu_subtitle: "Üniversite dereceleri ve uluslararası uzmanlıklar",
+                edu_subtitle: "Mevcut eğitimden ilk eğitime kronolojik akademik süreç.",
                 edu1_title: "Süt Teknolojisi Yüksek Lisans — Devam Ediyor",
                 edu1_inst: "Ankara Üniversitesi | Türkiye",
-                edu1_desc: "Süt işleme teknolojileri, süt biyokimyası ve kalite değerlendirme üzerine uzmanlaşma.",
+                edu1_desc: "Süt işleme teknolojileri, süt biyokimyası, üretim prosesleri ve kalite değerlendirme üzerine uzmanlaşma.",
                 edu2_title: "Biyoteknoloji ve Pastoral Ürünler Yüksek Lisans",
                 edu2_inst: "CERPP | Niamey, Nijer",
                 edu2_desc: "Bölgesel Mükemmeliyet Merkezi. Hayvansal ürünler: süt, et, deri.",
                 edu3_title: "Hayvancılık Mühendisliği Lisans",
-                edu3_inst: "ISFAR — Bambey Univ. | Senegal",
-                edu3_desc: "Hayvan yetiştiriciliği, sağlık ve ziraat mühendisliği eğitimi.",
+                edu3_inst: "ISFAR | Bambey Üniversitesi, Senegal",
                 res_title: "Araştırma ve Bilimsel Çalışmalar",
-                res_subtitle: "Uygulamalı araştırma projeleri, tezler ve seminerler",
+                res_subtitle: "Akademik tezler, bilimsel seminerler ve araştırma projeleri",
                 tag_ongoing: "Devam Ediyor",
-                res1_type: "Yüksek Lisans Tezi",
+                res1_type: "YÜKSEK LİSANS TEZİ — DEVAM EDİYOR",
                 res1_title: "Besinsel maya (S. cerevisiae) ile zenginleştirilmiş mangolu probiyotik yoğurt üretimi ve değerlendirilmesi",
                 res1_b1: "Formülasyon ve ürün üretimi.",
                 res1_b2: "Fizikokimyasal, reolojik, mikrobiyolojik ve duyusal analizler.",
                 res1_b3: "Depolama süresince stabilite takibi.",
-                res2_type: "Seminer — 2025",
+                res2_type: "SEMİNER — 2025",
                 res2_title: "Süt ürünlerinde mikrobiyel protein kaynaklarının kullanımı",
                 res2_b1: "Tek hücre proteinlerinin süt matrislerinde kullanımı.",
-                res2_b2: "Sürdürülebilir gıda geliştirme uygulamaları.",
-                res3_type: "Yüksek Lisans Tezi — 2024",
-                res3_title: "Deve sütü hijyeni ve çiğ süt kalitesinin değerlendirilmesi",
-                res3_desc: "Habsou Çiftliği, Nijer. Mikrobiyolojik analizler.",
-                res4_type: "Lisans Tezi — 2022",
-                res4_title: "Mbayar ponilerinde canlı ağırlık tahmini",
-                res4_desc: "Bambey, Senegal. Morfometrik çalışma.",
+                res2_b2: "Yeni gıda geliştirme uygulamaları.",
+                res3_type: "YÜKSEK LİSANS TEZİ — 2024",
+                res3_title: "Deve sütü hijyeni ve çiğ süt kalitesinin değerlendirilmesi: Habsou çiftliği vakası, Nijer.",
+                res4_type: "LİSANS TEZİ — 2022",
+                res4_title: "Mbayar ponilerinde canlı ağırlık tahmini morfometrik çalışması",
                 ref_title: "Teknik ve Bilimsel Kaynaklar",
-                pub_title: "Makaleler ve İndirilebilir PDF'ler",
-                pub_subtitle: "Gıda sektörü üzerine teknik değerlendirmeler ve PDF dokümanları",
-                pdf1_title: "1. Senegal Süt Sektörünün Stratejik Dönüşümü",
-                pdf2_title: "2. Gıdada 8 Devrim Niteliğinde Teknoloji",
-                pdf3_title: "3. Mikrobiyel Proteinler ve Süt Ürünleri: Sürdürülebilir Çözüm mü?",
-                pdf4_title: "4. Senegal'de Süt Sektörü ve Gıda Egemenliği",
-                pdf5_title: "5. Sessiz Devrim: Tabaklarımızda Mikroplar ve Böcekler",
-                btn_pdf: "PDF Görüntüle",
-                btn_badge: "Dijital Rozet",
+                ref_subtitle: "Danışılan teknik kaynaklar ve yayınlar",
+                pub_title: "Makaleler ve Kaynaklar",
+                pub_subtitle: "Süt sektörü, gıda egemenliği ve inovasyon üzerine kişisel değerlendirmeler ve PDF dokümanları.",
+                pdf1_title: "01. Senegal Süt Sektörünün Stratejik Dönüşümü",
+                pdf2_title: "02. Gıdada 8 Devrim Niteliğinde Teknoloji",
+                pdf3_title: "03. Mikrobiyel Proteinler ve Süt Ürünleri: Geleceğin Sürdürülebilir Çözümü mü?",
+                pdf4_title: "04. Senegal'de Süt Sektörü ve Gıda Egemenliği",
+                pdf5_title: "05. Sessiz Devrim: Tabaklarımızda Mikroplar ve Böcekler",
+                btn_pdf: "Dokümanı İncele (PDF)",
+                btn_cert: "Sertifikayı İncele",
                 cert_title: "Sertifikalar ve Yetkinlikler",
-                cert_subtitle: "FAO e-learning akreditasyonları, dil sertifikaları ve teknik eğitimler",
-                btn_more_certs: "Daha Fazla Göster (10 tane)",
+                cert_subtitle: "Resmi FAO, Alison, TÖMER sertifikaları ve tamamlayıcı eğitimler",
+                btn_more_certs: "Daha Fazla Göster (11 tane)",
                 btn_less_certs: "Daha Az Göster",
                 proj_title: "Öne Çıkan Projeler",
                 proj_subtitle: "Girişimcilik ödülleri ve akademik başarılar",
                 p1_award: "MAENUC Girişimcilik Maratonu 3.sü",
-                p1_desc: "Yerel kaynakların değerlendirilmesi üzerine odaklanan girişim projesi.",
+                p1_desc: "Üniversite Toplum Girişimcilik Maratonu kapsamında seçilen proje.",
                 p2_award: "POESAM Orange Top 3 Finalisti",
-                p2_desc: "Afrika ve Orta Doğu Sosyal Girişimci Ödülü.",
+                p2_desc: "Afrika ve Orta Doğu Sosyal Girişimci Ödülü yarışmasında ilk 3 finalist.",
                 tools_title: "Yöntemler ve Dijital Araçlar",
-                tools_subtitle: "Bilimsel titizlik ve veri analizine dayalı yaklaşım",
-                m1_title: "1. Analiz ve Kalite Kontrol",
-                m1_1: "• Sütün fizikokimyasal analizleri",
-                m1_2: "• pH ve Titre edilebilir asitlik",
-                m1_3: "• Mikrobiyolojik testler",
-                m1_4: "• Duyusal analiz ve Raf ömrü",
-                m2_title: "2. Süt Teknolojisi",
-                m2_1: "• Süt hazırlama ve işleme",
-                m2_2: "• Yoğurt ve peynir üretimi",
-                m2_3: "• Fermentasyon ve Pıhtılaşma",
-                m2_4: "• Ürün formülasyonu",
-                m3_title: "3. Hijyen ve HACCP",
-                m3_1: "• İyi Hijyen Uygulamaları (İHU)",
-                m3_2: "• 5M Ishikawa analizi",
-                m3_3: "• Numune alma ve hazırlama",
-                m3_4: "• HACCP ilkeleri",
-                m4_title: "4. Araştırma Yöntemleri",
-                m4_1: "• Literatür taraması",
-                m4_2: "• Laboratuvar deneyleri",
-                m4_3: "• Minitab istatistiksel analiz",
-                m4_4: "• Raporlama ve bilimsel yazım",
-                sw_title: "Kullanılan Yazılım ve İstatistik Araçları",
-                contact_title: "İletişime Geçin",
+                tools_subtitle: "Yaklaşımım deney, gözlem, veri analizi ve sürekli iyileştirmeye dayanmaktadır.",
+                m1_title: "01. Analiz ve Kalite Kontrol",
+                m1_1: "• Sütün fizikokimyasal analizleri.",
+                m1_2: "• pH ve Titre edilebilir asitlik.",
+                m1_3: "• Mikrobiyolojik testler.",
+                m1_4: "• Duyusal analiz.",
+                m1_5: "• Raf ömrü takibi.",
+                m2_title: "02. Süt Teknolojisi",
+                m2_1: "• Süt hazırlama ve işleme.",
+                m2_2: "• Yoğurt ve peynir üretimi.",
+                m2_3: "• Fermentasyon ve pıhtılaşma.",
+                m2_4: "• Formülasyon ve zenginleştirme.",
+                m2_5: "• Ürün değerlendirmesi.",
+                m3_title: "03. Hijyen ve Güvenlik",
+                m3_1: "• İyi Hijyen Uygulamaları (İHU).",
+                m3_2: "• 5M Ishikawa analizi.",
+                m3_3: "• Numune alma ve hazırlama.",
+                m3_4: "• Risk tespiti.",
+                m3_5: "• HACCP ilkeleri.",
+                m4_title: "04. Araştırma Yöntemleri",
+                m4_1: "• Literatür taraması.",
+                m4_2: "• Deneysel çalışmalar.",
+                m4_3: "• Parametre takibi.",
+                m4_4: "• Veri düzenleme.",
+                m4_5: "• Bilimsel raporlama.",
+                sw_title: "Kullanılan Dijital Araçlar ve Yazılımlar",
+                contact_title: "İletişim",
                 contact_subtitle: "Süt teknolojisi ve Ar-Ge alanındaki iş, staj ve akademik işbirliği fırsatlarına açığım.",
                 cinfo_title: "İletişim Bilgileri",
-                cinfo_desc: "Bir projeniz veya teklifiniz mi var? Görüşelim!",
+                cinfo_desc: "Bir projeniz veya teklifiniz mi var? Görüşmekten mutluluk duyarım.",
                 form_title: "Mesaj Gönderin",
                 lbl_name: "Adınız Soyadınız",
                 lbl_email: "E-posta Adresiniz",
                 lbl_subject: "Mesaj Konusu",
                 lbl_msg: "Mesajınız",
-                btn_send: "Mesajı Gönder",
-                c1_title: "Biyoçeşitlilik ve Tarım-Gıda Sistemleri — Giriş",
-                c2_title: "Hayvancılıkta Antibiyotik Kullanımı Bilinçlendirmesi",
-                c3_title: "Codex Alimentarius Katılımı (Ekim 2026)",
-                c4_title: "Codex Bölgesel İşbirliği (Ekim 2026)",
-                c5_title: "Codex Risk Analizi ve Bilim",
-                c6_title: "Codex Alimentarius'a Giriş",
-                c7_title: "Türkçe Dil Sertifikası — C2 Seviyesi (TÖMER)",
+                btn_send: "E-posta ile İletişime Geçin",
+                c1_title: "Hazard Analysis Critical Control Points (HACCP)",
+                c2_title: "Biyoçeşitlilik ve Tarım-Gıda Sistemleri — Giriş",
+                c3_title: "Hayvancılıkta Antibiyotik Kullanımı Bilinçlendirmesi",
+                c4_title: "Codex Alimentarius Katılımı — Ekim 2026",
+                c5_title: "Codex Bölgesel İşbirliği — Ekim 2026",
+                c6_title: "Codex Risk Analizi ve Bilim — Ekim 2026",
+                c7_title: "Codex Alimentarius'a Giriş — Ekim 2026",
                 c8_title: "Uzaktan Algılama ve CBS (ArcGIS, KoboToolbox)",
-                c9_title: "Gönüllü Sağlık Elçisi (USHAŞ)",
-                c10_title: "Proje İzleme ve Değerlendirme (AFD)",
-                c11_title: "Pastoral Sistemlerin Sürdürülebilirliği",
-                c12_title: "SEEDS Girişimcilik & İnovasyon Programı",
-                c13_title: "Korunan Alanlarda Yönetim ve Hukuk (IUCN)",
-                c14_title: "Tavşan Yetiştiriciliği Sertifikası (Agroconseil)"
+                c9_title: "Gönüllü Sağlık Elçisi",
+                c10_title: "Kalkınma Projeleri İzleme ve Değerlendirme",
+                c11_title: "Türkçe Dil Sertifikası — C2 Seviyesi",
+                c12_title: "Pastoral Sistemlerin Sürdürülebilirliği",
+                c13_title: "SEEDS Girişimcilik & İnovasyon Programı",
+                c14_title: "Korunan Alanlarda Yönetim ve Hukuk — MOOC",
+                c15_title: "Tavşan Yetiştiriciliği"
             }
         };
 
         let currentLang = 'fr';
 
-        // LANGUAGE SWITCH FUNCTION
         function setLanguage(lang) {
             currentLang = lang;
             
-            // Update active state on language buttons
             ['fr', 'en', 'tr'].forEach(l => {
                 const btn = document.getElementById(`lang-${l}`);
                 if (l === lang) {
-                    btn.className = "px-2.5 py-1 rounded-md transition-all duration-200 bg-sage-600 text-white shadow-sm";
+                    btn.className = "px-2.5 py-1 rounded-md transition-all duration-200 bg-sage-700 text-white shadow-sm";
                 } else {
-                    btn.className = "px-2.5 py-1 rounded-md transition-all duration-200 text-slate-700 hover:text-sage-600";
+                    btn.className = "px-2.5 py-1 rounded-md transition-all duration-200 text-slate-700 hover:text-sage-700";
                 }
             });
 
-            // Update all elements with data-i18n attribute
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (i18nData[lang] && i18nData[lang][key]) {
@@ -1582,7 +1573,6 @@
                 }
             });
 
-            // Update Cert Toggle Button Text depending on state
             const isExpanded = !document.querySelector('.cert-extra').classList.contains('hidden');
             const txtBtn = document.getElementById('txt-toggle-certs');
             if (txtBtn) {
@@ -1590,13 +1580,10 @@
             }
         }
 
-        // TOGGLE MOBILE MENU
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         }
 
-        // TOGGLE CERTIFICATIONS (SHOW 4-5 FIRST, THEN SHOW MORE)
         function toggleCerts() {
             const extraCerts = document.querySelectorAll('.cert-extra');
             const icon = document.getElementById('icon-toggle-certs');
@@ -1621,33 +1608,15 @@
             }
         }
 
-        // MODAL HANDLERS
-        function openPdfModal(title) {
-            document.getElementById('modal-pdf-title').textContent = title;
-            document.getElementById('pdf-modal').classList.remove('hidden');
-        }
-
-        function openBadgeModal(badgeId) {
-            document.getElementById('modal-badge-id').textContent = badgeId;
-            document.getElementById('badge-modal').classList.remove('hidden');
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.add('hidden');
-        }
-
-        function downloadCV() {
-            alert(currentLang === 'fr' ? 'Téléchargement du CV de Kouna Sadiya Mbaye (Format PDF)...' : (currentLang === 'en' ? 'Downloading CV (PDF format)...' : 'CV indiriliyor (PDF)...'));
-        }
-
         function handleFormSubmit(event) {
             event.preventDefault();
-            const msg = currentLang === 'fr' ? 'Merci ! Votre message a bien été envoyé à Kouna Sadiya Mbaye.' : (currentLang === 'en' ? 'Thank you! Your message has been sent.' : 'Teşekkürler! Mesajınız başarıyla gönderildi.');
+            const msg = currentLang === 'fr' 
+                ? 'Merci ! Votre message a bien été rédigé. Vous pouvez l’envoyer à kounasadiyambaye29@gmail.com' 
+                : (currentLang === 'en' ? 'Thank you! Your message is ready to send to kounasadiyambaye29@gmail.com' : 'Teşekkürler! Mesajınız kounasadiyambaye29@gmail.com adresine gönderilmeye hazır.');
             alert(msg);
             document.getElementById('contact-form').reset();
         }
 
-        // INITIALIZE DEFAULT LANGUAGE ON LOAD
         window.onload = function() {
             setLanguage('fr');
         };
