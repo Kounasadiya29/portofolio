@@ -125,7 +125,7 @@
 
                 <!-- Subtitle Chips -->
                 <p class="text-base sm:text-xl text-sage-800 font-medium max-w-3xl mx-auto leading-relaxed uppercase tracking-wider">
-                    <span data-i18n="hero_subtitle">TECHNOLOGIE LAITIÈRE | BIOTECHNOLOGIE | QUALITÉ ET SÉCURITÉ ALIMENTAIRE | RECHERCHE, DÉVELOPPEMENT ET INNOVATION</span>
+                    <span data-i18n="hero_subtitle">TECHNOLOGIE LAITIÈRE | BIOTECHNOLOGIE | QUALITÉ ET SÉCURITÉ ALIMENTAIRE | R&D ET INNOVATION</span>
                 </p>
 
                 <!-- Short Hero Intro -->
@@ -139,9 +139,11 @@
                         <i class="fa-regular fa-envelope"></i>
                         <span data-i18n="btn_contact">Me contacter</span>
                     </a>
-                    <a href="javascript:void(0)" onclick="downloadCV()" class="px-8 py-3.5 rounded-full bg-white border border-sage-300 hover:bg-sage-50 text-sage-800 font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2">
+                    <!-- CV Download Button with Clean Arrow Icon (No Visible URL) -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-white border border-sage-300 hover:bg-sage-50 text-sage-800 font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2 group">
                         <i class="fa-solid fa-file-arrow-down"></i>
-                        <span data-i18n="btn_cv">Télécharger mon CV (PDF)</span> https://drive.google.com/file/d/1d3q8jxZm9trnVkJXZIOAeBWfdxiPRRzc/view?usp=drive_link
+                        <span data-i18n="btn_cv">Télécharger mon CV (PDF)</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                     </a>
                 </div>
 
@@ -425,34 +427,7 @@
                         <li data-i18n="res1_b3">Suivi de l’évolution des caractéristiques au cours du stockage.</li>
                     </ul>
                 </div>
-
-                <!-- Research Card 2 (Seminar) -->
-                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-4">
-                    <span class="text-xs font-semibold text-earthAccent uppercase tracking-widest" data-i18n="res2_type">Séminaire — 2025</span>
-                    <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="res2_title">Utilisation des sources de protéines microbiennes dans le lait et évaluation des pratiques de production</h3>
-                    <ul class="space-y-1.5 text-xs text-slate-600 list-disc list-inside">
-                        <li data-i18n="res2_b1">Étude des sources de protéines microbiennes et utilisation potentielle dans les matrices laitières.</li>
-                        <li data-i18n="res2_b2">Analyse de leurs caractéristiques et applications dans le développement produit.</li>
-                    </ul>
-                </div>
-
-                <!-- Research Card 3 (Master 2024) -->
-                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-4">
-                    <span class="text-xs font-semibold text-earthAccent uppercase tracking-widest" data-i18n="res3_type">Mémoire de Master — 2024</span>
-                    <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="res3_title">Évaluation des pratiques d’hygiène de la traite et de la qualité du lait cru de chamelle (Camelus dromedarius)</h3>
-                    <p class="text-xs text-slate-600" data-i18n="res3_desc">Étude menée à la Ferme laitière Habsou à Youri, Niger. Analyse microbiologique et proposition de plans de maîtrise d'hygiène.</p>
-                </div>
-
-                <!-- Research Card 4 (Licence 2022) -->
-                <div class="p-6 rounded-2xl bg-white border border-cream-200 shadow-sm space-y-4">
-                    <span class="text-xs font-semibold text-earthAccent uppercase tracking-widest" data-i18n="res4_type">Mémoire de Licence — 2022</span>
-                    <h3 class="font-serif font-bold text-lg text-slate-900" data-i18n="res4_title">Étude comparative de méthodes morphométriques d’estimation du poids chez le poney Mbayar</h3>
-                    <p class="text-xs text-slate-600" data-i18n="res4_desc">Réalisé à Bambey, Sénégal. Analyse statistique des paramètres de croissance et de morphométrie équine.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 06 & 07 — VEILLE & PUBLICATIONS (DOCUMENTS PDF) -->
+        <!-- 07 — RÉFLEXIONS & DOCUMENTS PDF -->
         <section id="publications" class="py-20 px-4 sm:px-6 lg:px-8 bg-cream-100/50">
             <div class="max-w-6xl mx-auto space-y-16">
                 <!-- 06 Veille -->
@@ -505,9 +480,11 @@
                                 <span class="text-xs font-semibold text-slate-400">15 août 2025</span>
                                 <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf1_title">1. Transformation stratégique de la filière laitière sénégalaise</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="openPdfModal('Transformation stratégique de la filière laitière sénégalaise')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0">
+                            <!-- Remplacer '#' par le lien Google Drive / PDF réel -->
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
                                 <span data-i18n="btn_pdf">Consulter PDF</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                             </a>
                         </div>
 
@@ -517,9 +494,10 @@
                                 <span class="text-xs font-semibold text-slate-400">29 mai 2026</span>
                                 <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf2_title">2. 8 technologies révolutionnaires</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="openPdfModal('8 technologies révolutionnaires')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
                                 <span data-i18n="btn_pdf">Consulter PDF</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                             </a>
                         </div>
 
@@ -529,9 +507,10 @@
                                 <span class="text-xs font-semibold text-slate-400">10 juillet 2026</span>
                                 <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf3_title">3. Protéines microbiennes et produits laitiers : une solution durable ?</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="openPdfModal('Protéines microbiennes et produits laitiers')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
                                 <span data-i18n="btn_pdf">Consulter PDF</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                             </a>
                         </div>
 
@@ -541,9 +520,10 @@
                                 <span class="text-xs font-semibold text-slate-400">13 juillet 2026</span>
                                 <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf4_title">4. La filière laitière au Sénégal vers la souveraineté alimentaire</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="openPdfModal('La filière laitière au Sénégal vers la souveraineté alimentaire')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
                                 <span data-i18n="btn_pdf">Consulter PDF</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                             </a>
                         </div>
 
@@ -553,9 +533,10 @@
                                 <span class="text-xs font-semibold text-slate-400">15 août 2026</span>
                                 <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base" data-i18n="pdf5_title">5. La révolution silencieuse : microbes et insectes dans nos assiettes</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="openPdfModal('La révolution silencieuse de l\'industrie laitière')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 text-sage-700 hover:bg-sage-100 text-xs font-semibold transition-colors shrink-0 group">
                                 <i class="fa-regular fa-file-pdf text-red-500"></i>
                                 <span data-i18n="btn_pdf">Consulter PDF</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                             </a>
                         </div>
                     </div>
@@ -585,12 +566,15 @@
                         </div>
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c1_title">Biodiversité et systèmes agroalimentaires — Introduction</h4>
                     </div>
+                    <!-- Boutons PDF et Badge Numérique avec flèches (Pas d'URL visible) -->
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('FAO Cert - Biodiversité')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        <a href="javascript:void(0)" onclick="openBadgeModal('FAO Digital Badge - 3994065122KM')" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -605,11 +589,13 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c2_title">Raising Awareness on Responsible Use of Antibiotics in Livestock</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('FAO Cert - Antibiotics')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        <a href="javascript:void(0)" onclick="openBadgeModal('FAO Digital Badge - 0479428079KM')" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -624,11 +610,13 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c3_title">Participation au Codex Alimentarius (Octobre 2026)</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('FAO Cert - Codex Participation')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        <a href="javascript:void(0)" onclick="openBadgeModal('FAO Digital Badge - 3779344916KM')" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -643,11 +631,13 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c4_title">Collaboration régionale au sein du Codex (Octobre 2026)</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('FAO Cert - Codex Regional')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        <a href="javascript:void(0)" onclick="openBadgeModal('FAO Digital Badge - 4290371082KM')" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -663,11 +653,13 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c5_title">Science et analyse des risques au sein du Codex</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('FAO Cert - Risk Science')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        <a href="javascript:void(0)" onclick="openBadgeModal('FAO Digital Badge - 4040145929KM')" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -682,11 +674,13 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c6_title">Introduction au Codex Alimentarius</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('FAO Cert - Intro Codex')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        <a href="javascript:void(0)" onclick="openBadgeModal('FAO Digital Badge - 5537443528KM')" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-solid fa-award text-amber-600"></i> <span data-i18n="btn_badge">Badge Numérique</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -701,8 +695,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c7_title">Certificat de langue turque — Niveau C2</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Certificat Turc C2 TÖMER')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -717,8 +712,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c8_title">Télédétection et SIG (ArcGIS, KoboToolbox)</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Certificat SIG NigLab')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -733,8 +729,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c9_title">Ambassadeurs bénévoles de la santé</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Attestation USHAS Health')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -749,8 +746,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c10_title">Suivi et évaluation des projets de développement</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Certificat AFD Projects')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -765,8 +763,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c11_title">Appui à la durabilité des systèmes pastoraux</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Attestation Pastoralisme')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -781,8 +780,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c12_title">Programme SEEDS — Entrepreneuriat & Innovation</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Attestation SEEDS DER')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -797,8 +797,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c13_title">Gouvernance & Lois dans les aires protégées</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Attestation IUCN PAPACO')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -813,8 +814,9 @@
                         <h4 class="font-serif font-bold text-slate-900 text-base" data-i18n="c14_title">Formation en Cuniculture</h4>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <a href="javascript:void(0)" onclick="openPdfModal('Attestation Cuniculture')" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cream-100 hover:bg-cream-200 text-slate-700 flex items-center gap-1.5 font-medium transition-colors group">
                             <i class="fa-regular fa-file-pdf text-red-500"></i> <span data-i18n="btn_pdf">Consulter PDF</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
@@ -967,17 +969,19 @@
                                 <div class="w-9 h-9 rounded-lg bg-sage-700 flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
                                 <span>Ankara, Türkiye</span>
                             </div>
-                            <a href="https://www.linkedin.com/in/kouna-sadiya-mbaye-037068239" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-cream-50 hover:text-sage-300 transition-colors">
+                            <a href="https://www.linkedin.com/in/kouna-sadiya-mbaye-037068239" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-cream-50 hover:text-sage-300 transition-colors group">
                                 <div class="w-9 h-9 rounded-lg bg-sage-700 flex items-center justify-center shrink-0"><i class="fa-brands fa-linkedin-in"></i></div>
                                 <span>Profil LinkedIn</span>
+                                <i class="fa-solid fa-arrow-right text-xs ml-auto transition-transform group-hover:translate-x-1"></i>
                             </a>
                         </div>
 
                         <div class="pt-6 border-t border-sage-700/60">
-                            <button onclick="downloadCV()" class="w-full py-3 rounded-xl bg-cream-50 text-sage-900 font-semibold text-xs sm:text-sm hover:bg-cream-200 transition-colors flex items-center justify-center gap-2 shadow">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-cream-50 text-sage-900 font-semibold text-xs sm:text-sm hover:bg-cream-200 transition-colors flex items-center justify-center gap-2 shadow group">
                                 <i class="fa-solid fa-file-arrow-down"></i>
                                 <span data-i18n="btn_cv">Télécharger mon CV (PDF)</span>
-                            </button>
+                                <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                            </a>
                         </div>
                     </div>
 
