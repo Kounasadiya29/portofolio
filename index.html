@@ -153,7 +153,7 @@ tailwind.config = { theme: { extend: {
 
   <!-- 06 RESSOURCES -->
   <section id="publications" class="space-y-6">
-    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">RÉFLEXIONS ET DOCUMENTS (PDF)</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">RÉFLEXIONS ET DOCUMENTS</h2></div>
     <p class="text-stone-600 text-sm">Cette rubrique rassemble des réflexions personnelles et des documents consacrés aux filières agroalimentaires, à la transformation laitière, aux innovations technologiques et aux enjeux de souveraineté alimentaire.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pub-list"></div>
   </section>
@@ -284,13 +284,15 @@ const education = [
   ['2019 — 2022', 'Diplôme d’ingénieur en élevage', 'ISFAR | Université de Bambey, Sénégal', 'Formation d’ingénierie appliquée aux sciences agropastorales et filières d’élevage.']
 ];
 
+/* [date, titre, id Drive, temps de lecture approximatif en minutes] — modifiez les minutes ici */
 const pubs = [
-  ['15 août 2025', '01. Transformation stratégique de la filière laitière sénégalaise', '1Js_EbvTFXunOKz21vMgJ1qJjJ7SF7V_w'],
-  ['29 mai 2026', '02. 8 technologies révolutionnaires', '1TroAWnt9YY9JojJKvXL1YiYWdxYvOiOA'],
-  ['10 juillet 2026', '03. Protéines microbiennes et produits laitiers : une solution durable pour l’alimentation de demain ?', '1KSkqU53MH9MVCEuwzxeVxv1SoFP5Z8MQ'],
-  ['13 juillet 2026', '04. La filière laitière au Sénégal vers la souveraineté alimentaire', '1YW3qV4xKSlOBiaA4MZKEGLjTfndWOP3w'],
-  ['15 août 2026', '05. La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes', '1dv2RpIFdMdpi2h8lQzkjDiuaNaiXZAXl']
+  ['15 août 2025', '01. Transformation stratégique de la filière laitière sénégalaise', '1Js_EbvTFXunOKz21vMgJ1qJjJ7SF7V_w', 8],
+  ['29 mai 2026', '02. 8 technologies révolutionnaires', '1TroAWnt9YY9JojJKvXL1YiYWdxYvOiOA', 6],
+  ['10 juillet 2026', '03. Protéines microbiennes et produits laitiers : une solution durable pour l’alimentation de demain ?', '1KSkqU53MH9MVCEuwzxeVxv1SoFP5Z8MQ', 10],
+  ['13 juillet 2026', '04. La filière laitière au Sénégal vers la souveraineté alimentaire', '1YW3qV4xKSlOBiaA4MZKEGLjTfndWOP3w', 8],
+  ['15 août 2026', '05. La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes', '1dv2RpIFdMdpi2h8lQzkjDiuaNaiXZAXl', 10]
 ];
+const readTime = { fr: m => `Lecture : ~${m} min`, en: m => `Reading time: ~${m} min`, tr: m => `Okuma süresi: ~${m} dk` };
 
 /* [organisme, titre, détail, lien, libellé du bouton, style plein?] */
 const certs = [
@@ -372,11 +374,17 @@ $('edu-list').innerHTML = education.map(([date, title, place, desc]) => `
     <p class="text-sm text-stone-600 pt-2">${esc(desc)}</p>
   </div>`).join('');
 
-$('pub-list').innerHTML = pubs.map(([date, title, id], i) => `
+$('pub-list').innerHTML = pubs.map(([date, title, id, min], i) => `
   <div class="card space-y-3 flex flex-col justify-between ${i === pubs.length - 1 ? 'md:col-span-2' : ''}">
-    <div><span class="text-xs font-bold text-sage-500">${date}</span><h3 class="font-bold text-sage-900 text-base mt-1">${esc(title)}</h3></div>
+    <div>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+        <span class="font-bold text-sage-500">${date}</span>
+        <span class="flex items-center text-stone-500"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1"></i><span class="read-time" data-min="${min}">${readTime.fr(min)}</span></span>
+      </div>
+      <h3 class="font-bold text-sage-900 text-base mt-1">${esc(title)}</h3>
+    </div>
     <a ${ext} href="${dv(id)}" class="btn-soft btn-hover-arrow ${i === pubs.length - 1 ? 'w-full sm:w-auto sm:self-start gap-4' : ''}">
-      <span class="flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i>Consulter le document (PDF)</span>
+      <span class="flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i>Consulter le document</span>
       <i data-lucide="arrow-right" class="w-4 h-4 arrow-icon transition-transform"></i>
     </a>
   </div>`).join('');
@@ -442,6 +450,7 @@ function setLanguage(lang) {
   $('hero-btn-cv').textContent = t.cv;
   $('about-title').textContent = t.about;
   $('about-interests-title').textContent = t.interests;
+  document.querySelectorAll('.read-time').forEach(el => { el.textContent = readTime[lang](el.dataset.min); });
   updateToggleText();
 }
 
