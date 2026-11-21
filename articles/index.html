@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kouna Sadiya Mbaye — Portfolio Professionnel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://unpkg.com/lucide@0.468.0"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: {
+    sage: { 50:'#f4f7f4',100:'#e3eae3',200:'#c7d6c7',500:'#5a7862',700:'#384f3e',800:'#2c3e31',900:'#1e2b22' },
+    sand: { 50:'#faf8f5',100:'#f3efe6',200:'#e5decb' }
+  },
+  fontFamily: { serif:['Playfair Display','serif'], sans:['Plus Jakarta Sans','sans-serif'] }
+}}}
+</script>
+<style type="text/tailwindcss">
+  html { scroll-padding-top: 6rem; }
+  .glass-panel { background: rgba(255,255,255,.85); backdrop-filter: blur(12px); border: 1px solid rgba(227,234,227,.6); }
+  .card { @apply glass-panel p-6 rounded-xl shadow-sm; }
+  .sec-head { @apply flex items-center space-x-3; }
+  .sec-num { @apply text-xs font-bold text-sage-500 tracking-wider; }
+  .sec-title { @apply text-2xl md:text-3xl font-serif font-bold text-sage-900; }
+  .pill { @apply text-xs font-bold text-sage-700 bg-sage-100 px-3 py-1 rounded-full inline-block; }
+  .sub { @apply text-xs font-semibold text-sage-700; }
+  .list { @apply text-sm text-stone-600 space-y-1.5 list-disc list-inside; }
+  .btn-soft { @apply inline-flex items-center justify-between px-3.5 py-2 rounded-lg bg-sage-50 text-sage-800 text-xs font-medium hover:bg-sage-100 transition border border-sage-200; }
+  .btn-hover-arrow:hover .arrow-icon { transform: translateX(4px); }
+  .nav-link { @apply hover:text-sage-700 transition; }
+</style>
+</head>
+<body class="bg-sand-50 text-stone-800 font-sans selection:bg-sage-200">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-sage-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-3">
+    <a href="#hero" class="text-lg sm:text-xl font-serif font-bold text-sage-900 tracking-wide">Kouna Sadiya Mbaye</a>
+
+    <nav class="hidden xl:flex items-center space-x-5 text-sm font-medium text-stone-600" id="desktop-nav"></nav>
+
+    <div class="flex items-center space-x-2">
+      <div class="bg-stone-100 p-1 rounded-full border border-sage-200 flex items-center">
+        <button onclick="setLanguage('fr')" id="btn-fr" class="px-3 py-1 rounded-full text-xs font-semibold transition">FR</button>
+        <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 rounded-full text-xs font-semibold transition">EN</button>
+        <button onclick="setLanguage('tr')" id="btn-tr" class="px-3 py-1 rounded-full text-xs font-semibold transition">TR</button>
+      </div>
+      <button id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" class="xl:hidden p-2 rounded-lg hover:bg-sage-100 transition">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="hidden xl:hidden border-t border-sage-100 bg-white/95 px-6 py-4 grid grid-cols-2 gap-3 text-sm font-medium text-stone-600"></nav>
+</header>
+
+<main class="pt-28 pb-16 max-w-6xl mx-auto px-6 space-y-24">
+
+  <!-- HERO -->
+  <section id="hero" class="text-center pt-10 pb-6 space-y-6">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-sage-900 tracking-tight leading-tight">KOUNA SADIYA MBAYE</h1>
+    <p class="text-xs md:text-sm uppercase tracking-widest font-semibold text-sage-700 max-w-3xl mx-auto">
+      TECHNOLOGIE LAITIÈRE | BIOTECHNOLOGIE | QUALITÉ ET SÉCURITÉ ALIMENTAIRE | RECHERCHE, DÉVELOPPEMENT ET INNOVATION
+    </p>
+    <p class="text-stone-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+      Spécialisée dans la transformation, la valorisation des produits laitiers et la sécurité sanitaire des aliments. Orientée vers la recherche, l'optimisation des procédés et la formulation agroalimentaire.
+    </p>
+    <div class="pt-4 flex flex-wrap justify-center gap-4">
+      <a href="#contact" class="px-6 py-3 rounded-full bg-sage-700 text-white font-medium hover:bg-sage-800 transition shadow-md flex items-center space-x-2">
+        <i data-lucide="mail" class="w-4 h-4"></i><span id="hero-btn-contact">Me contacter</span>
+      </a>
+      <a id="hero-cv-btn" target="_blank" rel="noopener noreferrer" href="#" class="px-6 py-3 rounded-full bg-sage-100 text-sage-900 border border-sage-200 font-medium hover:bg-sage-200 transition shadow-sm flex items-center space-x-2 btn-hover-arrow">
+        <i data-lucide="file-text" class="w-4 h-4"></i><span id="hero-btn-cv">Télécharger mon CV (PDF)</span>
+        <i data-lucide="arrow-right" class="w-4 h-4 arrow-icon transition-transform"></i>
+      </a>
+    </div>
+    <div class="pt-8 flex flex-wrap justify-center items-center gap-6 text-xs text-stone-500">
+      <span class="flex items-center"><i data-lucide="map-pin" class="w-4 h-4 mr-1 text-sage-500"></i> Ankara, Türkiye</span>
+      <span class="flex items-center"><i data-lucide="graduation-cap" class="w-4 h-4 mr-1 text-sage-500"></i> Université d’Ankara</span>
+      <span class="flex items-center"><i data-lucide="globe" class="w-4 h-4 mr-1 text-sage-500"></i> FR / EN / TR (C2)</span>
+    </div>
+  </section>
+
+  <!-- 01 À PROPOS -->
+  <section id="about" class="glass-panel p-8 md:p-10 rounded-2xl shadow-sm space-y-6">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title" id="about-title">À PROPOS</h2></div>
+    <p class="text-stone-700 leading-relaxed text-lg">Titulaire d’un Master en biotechnologie et actuellement en Master de technologie laitière à l’Université d’Ankara, je me spécialise dans la transformation et la valorisation des produits laitiers.</p>
+    <p class="text-stone-700 leading-relaxed">Je m’intéresse particulièrement au contrôle qualité, à la sécurité alimentaire, aux produits fermentés et au développement de nouvelles formulations. Je souhaite contribuer à des projets de recherche et développement, d’innovation et d’amélioration des procédés dans l’industrie laitière et agroalimentaire.</p>
+    <div class="bg-sage-50 p-4 rounded-xl border-l-4 border-sage-500 text-stone-700 text-sm">
+      <strong>Mobilité internationale :</strong> Ouverte aux opportunités professionnelles et aux stages en Europe et à l’étranger.
+    </div>
+    <div class="pt-4">
+      <h3 class="font-serif font-bold text-sage-900 mb-3" id="about-interests-title">Postes et domaines d’intérêt :</h3>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-stone-600" id="interests"></ul>
+    </div>
+  </section>
+
+  <!-- 02 EXPÉRIENCES -->
+  <section id="experience" class="space-y-8">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">EXPÉRIENCES PROFESSIONNELLES</h2></div>
+    <div class="relative border-l-2 border-sage-200 ml-4 sm:ml-40 space-y-10 pl-6 sm:pl-8" id="exp-list"></div>
+  </section>
+
+  <!-- 03 COMPÉTENCES -->
+  <section id="skills" class="space-y-6">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">COMPÉTENCES</h2></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="skills-list"></div>
+  </section>
+
+  <!-- 04 FORMATION -->
+  <section id="education" class="space-y-6">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">FORMATION ACADÉMIQUE</h2></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="edu-list"></div>
+  </section>
+
+  <!-- 05 RECHERCHES -->
+  <section id="research" class="space-y-6">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">RECHERCHES ET TRAVAUX SCIENTIFIQUES</h2></div>
+    <div class="space-y-4">
+      <div class="card border-l-4 !border-l-sage-700 space-y-3">
+        <span class="pill">Mémoire de Master — En cours</span>
+        <h3 data-k="m1" class="text-lg font-bold text-sage-900">Production et évaluation d’un yaourt brassé probiotique à la mangue enrichi en levure nutritionnelle issue de la biomasse de Saccharomyces cerevisiae</h3>
+        <ul class="list">
+          <li>Mise au point des formulations et fabrication du produit.</li>
+          <li>Évaluation des propriétés physico-chimiques, rhéologiques, microbiologiques, antioxydantes et sensorielles.</li>
+          <li>Suivi de l’évolution des caractéristiques du produit au cours du stockage.</li>
+        </ul>
+      </div>
+      <div class="card border-l-4 !border-l-sage-500 space-y-3">
+        <span class="pill">Séminaire — 2025</span>
+        <h3 class="text-lg font-bold text-sage-900">Utilisation des sources de protéines microbiennes dans le lait et les produits laitiers et évaluation des pratiques de production</h3>
+        <ul class="list">
+          <li>Étude des sources de protéines microbiennes et de leur utilisation potentielle dans les matrices laitières.</li>
+          <li>Analyse de leurs caractéristiques et de leurs applications dans le développement de produits alimentaires.</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="card space-y-2">
+          <span class="text-xs font-bold text-stone-500">Mémoire de Master — 2024</span>
+          <h4 data-k="m2" class="font-bold text-stone-800 text-sm">Évaluation des pratiques d’hygiène de la traite et de la qualité du lait cru de chamelle (Camelus dromedarius)</h4>
+          <p class="text-xs text-stone-500">Cas de la ferme laitière Habsou à Youri, Niger.</p>
+        </div>
+        <div class="card space-y-2">
+          <span class="text-xs font-bold text-stone-500">Mémoire de Licence — 2022</span>
+          <h4 class="font-bold text-stone-800 text-sm">Étude comparative de méthodes morphométriques d’estimation du poids chez le poney Mbayar</h4>
+          <p class="text-xs text-stone-500">Bambey, Sénégal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 RESSOURCES -->
+  <section id="publications" class="space-y-6">
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">RÉFLEXIONS ET DOCUMENTS</h2></div>
+    <p class="text-stone-600 text-sm">Cette rubrique rassemble des réflexions personnelles et des documents consacrés aux filières agroalimentaires, à la transformation laitière, aux innovations technologiques et aux enjeux de souveraineté alimentaire.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pub-list"></div>
+  </section>
+
+  <!-- 07 CERTIFICATIONS -->
+  <section id="certifications" class="space-y-6">
+    <div class="sec-head">
+      <span class="sec-num">07</span>
+      <h2 class="sec-title">CERTIFICATIONS ET ENGAGEMENTS <span class="text-sm font-sans font-medium text-sage-500">(15)</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="cert-main"></div>
+    <div id="extra-certifications" class="hidden pt-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="cert-extra"></div>
+    </div>
+    <div class="text-center pt-2">
+      <button onclick="toggleCertifications()" id="cert-toggle-btn" aria-expanded="false" class="px-6 py-2.5 rounded-full bg-sage-100 text-sage-800 text-xs font-bold hover:bg-sage-200 transition border border-sage-200 inline-flex items-center space-x-2">
+        <span id="cert-toggle-text">Voir plus (11 autres certifications)</span>
+        <i data-lucide="chevron-down" id="cert-toggle-icon" class="w-4 h-4 transition-transform"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- 08 PROJETS -->
+  <section id="projects" class="space-y-6">
+    <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">PROJETS SÉLECTIONNÉS</h2></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card space-y-2">
+        <span class="pill">Janvier 2022</span>
+        <h3 class="font-bold text-sage-900 text-base">GREEN CORNER — 3e lauréate du MAENUC</h3>
+        <p class="sub">Université de Bambey</p>
+        <p class="text-sm text-stone-600 pt-1">Participation à un projet entrepreneurial sélectionné dans le cadre du Marathon Entreprendre Université Communauté.</p>
+      </div>
+      <div class="card space-y-2">
+        <span class="pill">Août 2022</span>
+        <h3 class="font-bold text-sage-900 text-base">RABBIT INNOVATION — Finaliste POESAM</h3>
+        <p class="sub">Prix Orange de l’Entrepreneur Social</p>
+        <p class="text-sm text-stone-600 pt-1">Projet entrepreneurial sélectionné parmi les trois finalistes du concours POESAM en Afrique et au Moyen-Orient.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 MÉTHODES -->
+  <section id="methods" class="space-y-6">
+    <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">MÉTHODES ET OUTILS</h2></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="methods-list"></div>
+  </section>
+
+  <!-- 10 CONTACT -->
+  <section id="contact" class="glass-panel p-8 md:p-10 rounded-2xl shadow-sm space-y-8">
+    <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-title">CONTACT & COLLABORATIONS</h2></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <p class="text-stone-600 text-sm leading-relaxed">Je suis ouverte aux opportunités professionnelles, aux stages et aux collaborations dans les domaines de la technologie laitière, de la qualité et de la R&amp;D agroalimentaire.</p>
+        <div class="space-y-4 text-sm" id="contact-list"></div>
+      </div>
+
+      <!-- Remplacez YOUR_FORM_ID par votre identifiant Formspree (https://formspree.io) -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 bg-sand-50 p-6 rounded-xl border border-sage-100">
+        <div>
+          <label for="f-name" class="block text-xs font-bold text-stone-600 uppercase tracking-wider mb-1">Nom complet</label>
+          <input id="f-name" type="text" name="name" required class="w-full px-4 py-2.5 rounded-lg border border-sage-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+        </div>
+        <div>
+          <label for="f-email" class="block text-xs font-bold text-stone-600 uppercase tracking-wider mb-1">Votre E-mail</label>
+          <input id="f-email" type="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-sage-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+        </div>
+        <div>
+          <label for="f-msg" class="block text-xs font-bold text-stone-600 uppercase tracking-wider mb-1">Message</label>
+          <textarea id="f-msg" name="message" rows="4" required class="w-full px-4 py-2.5 rounded-lg border border-sage-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-sage-500"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-lg bg-sage-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-sage-800 transition shadow-md">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-sage-100 bg-sand-50 py-8 text-center text-xs text-stone-500">
+  <p>© 2026 Kouna Sadiya Mbaye. Tous droits réservés.</p>
+</footer>
+
+<script>
+/* ---------- DONNÉES ---------- */
+const D = 'https://drive.google.com/file/d/';
+const dv = id => `${D}${id}/view?usp=drive_link`;
+
+const cvLinks = {
+  fr: dv('1d3q8jxZm9trnVkJXZIOAeBWfdxiPRRzc'),
+  en: `${D}1U_-AOkQIol43oaKkBHzAe4pGFXsGWWtA/view?usp=sharing`,
+  tr: `${D}1CtyCJm8g8FS-FJO_2qtv3zPwtpoG3gyE/view?usp=sharing`
+};
+
+const interests = [
+  'Assistante qualité — Lait et produits laitiers',
+  'Assistante de laboratoire — Analyses physico-chimiques et microbiologiques',
+  'Assistante R&D — Développement et formulation de produits alimentaires',
+  'Assistante en innovation et optimisation des procédés',
+  'Technologie laitière — Transformation du lait et produits fermentés'
+];
+
+const experiences = [
+  ['MAI 2023 — AOÛT 2023', 'Stagiaire — Hygiène et qualité du lait', 'Ferme laitière Habsou | Niamey, Niger', [
+    'Évaluation des pratiques d’hygiène lors de la traite et du conditionnement du lait cru.',
+    'Observation des pratiques susceptibles d’influencer la qualité et la conservation du lait.',
+    'Analyse des pratiques de production au regard des bonnes pratiques d’hygiène (BPH).']],
+  ['MARS 2023 — AVRIL 2023', 'Stagiaire — Agroalimentaire, hygiène et qualité', 'Marina Market | Niamey, Niger', [
+    'Participation à la préparation et à la transformation de produits de boucherie-charcuterie.',
+    'Application des pratiques d’hygiène et de manipulation des matières premières et des produits finis.',
+    'Participation au contrôle de la qualité et au respect des conditions de production.']],
+  ['JUILLET 2022 — SEPT 2022', 'Responsable adjointe — Clinique et laboratoire vétérinaire', 'Clinique et laboratoire vétérinaire | Diamniadio, Sénégal', [
+    'Réalisation d’analyses microbiologiques et d’antibiogrammes.',
+    'Participation au diagnostic des maladies infectieuses.',
+    'Appui à la gestion technique d’une ferme laitière et avicole.']],
+  ['2019 — 2022', 'Stages et expériences pratiques en médecine vétérinaire et élevage', 'Kaffrine, Bambey et Dakar | Sénégal', [
+    'Participation au suivi sanitaire des animaux en clinique et en élevage.',
+    'Observation et participation aux activités de diagnostic et de prévention des maladies.',
+    'Initiation aux mesures de biosécurité et aux pratiques de suivi sanitaire.']]
+];
+
+const skills = [
+  ['flask-conical', 'Technologie laitière', ['Transformation et valorisation du lait','Fabrication de produits laitiers fermentés','Technologie fromagère','Procédés de transformation laitière','Formulation et développement de produits']],
+  ['microscope', 'Analyses & Laboratoire', ['Analyses physico-chimiques & microbiologiques','Caractérisation des produits laitiers','Évaluation sensorielle','Suivi de la stabilité des produits','Application de protocoles expérimentaux']],
+  ['shield-check', 'Qualité & Hygiène', ['Contrôle de la qualité des produits alimentaires','Bonnes pratiques d’hygiène (BPH)','Hygiène de la traite et du conditionnement du lait','Contrôle des matières premières et finies','Manipulation et conservation des aliments']]
+];
+
+const education = [
+  ['2025 — 2027', 'Master en technologie laitière — En cours', 'Université d’Ankara | Türkiye', 'Formation spécialisée dans les technologies de transformation du lait, les produits laitiers, leurs procédés de fabrication et l’évaluation de leur qualité.'],
+  ['2022 — 2024', 'Master en biotechnologie', 'CERPP | Niamey, Niger', 'Production et valorisation des produits pastoraux (lait, viande, cuirs et peaux).'],
+  ['2019 — 2022', 'Diplôme d’ingénieur en élevage', 'ISFAR | Université de Bambey, Sénégal', 'Formation d’ingénierie appliquée aux sciences agropastorales et filières d’élevage.']
+];
+
+/* ===== RÉFLEXIONS ET DOCUMENTS — liste à remplir =====
+   Une ligne par document, séparées par une virgule :
+   ['date', 'titre', 'identifiant Drive du PDF', minutes de lecture, 'nom-de-la-page-article']
+   - 'identifiant Drive' = la partie entre /d/ et /view dans le lien Google Drive du PDF
+   - minutes et nom de page sont facultatifs : mettez 0 et '' si le document n'existe qu'en PDF
+   Exemples (à copier-coller entre les crochets) :
+     ['15 août 2025', 'Mon titre', '1AbCdEfGh...', 0, ''],
+     ['10 juillet 2026', 'Autre titre', '1XyZ...', 6, 'ma-page-article'],
+*/
+const pubs = [
+];
+const readTime = { fr: m => `Lecture : ~${m} min`, en: m => `Reading time: ~${m} min`, tr: m => `Okuma süresi: ~${m} dk` };
+
+/* [organisme, titre, détail, lien, libellé du bouton, style plein?] */
+const certs = [
+  ['Alison Certification', 'Hazard Analysis Critical Control Points (HACCP)', 'ID : 5690-61676269', 'https://alison.com/verify/ac2c01f27b', 'Vérifier l’attestation →', true],
+  ['FAO e-learning Academy', 'Biodiversité et systèmes agroalimentaires — Introduction', 'ID : 3994065122KM', dv('1DidHyXjMVc-qDbIIMbdsW7WMrOlVKEYC'), 'Consulter le certificat (PDF) →'],
+  ['FAO e-learning Academy', 'Raising Awareness on the Responsible Use of Antibiotics in Livestock', 'ID : 0479428079KM', dv('1fE6Mq4MjvnzuNbJaQU3z0eXoGqeGA_l9'), 'Consulter le certificat (PDF) →'],
+  ['FAO e-learning Academy — Octobre 2026', 'Participation au Codex', 'ID : 3779344916KM', dv('1Pu8CZrbmJSakG5W3qAal2wCTfOAprxaE'), 'Consulter le certificat (PDF) →'],
+  ['FAO e-learning Academy — Octobre 2026', 'Collaboration régionale au sein du Codex', 'ID : 4290371082KM', dv('1gAfEQybmcZMoT1TmXwukuRYdpOqHUyj9'), 'Consulter le certificat (PDF) →'],
+  ['FAO e-learning Academy — Octobre 2026', 'Science et analyse des risques au sein du Codex', 'ID : 4040145929KM', dv('1LbpQ6Xm7ckVPg59DnUc509rEuC_SnVbl'), 'Consulter le certificat (PDF) →'],
+  ['FAO e-learning Academy — Octobre 2026', 'Introduction au Codex', 'ID : 5537443528KM', dv('1qxIxdAShvUph1ARsKPiHH0C2m3pLCAdP'), 'Consulter le certificat (PDF) →'],
+  ['Cabinet NigLab — Avril 2026', 'Télédétection et systèmes d’information géographique (SIG)', 'ArcGIS, analyse spatiale, géoréférencement, numérisation et collecte de données sur le terrain avec KoboToolbox.', null, null],
+  ['USHAŞ / Ministère de la Santé de Türkiye — Avril 2026', 'Ambassadeurs bénévoles de la santé', 'Sensibilisation et promotion de la santé publique.', dv('1nOWt3ITt2wxHojW0zFrXfDXeVPyvlEX3'), 'Consulter l’attestation (PDF) →'],
+  ['Agence française de développement (AFD) — Février 2025', 'Suivi et évaluation des projets de développement', 'Cycle de projet, indicateurs de performance, collecte et analyse de données, évaluation de l’impact.', dv('1yfn08dcexnluZ8xYOp8kLa1aZ1FEs7Wi'), 'Consulter le certificat (PDF) →'],
+  ['TÖMER, Université d’Ankara, Türkiye — 2023–2024', 'Certificat de langue turque — Niveau C2', '', dv('1kf8VdF6YI8xOQgpNuYpYajwHGfw4sSue'), 'Consulter le certificat (PDF) →'],
+  ['Agricultural Expertise Center — Juin 2023', 'Appui à la durabilité des systèmes pastoraux', 'Gestion durable et résilience des systèmes d’élevage pastoral.', dv('1sviWOj5dgkdxmVVrEYGD5leU2-ySvBIF'), 'Consulter l’attestation (PDF) →'],
+  ['Délégation générale à l’Entreprenariat Rapide (DER/FJ) — Août 2022', 'Programme SEEDS — Entrepreneuriat et innovation', 'Entrepreneuriat, innovation et développement de projets.', dv('1aIIjO5ABlECW8Cl_5-aCoMD5k6o6LRmZ'), 'Consulter l’attestation (PDF) →'],
+  ['IUCN-PAPACO — Décembre 2020', 'Application des lois et gouvernance dans les aires protégées — MOOC', 'Gouvernance, cadres juridiques et conservation.', dv('1kZap-SBKWOTUT-SwsoVNq-9gH00twyrl'), 'Consulter la formation (PDF) →'],
+  ['Agroconseil ONG — Septembre 2020', 'Cuniculture', 'Élevage, gestion et production cunicole.', dv('1L95b6OR68Qh_HMp5WMOArO0eLZSXZIR6'), 'Consulter l’attestation (PDF) →']
+];
+
+const methods = [
+  ['Analyses & Contrôle Qualité', ['Analyses physico-chimiques du lait et des produits laitiers.','Mesure du pH et détermination de l’acidité titrable.','Analyses microbiologiques et suivi de la qualité sanitaire.','Évaluation sensorielle des produits et suivi du stockage.']],
+  ['Technologie & Transformation Laitière', ['Préparation et traitement du lait, yaourts et fromages.','Fermentation lactique et coagulation enzymatique.','Formulation et enrichissement de produits laitiers.']],
+  ['Hygiène & Sécurité Alimentaire', ['Application des bonnes pratiques d’hygiène (BPH).','Utilisation de l’approche des 5M (Ishikawa) et HACCP.','Prélèvement, préparation d’échantillons et gestion des risques.']],
+  ['Outils Numériques & Bibliographiques', ['MS Word, Excel (traitement de données), PowerPoint.','Minitab (analyse statistique).','Mendeley, Zotero, Google Scholar, Turnitin et Compilatio.']]
+];
+
+const contacts = [
+  ['mailto:kounasadiyambaye29@gmail.com', 'mail', 'E-mail', 'kounasadiyambaye29@gmail.com'],
+  ['tel:+905315912911', 'phone', 'Téléphone', '+90 531 591 29 11'],
+  [null, 'map-pin', 'Localisation', 'Ankara, Türkiye'],
+  ['https://www.linkedin.com/in/kouna-sadiya-mbaye-037068239', 'linkedin', 'LinkedIn', 'kouna-sadiya-mbaye']
+];
+
+/* ---------- TRADUCTIONS (navigation et éléments principaux) ---------- */
+const translations = {
+  fr: { nav: ['À propos','Expériences','Compétences','Formation','Recherches','Ressources','Certifications','Contact'],
+        contact: 'Me contacter', cv: 'Télécharger mon CV (PDF)', about: 'À PROPOS', interests: 'Postes et domaines d’intérêt :',
+        more: 'Voir plus (11 autres certifications)', less: 'Voir moins' },
+  en: { nav: ['About','Experience','Skills','Education','Research','Resources','Certifications','Contact'],
+        contact: 'Contact Me', cv: 'Download CV (PDF)', about: 'ABOUT ME', interests: 'Positions & Fields of Interest:',
+        more: 'Show more (11 additional certifications)', less: 'Show less' },
+  tr: { nav: ['Hakkımda','Deneyim','Beceriler','Eğitim','Araştırma','Kaynaklar','Sertifikalar','İletişim'],
+        contact: 'İletişime Geç', cv: 'CV İndir (PDF)', about: 'HAKKIMDA', interests: 'İlgilenilen Pozisyonlar ve Alanlar:',
+        more: 'Daha fazla göster (11 sertifika daha)', less: 'Daha az göster' }
+};
+const navTargets = ['about','experience','skills','education','research','publications','certifications','contact'];
+
+/* ---------- RENDU ---------- */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const ext = 'target="_blank" rel="noopener noreferrer"';
+
+$('interests').innerHTML = interests.map(t =>
+  `<li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-sage-500 mr-2 shrink-0"></i><span>${esc(t)}</span></li>`).join('');
+
+$('exp-list').innerHTML = experiences.map(([date, title, place, items]) => `
+  <div class="relative">
+    <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-sage-500 border-4 border-sand-50 z-10"></div>
+    <div class="sm:absolute sm:-left-52 sm:top-1 text-xs font-bold uppercase tracking-wider text-sage-700 mb-2 sm:mb-0 sm:text-right sm:w-36">${date}</div>
+    <div class="card space-y-3">
+      <h3 class="text-lg font-bold text-sage-900">${esc(title)}</h3>
+      <p class="sub">${esc(place)}</p>
+      <ul class="list">${items.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+    </div>
+  </div>`).join('');
+
+$('skills-list').innerHTML = skills.map(([icon, title, items]) => `
+  <div class="card space-y-4">
+    <div class="flex items-center space-x-3 text-sage-800"><i data-lucide="${icon}" class="w-6 h-6"></i><h3 class="font-serif font-bold text-lg">${esc(title)}</h3></div>
+    <ul class="text-sm text-stone-600 space-y-2">${items.map(i => `<li>• ${esc(i)}</li>`).join('')}</ul>
+  </div>`).join('');
+
+$('edu-list').innerHTML = education.map(([date, title, place, desc]) => `
+  <div class="card space-y-2">
+    <span class="pill">${date}</span>
+    <h3 class="font-serif font-bold text-lg text-sage-900">${esc(title)}</h3>
+    <p class="sub">${esc(place)}</p>
+    <p class="text-sm text-stone-600 pt-2">${esc(desc)}</p>
+  </div>`).join('');
+
+$('pub-list').innerHTML = pubs.map(([date, title, id, min, slug], i) => `
+  <div class="card space-y-3 flex flex-col justify-between ${i === pubs.length - 1 && pubs.length % 2 ? 'md:col-span-2' : ''}">
+    <div>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+        <span class="font-bold text-sage-500">${date}</span>
+        ${min ? `<span class="flex items-center text-stone-500"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1"></i><span class="read-time" data-min="${min}">${readTime.fr(min)}</span></span>` : ''}
+      </div>
+      <h3 class="font-bold text-sage-900 text-base mt-1">${esc(title)}</h3>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+      ${slug ? `
+      <a href="articles/${slug}.html" class="btn-soft btn-hover-arrow gap-4">
+        <span class="flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-2"></i>Lire l’article</span>
+        <i data-lucide="arrow-right" class="w-4 h-4 arrow-icon transition-transform"></i>
+      </a>` : `
+      <a ${ext} href="${dv(id)}" class="btn-soft btn-hover-arrow gap-4">
+        <span class="flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i>Consulter le document</span>
+        <i data-lucide="arrow-right" class="w-4 h-4 arrow-icon transition-transform"></i>
+      </a>`}
+    </div>
+  </div>`).join('');
+
+const certCard = ([org, title, detail, href, label, solid]) => `
+  <div class="card !p-5 flex flex-col justify-between space-y-3">
+    <div>
+      <span class="text-xs font-bold text-sage-600">${esc(org)}</span>
+      <h3 class="font-bold text-sage-900 text-sm">${esc(title)}</h3>
+      ${detail ? `<p class="text-xs text-stone-500">${esc(detail)}</p>` : ''}
+    </div>
+    ${href ? `<a ${ext} href="${href}" class="${solid ? 'inline-flex items-center px-3.5 py-2 rounded-lg bg-sage-700 text-white text-xs font-medium hover:bg-sage-800 transition' : 'btn-soft'}"><span>${label}</span></a>` : ''}
+  </div>`;
+$('cert-main').innerHTML = certs.slice(0, 4).map(certCard).join('');
+$('cert-extra').innerHTML = certs.slice(4).map(certCard).join('');
+
+$('methods-list').innerHTML = methods.map(([title, items]) => `
+  <div class="card space-y-3">
+    <h3 class="font-serif font-bold text-sage-900 text-lg">${esc(title)}</h3>
+    <ul class="list">${items.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+  </div>`).join('');
+
+$('contact-list').innerHTML = contacts.map(([href, icon, label, value]) => {
+  const inner = `
+    <div class="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center text-sage-700 shrink-0"><i data-lucide="${icon}" class="w-5 h-5"></i></div>
+    <div><span class="text-xs text-stone-400 block">${label}</span><span class="font-medium break-all">${esc(value)}</span></div>`;
+  return href
+    ? `<a ${href.startsWith('http') ? ext : ''} href="${href}" class="flex items-center space-x-3 text-stone-700 hover:text-sage-700 transition">${inner}</a>`
+    : `<div class="flex items-center space-x-3 text-stone-700">${inner}</div>`;
+}).join('');
+
+/* ---------- MENUS ---------- */
+function renderNav(lang) {
+  const links = navTargets.map((id, i) =>
+    `<a href="#${id}" class="nav-link">${translations[lang].nav[i]}</a>`).join('');
+  $('desktop-nav').innerHTML = links;
+  $('mobile-nav').innerHTML = links;
+}
+
+const menuBtn = $('menu-btn'), mobileNav = $('mobile-nav');
+menuBtn.addEventListener('click', () => {
+  const open = mobileNav.classList.toggle('hidden') === false;
+  menuBtn.setAttribute('aria-expanded', open);
+});
+mobileNav.addEventListener('click', e => {
+  if (e.target.tagName === 'A') { mobileNav.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', false); }
+});
+
+/* ---------- LANGUE ---------- */
+let currentLang = 'fr';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  const t = translations[lang];
+  ['fr','en','tr'].forEach(l => {
+    $(`btn-${l}`).className = 'px-3 py-1 rounded-full text-xs font-semibold transition ' +
+      (l === lang ? 'bg-sage-700 text-white shadow' : 'text-stone-600 hover:text-sage-700');
+  });
+  document.documentElement.lang = lang;
+  $('hero-cv-btn').href = cvLinks[lang];
+  renderNav(lang);
+  $('hero-btn-contact').textContent = t.contact;
+  $('hero-btn-cv').textContent = t.cv;
+  $('about-title').textContent = t.about;
+  $('about-interests-title').textContent = t.interests;
+  document.querySelectorAll('.read-time').forEach(el => { el.textContent = readTime[lang](el.dataset.min); });
+  applyHtml(lang);
+  applyDict(lang);
+  updateToggleText();
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+}
+
+/* ---------- CERTIFICATIONS ---------- */
+function updateToggleText() {
+  const hidden = $('extra-certifications').classList.contains('hidden');
+  $('cert-toggle-text').textContent = hidden ? translations[currentLang].more : translations[currentLang].less;
+}
+
+function toggleCertifications() {
+  const box = $('extra-certifications');
+  const nowHidden = box.classList.toggle('hidden');
+  $('cert-toggle-icon').style.transform = nowHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+  $('cert-toggle-btn').setAttribute('aria-expanded', !nowHidden);
+  updateToggleText();
+}
+
+
+/* ---------- TRADUCTION AUTOMATIQUE DU CONTENU ----------
+   Clé = début du texte français ; le plus long préfixe correspondant l'emporte. */
+const DICT = [
+['TECHNOLOGIE LAITIÈRE |','DAIRY TECHNOLOGY | BIOTECHNOLOGY | FOOD QUALITY AND SAFETY | RESEARCH, DEVELOPMENT AND INNOVATION','SÜT TEKNOLOJİSİ | BİYOTEKNOLOJİ | GIDA KALİTESİ VE GÜVENLİĞİ | ARAŞTIRMA, GELİŞTİRME VE İNOVASYON'],
+['Spécialisée dans la','Specialised in dairy processing and valorisation and food safety. Focused on research, process optimisation and food formulation.','Süt işleme ve değerlendirme ile gıda güvenliği alanında uzmanlaşmış; araştırma, proses optimizasyonu ve gıda formülasyonuna odaklanmış.'],
+['Université d’Ankara','Ankara University','Ankara Üniversitesi'],
+['Université d’Ankara |','Ankara University | Türkiye','Ankara Üniversitesi | Türkiye'],
+['Titulaire d’un Master','Holding a Master’s degree in biotechnology and currently pursuing a Master’s in dairy technology at Ankara University, I specialise in dairy processing and valorisation.','Biyoteknoloji yüksek lisans derecesine sahibim ve halen Ankara Üniversitesi’nde süt teknolojisi yüksek lisansı yapıyorum; süt ürünlerinin işlenmesi ve değerlendirilmesi alanında uzmanlaşıyorum.'],
+['Je m’intéresse particulièrement','I am particularly interested in quality control, food safety, fermented products and the development of new formulations. I wish to contribute to research and development, innovation and process improvement projects in the dairy and food industry.','Kalite kontrol, gıda güvenliği, fermente ürünler ve yeni formülasyonların geliştirilmesiyle özellikle ilgileniyorum. Süt ve gıda endüstrisinde Ar-Ge, inovasyon ve proses iyileştirme projelerine katkıda bulunmak istiyorum.'],
+['Mobilité internationale','International mobility:','Uluslararası hareketlilik:'],
+['Ouverte aux opportunités','Open to professional opportunities and internships in Europe and abroad.','Avrupa’da ve yurt dışında iş fırsatlarına ve stajlara açığım.'],
+['Assistante qualité','Quality assistant — Milk and dairy products','Kalite asistanı — Süt ve süt ürünleri'],
+['Assistante de laboratoire','Laboratory assistant — Physico-chemical and microbiological analyses','Laboratuvar asistanı — Fizikokimyasal ve mikrobiyolojik analizler'],
+['Assistante R&D','R&D assistant — Food product development and formulation','Ar-Ge asistanı — Gıda ürünü geliştirme ve formülasyonu'],
+['Assistante en innovation','Innovation and process optimisation assistant','İnovasyon ve proses optimizasyonu asistanı'],
+['Technologie laitière — Transformation','Dairy technology — Milk processing and fermented products','Süt teknolojisi — Süt işleme ve fermente ürünler'],
+['EXPÉRIENCES PROFESSIONNELLES','PROFESSIONAL EXPERIENCE','MESLEKİ DENEYİM'],
+['COMPÉTENCES','SKILLS','BECERİLER'],
+['FORMATION ACADÉMIQUE','ACADEMIC EDUCATION','AKADEMİK EĞİTİM'],
+['RECHERCHES ET TRAVAUX','RESEARCH AND SCIENTIFIC WORK','ARAŞTIRMA VE BİLİMSEL ÇALIŞMALAR'],
+['RÉFLEXIONS ET DOCUMENTS','REFLECTIONS AND DOCUMENTS','DÜŞÜNCELER VE BELGELER'],
+['CERTIFICATIONS ET ENGAGEMENTS','CERTIFICATIONS AND COMMITMENTS','SERTİFİKALAR VE TAAHHÜTLER'],
+['PROJETS SÉLECTIONNÉS','SELECTED PROJECTS','SEÇİLİ PROJELER'],
+['MÉTHODES ET OUTILS','METHODS AND TOOLS','YÖNTEMLER VE ARAÇLAR'],
+['CONTACT & COLLABORATIONS','CONTACT & COLLABORATIONS','İLETİŞİM VE İŞBİRLİKLERİ'],
+['MAI 2023','MAY 2023 — AUGUST 2023','MAYIS 2023 — AĞUSTOS 2023'],
+['MARS 2023','MARCH 2023 — APRIL 2023','MART 2023 — NİSAN 2023'],
+['JUILLET 2022','JULY 2022 — SEPT 2022','TEMMUZ 2022 — EYLÜL 2022'],
+['Stagiaire — Hygiène','Intern — Milk hygiene and quality','Stajyer — Süt hijyeni ve kalitesi'],
+['Stagiaire — Agroalimentaire','Intern — Food industry, hygiene and quality','Stajyer — Gıda sanayi, hijyen ve kalite'],
+['Responsable adjointe','Deputy manager — Veterinary clinic and laboratory','Müdür yardımcısı — Veteriner klinik ve laboratuvarı'],
+['Stages et expériences','Internships and practical experience in veterinary medicine and livestock farming','Veterinerlik ve hayvancılık alanında stajlar ve uygulamalı deneyimler'],
+['Ferme laitière Habsou |','Habsou dairy farm | Niamey, Niger','Habsou süt çiftliği | Niamey, Nijer'],
+['Clinique et laboratoire vétérinaire |','Veterinary clinic and laboratory | Diamniadio, Senegal','Veteriner klinik ve laboratuvarı | Diamniadio, Senegal'],
+['Kaffrine, Bambey','Kaffrine, Bambey and Dakar | Senegal','Kaffrine, Bambey ve Dakar | Senegal'],
+['Évaluation des pratiques d’hygiène lors','Assessment of hygiene practices during milking and packaging of raw milk.','Çiğ sütün sağımı ve ambalajlanması sırasındaki hijyen uygulamalarının değerlendirilmesi.'],
+['Observation des pratiques','Observation of practices likely to affect milk quality and shelf life.','Süt kalitesini ve muhafazasını etkileyebilecek uygulamaların gözlemlenmesi.'],
+['Analyse des pratiques de production','Analysis of production practices against good hygiene practices (GHP).','Üretim uygulamalarının iyi hijyen uygulamaları (İHU) açısından analizi.'],
+['Participation à la préparation','Participation in the preparation and processing of butchery and charcuterie products.','Kasap ve şarküteri ürünlerinin hazırlanması ve işlenmesine katılım.'],
+['Application des pratiques','Application of hygiene and handling practices for raw materials and finished products.','Hammadde ve nihai ürünlerin hijyen ve elleçleme uygulamalarının yürütülmesi.'],
+['Participation au contrôle','Participation in quality control and compliance with production conditions.','Kalite kontrolüne ve üretim koşullarına uyumun sağlanmasına katılım.'],
+['Réalisation d’analyses','Microbiological analyses and antibiograms.','Mikrobiyolojik analizler ve antibiyogramlar.'],
+['Participation au diagnostic','Participation in the diagnosis of infectious diseases.','Bulaşıcı hastalıkların teşhisine katılım.'],
+['Appui à la gestion technique','Support in the technical management of a dairy and poultry farm.','Bir süt ve kanatlı çiftliğinin teknik yönetimine destek.'],
+['Participation au suivi','Participation in animal health monitoring in clinics and farms.','Klinik ve çiftliklerde hayvan sağlığı takibine katılım.'],
+['Observation et participation','Observation of and participation in disease diagnosis and prevention activities.','Hastalık teşhisi ve önleme faaliyetlerinin gözlemlenmesi ve bunlara katılım.'],
+['Initiation aux mesures','Introduction to biosecurity measures and health monitoring practices.','Biyogüvenlik önlemlerine ve sağlık takibi uygulamalarına giriş.'],
+['Technologie laitière','Dairy technology','Süt teknolojisi'],
+['Analyses & Laboratoire','Analyses & Laboratory','Analizler ve Laboratuvar'],
+['Qualité & Hygiène','Quality & Hygiene','Kalite ve Hijyen'],
+['Transformation et valorisation','Milk processing and valorisation','Sütün işlenmesi ve değerlendirilmesi'],
+['Fabrication de produits laitiers','Manufacture of fermented dairy products','Fermente süt ürünleri üretimi'],
+['Technologie fromagère','Cheese technology','Peynir teknolojisi'],
+['Procédés de transformation','Dairy processing methods','Süt işleme prosesleri'],
+['Formulation et développement','Product formulation and development','Ürün formülasyonu ve geliştirme'],
+['Analyses physico-chimiques &','Physico-chemical & microbiological analyses','Fizikokimyasal ve mikrobiyolojik analizler'],
+['Caractérisation','Characterisation of dairy products','Süt ürünlerinin karakterizasyonu'],
+['Évaluation sensorielle','Sensory evaluation','Duyusal değerlendirme'],
+['Suivi de la stabilité','Product stability monitoring','Ürün stabilitesinin izlenmesi'],
+['Application de protocoles','Application of experimental protocols','Deneysel protokollerin uygulanması'],
+['Contrôle de la qualité des produits','Food product quality control','Gıda ürünlerinin kalite kontrolü'],
+['Bonnes pratiques d’hygiène','Good hygiene practices (GHP)','İyi hijyen uygulamaları (İHU)'],
+['Hygiène de la traite','Hygiene in milking and milk packaging','Sağım ve süt ambalajlama hijyeni'],
+['Contrôle des matières','Control of raw materials and finished products','Hammadde ve nihai ürün kontrolü'],
+['Manipulation et conservation','Food handling and preservation','Gıdaların elleçlenmesi ve muhafazası'],
+['Master en technologie laitière','Master’s in Dairy Technology — In progress','Süt Teknolojisi Yüksek Lisansı — Devam ediyor'],
+['Formation spécialisée','Specialised training in milk processing technologies, dairy products, their manufacturing processes and quality assessment.','Sütün işlenme teknolojileri, süt ürünleri, üretim prosesleri ve kalite değerlendirmesi konusunda uzmanlaşmış eğitim.'],
+['Master en biotechnologie','Master’s in Biotechnology','Biyoteknoloji Yüksek Lisansı'],
+['Production et valorisation des produits pastoraux','Production and valorisation of pastoral products (milk, meat, hides and skins).','Pastoral ürünlerin (süt, et, deri ve post) üretimi ve değerlendirilmesi.'],
+['Diplôme d’ingénieur','Engineering degree in animal science','Hayvancılık mühendisliği diploması'],
+['ISFAR |','ISFAR | University of Bambey, Senegal','ISFAR | Bambey Üniversitesi, Senegal'],
+['Formation d','Engineering training applied to agro-pastoral sciences and livestock sectors.','Agro-pastoral bilimlere ve hayvancılık sektörlerine uygulanan mühendislik eğitimi.'],
+['Mémoire de Master — En cours','Master’s thesis — In progress','Yüksek lisans tezi — Devam ediyor'],
+['Mémoire de Master — 2024','Master’s thesis — 2024','Yüksek lisans tezi — 2024'],
+['Mémoire de Licence','Bachelor’s thesis — 2022','Lisans tezi — 2022'],
+['Séminaire','Seminar — 2025','Seminer — 2025'],
+['Mise au point','Development of formulations and manufacture of the product.','Formülasyonların geliştirilmesi ve ürünün üretimi.'],
+['Évaluation des propriétés','Evaluation of physico-chemical, rheological, microbiological, antioxidant and sensory properties.','Fizikokimyasal, reolojik, mikrobiyolojik, antioksidan ve duyusal özelliklerin değerlendirilmesi.'],
+['Suivi de l’évolution','Monitoring of product characteristics during storage.','Depolama sırasında ürün özelliklerinin izlenmesi.'],
+['Étude des sources','Study of microbial protein sources and their potential use in dairy matrices.','Mikrobiyal protein kaynaklarının ve süt matrislerinde olası kullanımlarının incelenmesi.'],
+['Analyse de leurs caractéristiques','Analysis of their characteristics and applications in food product development.','Özelliklerinin ve gıda ürünü geliştirmedeki uygulamalarının analizi.'],
+['Cas de la ferme','Case of the Habsou dairy farm in Youri, Niger.','Nijer’in Youri kentindeki Habsou süt çiftliği örneği.'],
+['Bambey, Sénégal','Bambey, Senegal.','Bambey, Senegal.'],
+['Cette rubrique','This section gathers personal reflections and documents on agri-food sectors, dairy processing, technological innovations and food sovereignty issues.','Bu bölüm; tarım-gıda sektörleri, süt işleme, teknolojik yenilikler ve gıda egemenliği konularındaki kişisel düşünceleri ve belgeleri bir araya getirir.'],
+['15 août 2025','August 15, 2025','15 Ağustos 2025'],
+['29 mai 2026','May 29, 2026','29 Mayıs 2026'],
+['10 juillet 2026','July 10, 2026','10 Temmuz 2026'],
+['13 juillet 2026','July 13, 2026','13 Temmuz 2026'],
+['15 août 2026','August 15, 2026','15 Ağustos 2026'],
+['Lire l’article','Read the article','Makaleyi oku'],
+['Consulter le document','Open the document','Belgeyi aç'],
+['Version PDF','PDF version (in French)','PDF sürümü (Fransızca)'],
+['Utilisation des sources de protéines','Use of Microbial Protein Sources in Milk and Dairy Products and Evaluation of Production Practices','Mikrobiyal Protein Kaynaklarının Süt ve Süt Ürünlerinde Kullanımı ve Üretim Pratiklerinin Değerlendirilmesi'],
+['Étude comparative de méthodes','Comparative study of morphometric methods for estimating body weight in the Mbayar pony','Mbayar midillisinde canlı ağırlık tahmini için morfometrik yöntemlerin karşılaştırmalı incelenmesi'],
+['Vérifier l’attestation','Verify certificate →','Sertifikayı doğrula →'],
+['Consulter le certificat','View certificate (PDF) →','Sertifikayı görüntüle (PDF) →'],
+['Consulter l’attestation','View certificate (PDF) →','Belgeyi görüntüle (PDF) →'],
+['Consulter la formation','View course (PDF) →','Eğitimi görüntüle (PDF) →'],
+['Janvier 2022','January 2022','Ocak 2022'],
+['Août 2022','August 2022','Ağustos 2022'],
+['GREEN CORNER','GREEN CORNER — 3rd place winner of MAENUC','GREEN CORNER — MAENUC üçüncüsü'],
+['Université de Bambey','University of Bambey','Bambey Üniversitesi'],
+['Participation à un projet','Participation in an entrepreneurial project selected as part of the Marathon Entreprendre Université Communauté.','Marathon Entreprendre Université Communauté kapsamında seçilen bir girişimcilik projesine katılım.'],
+['RABBIT INNOVATION','RABBIT INNOVATION — POESAM finalist','RABBIT INNOVATION — POESAM finalisti'],
+['Prix Orange','Orange Social Entrepreneur Prize','Orange Sosyal Girişimci Ödülü'],
+['Projet entrepreneurial','Entrepreneurial project selected among the three finalists of the POESAM competition in Africa and the Middle East.','Afrika ve Orta Doğu’daki POESAM yarışmasının üç finalisti arasından seçilen girişimcilik projesi.'],
+['Analyses & Contrôle Qualité','Analyses & Quality Control','Analizler ve Kalite Kontrol'],
+['Technologie & Transformation','Dairy Technology & Processing','Süt Teknolojisi ve İşleme'],
+['Hygiène & Sécurité','Hygiene & Food Safety','Hijyen ve Gıda Güvenliği'],
+['Outils Numériques','Digital & Bibliographic Tools','Dijital ve Bibliyografik Araçlar'],
+['Analyses physico-chimiques du lait','Physico-chemical analyses of milk and dairy products.','Süt ve süt ürünlerinin fizikokimyasal analizleri.'],
+['Mesure du pH','pH measurement and titratable acidity determination.','pH ölçümü ve titrasyon asitliğinin belirlenmesi.'],
+['Analyses microbiologiques et suivi','Microbiological analyses and monitoring of sanitary quality.','Mikrobiyolojik analizler ve sağlık kalitesinin izlenmesi.'],
+['Évaluation sensorielle des produits','Sensory evaluation of products and storage monitoring.','Ürünlerin duyusal değerlendirmesi ve depolama takibi.'],
+['Préparation et traitement','Milk preparation and treatment, yoghurts and cheeses.','Süt hazırlama ve işleme, yoğurt ve peynir.'],
+['Fermentation lactique','Lactic fermentation and enzymatic coagulation.','Laktik fermantasyon ve enzimatik koagülasyon.'],
+['Formulation et enrichissement','Formulation and fortification of dairy products.','Süt ürünlerinin formülasyonu ve zenginleştirilmesi.'],
+['Application des bonnes pratiques','Application of good hygiene practices (GHP).','İyi hijyen uygulamalarının (İHU) uygulanması.'],
+['Utilisation de l’approche','Use of the 5M (Ishikawa) approach and HACCP.','5M (Ishikawa) yaklaşımı ve HACCP kullanımı.'],
+['Prélèvement','Sampling, sample preparation and risk management.','Numune alma, numune hazırlama ve risk yönetimi.'],
+['Je suis ouverte','I am open to professional opportunities, internships and collaborations in dairy technology, quality and food R&D.','Süt teknolojisi, kalite ve gıda Ar-Ge alanlarında iş fırsatlarına, stajlara ve işbirliklerine açığım.'],
+['E-mail','Email','E-posta'],
+['Téléphone','Phone','Telefon'],
+['Localisation','Location','Konum'],
+['Nom complet','Full name','Ad soyad'],
+['Votre E-mail','Your email','E-postanız'],
+['Message','Message','Mesaj'],
+['Envoyer le message','Send message','Mesajı gönder'],
+['© 2026','© 2026 Kouna Sadiya Mbaye. All rights reserved.','© 2026 Kouna Sadiya Mbaye. Tüm hakları saklıdır.'],
+['Production et évaluation d’un yaourt','Production and evaluation of a probiotic mango stirred yoghurt enriched with nutritional yeast derived from Saccharomyces cerevisiae biomass','Saccharomyces cerevisiae biyokütlesinden elde edilen besinsel maya ile zenginleştirilmiş probiyotik mangolu karıştırılmış yoğurdun üretimi ve değerlendirilmesi'],
+['Utilisation des sources de protéines','Use of microbial protein sources in milk and dairy products and evaluation of production practices','Süt ve süt ürünlerinde mikrobiyal protein kaynaklarının kullanımı ve üretim uygulamalarının değerlendirilmesi'],
+['Évaluation des pratiques d’hygiène de la traite','Evaluation of milking hygiene practices and the quality of raw camel milk (Camelus dromedarius)','Sağım hijyeni uygulamalarının ve dromeder deve (Camelus dromedarius) çiğ süt kalitesinin değerlendirilmesi'],
+['Étude comparative','Comparative study of morphometric methods for estimating body weight in the Mbayar pony','Mbayar midillisinde canlı ağırlık tahmini için morfometrik yöntemlerin karşılaştırmalı incelenmesi']
+].sort((a, b) => b[0].length - a[0].length);
+
+const TH = {
+  m1: { en: 'Evaluation of Some Quality Characteristics of Fruit-Flavored Probiotic Yogurts Fortified with Nutritional Yeast',
+        tr: 'Besin Mayası İle Zenginleştirilen Meyveli Probiyotik Yoğurtların Bazı Kalite Özelliklerinin Değerlendirilmesi' },
+  m2: { en: 'Evaluation of milking hygiene practices and the quality of raw camel (<em>Camelus dromedarius</em>) milk',
+        tr: 'Dişi deve (<em>Camelus dromedarius</em>) çiğ sütünün sağım hijyeni uygulamalarının ve kalitesinin değerlendirilmesi' }
+};
+function applyHtml(lang) {
+  document.querySelectorAll('[data-k]').forEach(el => {
+    if (el._o === undefined) el._o = el.innerHTML;
+    el.innerHTML = lang === 'fr' ? el._o : TH[el.dataset.k][lang];
+  });
+}
+
+function applyDict(lang) {
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const idx = lang === 'en' ? 1 : 2;
+  for (let n = w.nextNode(); n; n = w.nextNode()) {
+    if (n._o === undefined) {                       // 1er passage (français) : on mémorise
+      if (['SCRIPT','STYLE'].includes(n.parentNode.tagName)) continue;
+      const t = n.nodeValue.trim().replace(/^• /, '');
+      const hit = t && DICT.find(d => t.startsWith(d[0]));
+      if (!hit) continue;
+      n._o = n.nodeValue; n._h = hit;
+    }
+    if (n._o === undefined) continue;
+    if (lang === 'fr') { n.nodeValue = n._o; continue; }
+    const lead = n._o.match(/^\s*(• )?/)[0], trail = n._o.match(/\s*$/)[0];
+    n.nodeValue = lead + n._h[idx] + trail;
+  }
+}
+
+/* ---------- INIT ---------- */
+let saved = 'fr';
+try { saved = localStorage.getItem('lang') || 'fr'; } catch (e) {}
+setLanguage(translations[saved] ? saved : 'fr');
+if (window.lucide) lucide.createIcons();
+</script>
+</body>
+</html>
