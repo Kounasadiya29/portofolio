@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes — Kouna Sadiya Mbaye</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>La révolution silencieuse de l’Industrie Laitière : quand les Microbes et les Insectes s’invitent à nos assiettes — Kouna Sadiya Mbaye</title>
 <meta name="description" content="Passionnée par l’avenir de notre alimentation, je me suis penchée sur une question qui nous concerne tous : comment continuer à savourer nos produits…">
-<meta property="og:title" content="La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes">
-<meta property="og:description" content="Passionnée par l’avenir de notre alimentation, je me suis penchée sur une question qui nous concerne tous : comment continuer à savourer nos produits…">
-<meta property="og:type" content="article">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥛</text></svg>">
 <style>
-:root{--bg:#f6f9fb;--surface:#fff;--ink:#14272e;--muted:#4f646c;--line:#d5e0e5;--accent:#1d6b86;--accent-ink:#fff;--butter:#e9c46a;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1b20;--surface:#16262c;--ink:#e8f0f3;--muted:#9bb0b8;--line:#28404a;--accent:#6cc0dd;--accent-ink:#0f1b20;color-scheme:dark}}
+:root{--bg:#f6f9fb;--surface:#fff;--ink:#14272e;--muted:#4f646c;--line:#d5e0e5;--accent:#1d6b86;--accent-ink:#fff;--butter:#e9c46a;--tint:#e8f1f5;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1b20;--surface:#16262c;--ink:#e8f0f3;--muted:#9bb0b8;--line:#28404a;--accent:#6cc0dd;--accent-ink:#0f1b20;--tint:#1b2f37;color-scheme:dark}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}
-h1,h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;line-height:1.25}
-a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--butter);outline-offset:2px}
-.bar{background:var(--surface);border-bottom:1px solid var(--line)}
-.bar .in{max-width:1320px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.bar a.back{text-decoration:none;font-weight:600}
-.lang{display:flex;gap:4px}
-.lang button{font:inherit;font-size:.85rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.goog-te-banner-frame,#goog-gt-tt,.goog-te-balloon-frame,.skiptranslate iframe{display:none!important}
-.goog-text-highlight{background:none!important;box-shadow:none!important}
-body{top:0!important}
-article{max-width:720px;margin:0 auto;padding:48px 20px 24px}
-.date{color:var(--muted);font-size:.9rem;font-weight:600}
-h1{font-size:clamp(1.8rem,5vw,2.5rem);margin:6px 0 28px;padding-bottom:14px;border-bottom:3px solid var(--butter)}
-h2{font-size:1.4rem;margin:2.2rem 0 .6rem}
-article ul{padding-left:1.3rem}
-li p{margin:0}
-li{margin:.5rem 0}
-footer{max-width:720px;margin:0 auto;padding:24px 20px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;padding-top:env(safe-area-inset-top,0px)}
+header{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{max-width:72rem;margin:0 auto;padding:0 1.25rem;height:4.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
+.lang{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.25rem}
+.lang button{border:0;background:none;padding:.25rem .75rem;border-radius:999px;font:600 .8rem system-ui,sans-serif;color:var(--ink);cursor:pointer}
+.lang button.on{background:var(--accent);color:var(--accent-ink)}
+main{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.back{display:inline-block;font-weight:600;font-size:.95rem;color:var(--ink);text-decoration:none}
+.back:hover{color:var(--accent)}
+.rule{border:0;border-top:3px solid var(--butter);margin:1.5rem 0 1.75rem}
+.meta{display:flex;flex-wrap:wrap;gap:.25rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cat{color:var(--accent)}
+h1{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-weight:700;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;color:var(--ink);margin:.9rem 0 1.25rem}
+.by{margin:0 0 .6rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.read{display:flex;align-items:center;gap:.4rem;margin:0 0 2rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-size:1.125rem;line-height:1.8;color:var(--ink)}
+.prose p{margin:0 0 1.25rem}
+.prose .lead{font-size:1.28rem;line-height:1.65;color:var(--ink)}
+.prose h2{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-size:1.5rem;line-height:1.3;color:var(--ink);margin:2.5rem 0 1rem}
+.prose ul,.prose ol{padding-left:1.4rem;margin:0 0 1.25rem}
+.prose li{margin:.4rem 0}
+.prose blockquote{margin:2rem 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--tint);border-radius:0 .75rem .75rem 0}
+.prose blockquote p{margin:0;font-weight:600;color:var(--ink)}
+.notice{background:var(--line);border:1px solid var(--line);border-radius:.75rem;padding:.75rem 1rem;font-size:.85rem;margin-bottom:1.75rem}
+.pdf{display:inline-block;margin-top:1.5rem;padding:.6rem 1rem;border:1px solid var(--line);border-radius:.6rem;background:var(--tint);color:var(--accent);font-size:.8rem;font-weight:600;text-decoration:none}
+.pdf:hover{background:var(--line)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.pn a{display:block;text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:600;line-height:1.4}
+.pn a small{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+.pn a:last-child{text-align:right}
+.pn a:hover{color:var(--accent)}
+footer{text-align:center;font-size:.75rem;color:var(--muted);padding:2rem 1rem;border-top:1px solid var(--line)}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
-<div class="bar"><div class="in">
-  <a class="back" href="/#publications">← Retour au portfolio</a>
-  <div class="lang notranslate" role="group" aria-label="Langue du site">
-    <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
-    <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
-    <button type="button" data-lang="tr" aria-pressed="false" lang="tr">TR</button>
+<header><div class="bar">
+  <a class="brand" href="../index.html">Kouna Sadiya Mbaye</a>
+  <div class="lang">
+    <button id="b-fr" onclick="setLang('fr',true)">FR</button>
+    <button id="b-en" onclick="setLang('en',true)">EN</button>
+    <button id="b-tr" onclick="setLang('tr',true)">TR</button>
   </div>
-</div></div>
-<div id="google_translate_element" style="display:none"></div>
-<article>
-<div class="date">15 août 2026 · Kouna Sadiya Mbaye · 3 min de lecture</div>
-<h1>La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes</h1>
+</div></header>
 
-<p>Passionnée par l’avenir de notre alimentation, je me suis penchée sur une question qui nous concerne tous : comment continuer à savourer nos produits laitiers préférés dans un monde qui change à toute vitesse ?</p>
+<main>
+  <a class="back" href="../index.html#publications">← <span data-u="back"></span></a>
+  <hr class="rule">
+  <div class="meta"><span class="cat" data-u="cat"></span><span id="date"></span></div>
+  <div id="notice" class="notice" hidden></div>
+  <article data-lang="fr" data-min="3" data-title="La révolution silencieuse de l’Industrie Laitière : quand les Microbes et les Insectes s’invitent à nos assiettes">
+  <h1>La révolution silencieuse de l’Industrie Laitière : quand les Microbes et les Insectes s’invitent à nos assiettes</h1>
+  <p class="by"></p>
+  <p class="read"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="rt"></span></p>
+  <div class="prose">
+<p class="lead">Passionnée par l’avenir de notre alimentation, je me suis penchée sur une question qui nous concerne tous : comment continuer à savourer nos produits laitiers préférés dans un monde qui change à toute vitesse ?</p>
 <p>Entre la pression climatique et la nécessité de nourrir une population croissante, l’industrie laitière vit une rupture de paradigme, le modèle de la “vache laitière” unique atteint ses limites. Elle s’aventure désormais dans l’infiniment petit et “l’insolite”, la fermentation de précision et les protéines d’insectes. La convergence entre la biotechnologie microbienne et l’entomoculture n’est plus une curiosité de laboratoire, mais le socle d’une nouvelle architecture alimentaire mondiale.</p>
 <p>Le constat est simple, mais sérieux. L’élevage traditionnel consomme énormément d’eau, de terres et génère des gaz à effet de serre (GES). Face au changement climatique qui fragilise nos ressources, le recours à de nouvelles sources de protéines n’est plus une option de science-fiction, mais une nécessité vitale. Les micro-organismes comme les levures et les insectes offrent une densité nutritionnelle incroyable avec une empreinte écologique dérisoire. C’est une solution concrète pour produire plus, tout en respectant la planète.</p>
 <h2>L’hybridation</h2>
@@ -64,23 +80,88 @@ footer{max-width:720px;margin:0 auto;padding:24px 20px 56px;border-top:1px solid
 <p>C’est là que l’industrie agroalimentaire joue un rôle décisif. Pour que ces protéines alternatives sortent des niches technologiques et arrivent massivement dans nos assiettes, une recomposition des forces est en cours.</p>
 <p>Dans cette course mondiale, les nations qui sauront s’emparer de ces innovations deviendront les leaders de l’alimentation de demain, libérées des fluctuations des matières premières traditionnelles.</p>
 
-</article>
-<footer><a href="/#publications">← Retour aux réflexions et ressources</a><br>© 2026 Kouna Sadiya Mbaye. Tous droits réservés.</footer>
+  </div>
+  </article>
+  <article data-lang="en" data-min="3" data-title="The Silent Revolution in the Dairy Industry: When Microbes and Insects Join Our Plates">
+  <h1>The Silent Revolution in the Dairy Industry: When Microbes and Insects Join Our Plates</h1>
+  <p class="by"></p>
+  <p class="read"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="rt"></span></p>
+  <div class="prose">
+<p class="lead">Passionate about the future of our food, I looked into a question that concerns us all: how can we keep enjoying our favourite dairy products in a world that is changing so fast?</p>
+<p>Between climate pressure and the need to feed a growing population, the dairy industry is going through a paradigm shift: the single “dairy cow” model is reaching its limits. It is now venturing into the infinitely small and the “unusual”: precision fermentation and insect proteins. The convergence of microbial biotechnology and entomoculture is no longer a laboratory curiosity, but the foundation of a new global food architecture.</p>
+<p>The observation is simple, but serious. Traditional livestock farming consumes enormous amounts of water and land and generates greenhouse gases (GHG). With climate change weakening our resources, turning to new protein sources is no longer a science-fiction option but a vital necessity. Micro-organisms such as yeasts, and insects, offer remarkable nutritional density with a tiny ecological footprint. It is a concrete way to produce more while respecting the planet.</p>
+<h2>Hybridisation</h2>
+<p>We all picture rather bland or grainy plant-based substitutes. This is where science steps in to save our taste buds!</p>
+<p>The major trend today is hybridisation. By blending plant bases such as pea or oat with hydrolysed insect proteins, researchers manage to recreate the creaminess and texture of real yoghurt. The insect “repairs” the plant: it supplies the missing essential amino acids and gives the product the creamy quality we love.</p>
+<h2>The acceptance barrier</h2>
+<p>Yet technology is not everything. The real barrier remains social acceptance. While entomophagy is natural in some cultures, it often triggers a strong “disgust factor” in Western countries. The point is not to bite into a cricket, but to use these proteins as invisible, neutral hydrolysed powders built into familiar dairy products.</p>
+<p>The challenge is above all psychological: turning the image of the insect, often seen as survival food, into a modern, healthy and sustainable ingredient. This battle is won through communication and familiarisation, by highlighting taste, texture and benefits rather than origin.</p>
+<p>However, single-cell proteins (SCP) face other limits: sometimes low sensory acceptability due to undesirable flavours, variable digestibility, a high nucleic acid content that may increase the risk of gout, and potential contamination risks. Their amino acid profile, although better than cereals, is sometimes lower than that of animal proteins, notably in lysine and methionine. Genetic engineering could nevertheless ease these constraints.</p>
+<p>In the end, this silent revolution will not be played out only in laboratories, but in our collective ability to tell a new story about food. It means redefining what “eating well” means: combining nutritional performance, respect for planetary limits and economic accessibility.</p>
+<p>This is where the food industry plays a decisive role. For these alternative proteins to leave technological niches and reach our plates on a large scale, a reshuffling of forces is under way.</p>
+<p>In this global race, the nations that seize these innovations will become the food leaders of tomorrow, freed from the fluctuations of traditional commodities.</p>
+
+  </div>
+  </article>
+  <article data-lang="tr" data-min="3" data-title="Süt Endüstrisinde Sessiz Devrim: Mikroplar ve Böcekler Sofralarımıza Geldiğinde">
+  <h1>Süt Endüstrisinde Sessiz Devrim: Mikroplar ve Böcekler Sofralarımıza Geldiğinde</h1>
+  <p class="by"></p>
+  <p class="read"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="rt"></span></p>
+  <div class="prose">
+<p class="lead">Gıdamızın geleceği konusunda tutkulu biri olarak hepimizi ilgilendiren bir soruyu inceledim: Hızla değişen bir dünyada en sevdiğimiz süt ürünlerinin tadını çıkarmaya nasıl devam edebiliriz?</p>
+<p>İklim baskısı ile artan nüfusu doyurma zorunluluğu arasında süt endüstrisi bir paradigma değişimi yaşıyor: tek bir “süt ineği” modeli sınırlarına ulaşıyor. Sektör artık sonsuz küçüğün ve “sıra dışının” alanına, yani hassas fermantasyona ve böcek proteinlerine yöneliyor. Mikrobiyal biyoteknoloji ile entomokültürün buluşması artık bir laboratuvar merakı değil, yeni bir küresel gıda mimarisinin temelidir.</p>
+<p>Tespit basit ama ciddi: Geleneksel hayvancılık çok büyük miktarda su ve arazi tüketiyor ve sera gazı (SG) üretiyor. İklim değişikliği kaynaklarımızı zayıflatırken yeni protein kaynaklarına yönelmek artık bir bilim kurgu seçeneği değil, hayati bir zorunluluk. Mayalar gibi mikroorganizmalar ve böcekler, çok düşük bir ekolojik ayak iziyle olağanüstü bir besin yoğunluğu sunuyor. Bu, gezegene saygı göstererek daha fazla üretmenin somut bir yolu.</p>
+<h2>Melezleme</h2>
+<p>Hepimizin aklında biraz yavan ya da kumlu bitkisel alternatiflerin görüntüsü var. İşte bilim damak tadımızı kurtarmak için burada devreye giriyor!</p>
+<p>Bugünün en büyük eğilimi melezleme. Bezelye ya da yulaf gibi bitkisel bazları hidrolize böcek proteinleriyle karıştıran araştırmacılar, gerçek yoğurdun kremsi yapısını ve dokusunu yeniden yaratmayı başarıyor. Böcek bitkiyi “onarıyor”: eksik olan temel amino asitleri sağlıyor ve ürüne çok sevdiğimiz kremsi özelliği kazandırıyor.</p>
+<h2>Kabul edilebilirlik engeli</h2>
+<p>Yine de teknoloji her şey değil. Asıl engel toplumsal kabul olmaya devam ediyor. Entomofaji bazı kültürlerde doğal olsa da Batı ülkelerinde sıklıkla güçlü bir “tiksinme faktörü” yaratıyor. Mesele bir cırcır böceği ısırmak değil; bu proteinleri tanıdık süt ürünlerine katılan, görünmez ve nötr hidrolize tozlar olarak kullanmak.</p>
+<p>Zorluk her şeyden önce psikolojik: Çoğu zaman hayatta kalma yiyeceği olarak görülen böceğin imajını modern, sağlıklı ve sürdürülebilir bir bileşene dönüştürmek. Bu savaş iletişimle ve alıştırmayla, kaynaktan çok tadı, dokuyu ve faydaları öne çıkararak kazanılır.</p>
+<p>Bununla birlikte tek hücreli proteinler (SCP) başka sınırlarla karşı karşıya: istenmeyen tatlar nedeniyle bazen düşük duyusal kabul, değişken sindirilebilirlik, gut riskini artırabilen yüksek nükleik asit içeriği ve olası kontaminasyon riskleri. Amino asit profilleri tahıllardan üstün olsa da özellikle lizin ve metiyonin bakımından bazen hayvansal proteinlerin gerisinde kalıyor. Genetik mühendisliği yine de bu kısıtları hafifletebilir.</p>
+<p>Sonuç olarak bu sessiz devrim yalnızca laboratuvarlarda değil, gıdaya dair yeni bir hikâye anlatma konusundaki ortak yeteneğimizde şekillenecek. Mesele, “iyi beslenmenin” ne anlama geldiğini yeniden tanımlamak: besin performansını, gezegensel sınırlara saygıyı ve ekonomik erişilebilirliği bir araya getirmek.</p>
+<p>Gıda endüstrisinin belirleyici rolü tam burada devreye giriyor. Bu alternatif proteinlerin teknolojik nişlerden çıkıp sofralarımıza yaygın biçimde ulaşabilmesi için güçler yeniden dizilmekte.</p>
+<p>Bu küresel yarışta, bu yeniliklere sahip çıkabilen ülkeler, geleneksel hammaddelerin dalgalanmalarından kurtulmuş olarak yarının gıda liderleri olacak.</p>
+
+  </div>
+  </article>
+
+  <nav class="pn">
+    <a href="la-filiere-laitiere-au-senegal-vers-la-souverainete-alimentaire.html"><small data-u="prev"></small>La filière laitière au Sénégal : vers la souveraineté alimentaire</a>
+    <span></span>
+  </nav>
+</main>
+<footer data-u="foot"></footer>
+
 <script>
-document.querySelectorAll("em, .back").forEach(el => el.classList.add("notranslate"));
-function currentLang(){const m=document.cookie.match(/googtrans=\/fr\/(en|tr)/);return m?m[1]:"fr";}
-function setLang(lang){
-  const host=location.hostname;
-  if(lang==="fr"){const past="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";document.cookie=past;document.cookie=past+"; domain="+host;}
-  else{const v="googtrans=/fr/"+lang+"; path=/";document.cookie=v;document.cookie=v+"; domain="+host;}
-  location.reload();
+const U = {
+  fr: {back:'Tous les articles',cat:'Réflexions',by:'Par',min:'min de lecture',only:'Cet article est disponible en français uniquement.',pdf:'Télécharger en PDF (version française)',prev:'Article précédent',next:'Article suivant',foot:'© 2026 Kouna Sadiya Mbaye. Tous droits réservés.'},
+  en: {back:'All articles',cat:'Reflections',by:'By',min:'min read',only:'This article is currently available in French only.',pdf:'Download as PDF (French version)',prev:'Previous article',next:'Next article',foot:'© 2026 Kouna Sadiya Mbaye. All rights reserved.'},
+  tr: {back:'Tüm makaleler',cat:'Düşünceler',by:'Yazar',min:'dk okuma',only:'Bu makale şu anda yalnızca Fransızca olarak mevcuttur.',pdf:'PDF olarak indir (Fransızca sürüm)',prev:'Önceki makale',next:'Sonraki makale',foot:'© 2026 Kouna Sadiya Mbaye. Tüm hakları saklıdır.'}
+};
+const DATES = {"fr": "15 août 2026", "en": "August 15, 2026", "tr": "15 Ağustos 2026"};
+function setLang(l, save) {
+  const u = U[l];
+  const has = !!document.querySelector('article[data-lang="' + l + '"]');
+  const show = has ? l : 'fr';
+  document.documentElement.lang = show;
+  document.querySelectorAll('article').forEach(a => { a.hidden = a.dataset.lang !== show; });
+  const cur = document.querySelector('article[data-lang="' + show + '"]');
+  document.querySelectorAll('[data-u]').forEach(e => { e.textContent = u[e.dataset.u]; });
+  document.getElementById('date').textContent = DATES[l];
+  cur.querySelector('.rt').textContent = cur.dataset.min + ' ' + u.min;
+  cur.querySelector('.by').textContent = u.by + ' Kouna Sadiya Mbaye';
+  const n = document.getElementById('notice');
+  n.hidden = has; n.textContent = has ? '' : u.only;
+  ['fr','en','tr'].forEach(x => document.getElementById('b-' + x).classList.toggle('on', x === l));
+  document.title = cur.dataset.title + ' — Kouna Sadiya Mbaye';
+  if (save) {
+    const host = location.hostname;
+    if (l === 'fr') { const past = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'; document.cookie = past; document.cookie = past + '; domain=' + host; }
+    else { const v = 'googtrans=/fr/' + l + '; path=/'; document.cookie = v; document.cookie = v + '; domain=' + host; }
+  }
 }
-document.querySelectorAll(".lang button").forEach(b=>{
-  b.setAttribute("aria-pressed",String(b.dataset.lang===currentLang()));
-  b.addEventListener("click",()=>setLang(b.dataset.lang));
-});
-function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"fr",includedLanguages:"fr,en,tr",autoDisplay:false},"google_translate_element");}
+const m = document.cookie.match(/googtrans=\/fr\/(en|tr)/);
+setLang(m ? m[1] : 'fr', false);
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
