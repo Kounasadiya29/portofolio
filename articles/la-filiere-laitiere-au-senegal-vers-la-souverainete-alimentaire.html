@@ -1,57 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>La filière laitière au Sénégal : vers la souveraineté alimentaire — Kouna Sadiya Mbaye</title>
-<meta name="description" content="Au cœur de l’économie rurale sénégalaise, la filière laitière incarne à la fois une tradition millénaire et un enjeu stratégique de souveraineté…">
-<meta property="og:title" content="La filière laitière au Sénégal : vers la souveraineté alimentaire">
-<meta property="og:description" content="Au cœur de l’économie rurale sénégalaise, la filière laitière incarne à la fois une tradition millénaire et un enjeu stratégique de souveraineté…">
-<meta property="og:type" content="article">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥛</text></svg>">
+<meta name="description" content="Un secteur ancestral confronté à la modernité Au cœur de l’économie rurale sénégalaise, la filière laitière incarne à la fois une tradition millénaire et…">
 <style>
-:root{--bg:#f6f9fb;--surface:#fff;--ink:#14272e;--muted:#4f646c;--line:#d5e0e5;--accent:#1d6b86;--accent-ink:#fff;--butter:#e9c46a;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1b20;--surface:#16262c;--ink:#e8f0f3;--muted:#9bb0b8;--line:#28404a;--accent:#6cc0dd;--accent-ink:#0f1b20;color-scheme:dark}}
+:root{--bg:#f6f9fb;--surface:#fff;--ink:#14272e;--muted:#4f646c;--line:#d5e0e5;--accent:#1d6b86;--accent-ink:#fff;--butter:#e9c46a;--tint:#e8f1f5;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1b20;--surface:#16262c;--ink:#e8f0f3;--muted:#9bb0b8;--line:#28404a;--accent:#6cc0dd;--accent-ink:#0f1b20;--tint:#1b2f37;color-scheme:dark}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}
-h1,h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;line-height:1.25}
-a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--butter);outline-offset:2px}
-.bar{background:var(--surface);border-bottom:1px solid var(--line)}
-.bar .in{max-width:1320px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.bar a.back{text-decoration:none;font-weight:600}
-.lang{display:flex;gap:4px}
-.lang button{font:inherit;font-size:.85rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.goog-te-banner-frame,#goog-gt-tt,.goog-te-balloon-frame,.skiptranslate iframe{display:none!important}
-.goog-text-highlight{background:none!important;box-shadow:none!important}
-body{top:0!important}
-article{max-width:720px;margin:0 auto;padding:48px 20px 24px}
-.date{color:var(--muted);font-size:.9rem;font-weight:600}
-h1{font-size:clamp(1.8rem,5vw,2.5rem);margin:6px 0 28px;padding-bottom:14px;border-bottom:3px solid var(--butter)}
-h2{font-size:1.4rem;margin:2.2rem 0 .6rem}
-article ul{padding-left:1.3rem}
-li p{margin:0}
-li{margin:.5rem 0}
-footer{max-width:720px;margin:0 auto;padding:24px 20px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;padding-top:env(safe-area-inset-top,0px)}
+header{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{max-width:72rem;margin:0 auto;padding:0 1.25rem;height:4.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
+.lang{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.25rem}
+.lang button{border:0;background:none;padding:.25rem .75rem;border-radius:999px;font:600 .8rem system-ui,sans-serif;color:var(--ink);cursor:pointer}
+.lang button.on{background:var(--accent);color:var(--accent-ink)}
+main{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.back{display:inline-block;font-weight:600;font-size:.95rem;color:var(--ink);text-decoration:none}
+.back:hover{color:var(--accent)}
+.rule{border:0;border-top:3px solid var(--butter);margin:1.5rem 0 1.75rem}
+.meta{display:flex;flex-wrap:wrap;gap:.25rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cat{color:var(--accent)}
+h1{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-weight:700;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;color:var(--ink);margin:.9rem 0 1.25rem}
+.by{margin:0 0 .6rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.read{display:flex;align-items:center;gap:.4rem;margin:0 0 2rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-size:1.125rem;line-height:1.8;color:var(--ink)}
+.prose p{margin:0 0 1.25rem}
+.prose .lead{font-size:1.28rem;line-height:1.65;color:var(--ink)}
+.prose h2{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-size:1.5rem;line-height:1.3;color:var(--ink);margin:2.5rem 0 1rem}
+.prose ul,.prose ol{padding-left:1.4rem;margin:0 0 1.25rem}
+.prose li{margin:.4rem 0}
+.prose blockquote{margin:2rem 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--tint);border-radius:0 .75rem .75rem 0}
+.prose blockquote p{margin:0;font-weight:600;color:var(--ink)}
+.notice{background:var(--line);border:1px solid var(--line);border-radius:.75rem;padding:.75rem 1rem;font-size:.85rem;margin-bottom:1.75rem}
+.pdf{display:inline-block;margin-top:1.5rem;padding:.6rem 1rem;border:1px solid var(--line);border-radius:.6rem;background:var(--tint);color:var(--accent);font-size:.8rem;font-weight:600;text-decoration:none}
+.pdf:hover{background:var(--line)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.pn a{display:block;text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:600;line-height:1.4}
+.pn a small{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+.pn a:last-child{text-align:right}
+.pn a:hover{color:var(--accent)}
+footer{text-align:center;font-size:.75rem;color:var(--muted);padding:2rem 1rem;border-top:1px solid var(--line)}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
-<div class="bar"><div class="in">
-  <a class="back" href="/#publications">← Retour au portfolio</a>
-  <div class="lang notranslate" role="group" aria-label="Langue du site">
-    <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
-    <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
-    <button type="button" data-lang="tr" aria-pressed="false" lang="tr">TR</button>
+<header><div class="bar">
+  <a class="brand" href="../index.html">Kouna Sadiya Mbaye</a>
+  <div class="lang">
+    <button id="b-fr" onclick="setLang('fr',true)">FR</button>
+    <button id="b-en" onclick="setLang('en',true)">EN</button>
+    <button id="b-tr" onclick="setLang('tr',true)">TR</button>
   </div>
-</div></div>
-<div id="google_translate_element" style="display:none"></div>
-<article>
-<div class="date">13 juillet 2026 · Kouna Sadiya Mbaye · 4 min de lecture</div>
-<h1>La filière laitière au Sénégal : vers la souveraineté alimentaire</h1>
+</div></header>
 
+<main>
+  <a class="back" href="../index.html#publications">← <span data-u="back"></span></a>
+  <hr class="rule">
+  <div class="meta"><span class="cat" data-u="cat"></span><span id="date"></span></div>
+  <div id="notice" class="notice" hidden></div>
+  <article data-lang="fr" data-min="5" data-title="La filière laitière au Sénégal : vers la souveraineté alimentaire">
+  <h1>La filière laitière au Sénégal : vers la souveraineté alimentaire</h1>
+  <p class="by"></p>
+  <p class="read"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="rt"></span></p>
+  <div class="prose">
 <h2>Un secteur ancestral confronté à la modernité</h2>
-<p>Au cœur de l’économie rurale sénégalaise, la filière laitière incarne à la fois une tradition millénaire et un enjeu stratégique de souveraineté nationale. Alors que l’élevage contribue à hauteur de 3,5% au PIB national et de 21,2% à la valeur ajoutée du secteur primaire (DPEE, 2022), la production locale de lait reste insuffisante pour satisfaire une demande en pleine expansion. Selon les données du <strong>Ministère de l’Elevage et des Productions Animales</strong> (MEPA, 2022) (actuel <strong>Ministère de l’Agriculture de la Souveraineté Alimentaire et de l’Elevage</strong>, MASAE), la production de lait cru a certes plus que doublé entre 2000 et 2021, passant de 119 millions à 280,8 millions de litres. Pourtant, elle ne couvre qu’environ 38% des besoins nationaux, le reste étant assuré par des importations massives. L’Agence Nationale de la Statistique et de la Démographie (ANSD) estimait ainsi, pour 2024, que le Sénégal avait importé plus de 27 700 tonnes de produits laitiers pour une valeur de 53,4 milliards de FCFA. D’autres estimations ministérielles font état d’une facture atteignant 153 milliards de FCFA en 2025, contre 73 milliards en 2017. Ces chiffres soulignent l’urgence d’une transformation structurelle.</p>
+<p class="lead">Au cœur de l’économie rurale sénégalaise, la filière laitière incarne à la fois une tradition millénaire et un enjeu stratégique de souveraineté nationale. Alors que l’élevage contribue à hauteur de 3,5% au PIB national et de 21,2% à la valeur ajoutée du secteur primaire (DPEE, 2022), la production locale de lait reste insuffisante pour satisfaire une demande en pleine expansion. Selon les données du <strong>Ministère de l’Elevage et des Productions Animales</strong> (MEPA, 2022) (actuel <strong>Ministère de l’Agriculture de la Souveraineté Alimentaire et de l’Elevage</strong>, MASAE), la production de lait cru a certes plus que doublé entre 2000 et 2021, passant de 119 millions à 280,8 millions de litres. Pourtant, elle ne couvre qu’environ 38% des besoins nationaux, le reste étant assuré par des importations massives. L’Agence Nationale de la Statistique et de la Démographie (ANSD) estimait ainsi, pour 2024, que le Sénégal avait importé plus de 27 700 tonnes de produits laitiers pour une valeur de 53,4 milliards de FCFA. D’autres estimations ministérielles font état d’une facture atteignant 153 milliards de FCFA en 2025, contre 73 milliards en 2017. Ces chiffres soulignent l’urgence d’une transformation structurelle.</p>
 <h2>Un élevage dominé par la tradition</h2>
 <p>La filière laitière sénégalaise repose encore majoritairement sur des systèmes pastoraux extensifs. En 2021, 51% de la production provenaient d’élevages pastoraux à base de races locales (Gobra, Maure, N’Dama), caractérisées par une productivité faible, souvent entre 1 et 4 litres par vache et par jour selon la saison. Les élevages mixtes (races métisses) contribuaient à 29% et les fermes intensives (races exotiques) à seulement 9% (MEPA, 2022). Les principales zones de production se concentrent dans les régions de Tambacounda (28% des ménages producteurs de lait), Kolda (25%) et Matam (17%), selon l’Enquête Agricole Annuelle 2022-2023 de la Direction de l’Analyse, de la Prévision et des Statistiques Agricoles (DAPSA).</p>
 <p>Cette organisation traditionnelle assure une part importante de l’autoconsommation (jusqu’à 80% dans certains systèmes pastoraux) et constitue un filet de sécurité alimentaire pour les ménages ruraux. Cependant, elle peine à répondre à la croissance urbaine et à la demande des ménages dakarois, qui concentrent plus de 50% de la consommation nationale.</p>
@@ -66,25 +82,104 @@ footer{max-width:720px;margin:0 auto;padding:24px 20px 56px;border-top:1px solid
 <p>Pour accélérer cette transition, plusieurs recommandations s’imposent. Il convient d’abord de renforcer la préférence nationale par des mesures tarifaires intelligentes et des incitations fiscales en faveur des transformateurs incorporant du lait local. La modernisation de la chaîne du froid et le déploiement de centres de collecte en zones rurales constituent une priorité infrastructurelle. Enfin, un effort soutenu de formation et de financement, ciblant particulièrement les femmes et les jeunes, permettra de professionnaliser la filière et de créer des emplois durables en milieu rural.</p>
 <h2>Un levier de dignité et de souveraineté</h2>
 <p>La filière laitière n’est pas seulement une question économique. Elle touche à la dignité des éleveurs, à la sécurité nutritionnelle des ménages et à la souveraineté alimentaire d’une nation. Comme le soulignent les données du MEPA et de l’ANSD, le Sénégal dispose des atouts nécessaires, cheptel important, savoir-faire ancestral, volonté politique, pour inverser la tendance. L’année 2026, marquée par de nouveaux investissements dans l’amélioration génétique et la mise en œuvre de la Stratégie Nationale de Souveraineté Alimentaire, pourrait bien constituer un tournant décisif.</p>
+<blockquote>
 <p><strong>Le lait local n’est pas un luxe : c’est un droit et un projet de société. Soutenir sa production, c’est investir dans l’avenir rural du Sénégal.</strong></p>
+</blockquote>
 
-</article>
-<footer><a href="/#publications">← Retour aux réflexions et ressources</a><br>© 2026 Kouna Sadiya Mbaye. Tous droits réservés.</footer>
+  </div>
+  </article>
+  <article data-lang="en" data-min="4" data-title="The Dairy Sector in Senegal: Towards Food Sovereignty">
+  <h1>The Dairy Sector in Senegal: Towards Food Sovereignty</h1>
+  <p class="by"></p>
+  <p class="read"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="rt"></span></p>
+  <div class="prose">
+<h2>An ancient sector facing modernity</h2>
+<p class="lead">At the heart of Senegal’s rural economy, the dairy sector embodies both a thousand-year-old tradition and a strategic issue of national sovereignty. Livestock farming contributes 3.5% of national GDP and 21.2% of the primary sector’s value added (DPEE, 2022), yet local milk production remains insufficient to meet fast-growing demand. According to the <strong>Ministry of Livestock and Animal Production</strong> (MEPA, 2022) (now the <strong>Ministry of Agriculture, Food Sovereignty and Livestock</strong>, MASAE), raw milk production did more than double between 2000 and 2021, from 119 million to 280.8 million litres. Even so, it covers only about 38% of national needs, the rest being met by massive imports. The National Agency for Statistics and Demography (ANSD) estimated that in 2024 Senegal imported more than 27,700 tonnes of dairy products worth 53.4 billion FCFA. Other ministerial estimates put the bill at 153 billion FCFA in 2025, against 73 billion in 2017. These figures underline the urgency of a structural transformation.</p>
+<h2>Livestock farming dominated by tradition</h2>
+<p>Senegal’s dairy sector still rests mainly on extensive pastoral systems. In 2021, 51% of production came from pastoral herds of local breeds (Gobra, Maure, N’Dama), characterised by low productivity, often 1 to 4 litres per cow per day depending on the season. Mixed herds (crossbreeds) contributed 29% and intensive farms (exotic breeds) only 9% (MEPA, 2022). The main production areas are concentrated in the regions of Tambacounda (28% of milk-producing households), Kolda (25%) and Matam (17%), according to the 2022-2023 Annual Agricultural Survey of the Directorate of Agricultural Analysis, Forecasting and Statistics (DAPSA).</p>
+<p>This traditional organisation ensures a large share of self-consumption (up to 80% in some pastoral systems) and provides a food safety net for rural households. However, it struggles to meet urban growth and the demand of Dakar households, which account for more than 50% of national consumption.</p>
+<h2>Structural challenges of a changing sector</h2>
+<p>Several constraints explain this persistent dependence. The first is the low productivity of local breeds, worsened by climate change, scarcer fodder resources and difficult access to water. Added to this are a failing cold chain, insufficient collection infrastructure and unfair competition from imported milk powders, often sold below local production costs.</p>
+<p>The fragmented organisation of players (herders, cooperatives and artisanal processors) also limits high-value-added products (yoghurts, cheeses, pasteurised milk). Finally, access to financing, training and artificial insemination remains uneven, particularly for young people and women, who are nonetheless very present in processing.</p>
+<h2>Promising initiatives and a clear political will</h2>
+<p>Faced with these challenges, encouraging signs are emerging. The government has made food sovereignty a national priority, as shown by the National Food Sovereignty Strategy 2024-2028. It sets an ambitious goal: raising the share of milk needs covered by local production to 80% by 2028, from about 30-38% today.</p>
+<p>Among the levers used is the subsidised import of high-milk-potential breeds (Guzera, Girolando, Holstein, Montbéliarde). In 2024, 2,500 heifers were introduced; in January 2026, a new batch of 1,050 exotic cattle was received at a cost of 1.45 billion FCFA. These genetic improvement programmes, combined with investment in mobile collection and mini-dairies, are beginning to bear fruit.</p>
+<p>The example of Laiterie du Berger perfectly illustrates this virtuous dynamic: by collecting milk from thousands of traditional herders, training women and young people and developing a range of local products (“Kosam” yoghurts, pasteurised milk), the company shows that pastoral tradition and modern processing can be reconciled.</p>
+<h2>Towards a resilient and inclusive sector</h2>
+<p>To speed up this transition, several recommendations stand out. First, national preference should be strengthened through smart tariff measures and tax incentives for processors using local milk. Modernising the cold chain and deploying collection centres in rural areas are an infrastructure priority. Finally, sustained training and financing efforts, targeting women and young people in particular, will professionalise the sector and create lasting jobs in rural areas.</p>
+<h2>A lever for dignity and sovereignty</h2>
+<p>The dairy sector is not only an economic matter. It touches the dignity of herders, the nutritional security of households and the food sovereignty of a nation. As the MEPA and ANSD data show, Senegal has what it needs to reverse the trend: a large herd, ancestral know-how and political will. The year 2026, marked by new investment in genetic improvement and the implementation of the National Food Sovereignty Strategy, could well prove a decisive turning point.</p>
+<blockquote>
+<p><strong>Local milk is not a luxury: it is a right and a societal project. Supporting its production means investing in Senegal’s rural future.</strong></p>
+</blockquote>
+
+  </div>
+  </article>
+  <article data-lang="tr" data-min="4" data-title="Senegal’de Süt Sektörü: Gıda Egemenliğine Doğru">
+  <h1>Senegal’de Süt Sektörü: Gıda Egemenliğine Doğru</h1>
+  <p class="by"></p>
+  <p class="read"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="rt"></span></p>
+  <div class="prose">
+<h2>Modernlikle yüzleşen kadim bir sektör</h2>
+<p class="lead">Senegal kırsal ekonomisinin kalbinde süt sektörü, hem bin yıllık bir geleneği hem de ulusal egemenlik açısından stratejik bir meseleyi temsil ediyor. Hayvancılık ulusal GSYH’nin %3,5’ine ve birincil sektörün katma değerinin %21,2’sine katkıda bulunsa da (DPEE, 2022), yerel süt üretimi hızla artan talebi karşılamaya yetmiyor. <strong>Hayvancılık ve Hayvansal Üretim Bakanlığı</strong>’nın (MEPA, 2022) (bugünkü adıyla <strong>Tarım, Gıda Egemenliği ve Hayvancılık Bakanlığı</strong>, MASAE) verilerine göre çiğ süt üretimi 2000-2021 arasında iki katından fazla artarak 119 milyon litreden 280,8 milyon litreye çıktı. Buna rağmen ulusal ihtiyacın yalnızca yaklaşık %38’ini karşılıyor; geri kalanı yoğun ithalatla sağlanıyor. Ulusal İstatistik ve Demografi Ajansı (ANSD), 2024’te Senegal’in 53,4 milyar FCFA değerinde 27.700 tonun üzerinde süt ürünü ithal ettiğini tahmin ediyordu. Bakanlık düzeyindeki diğer tahminler, faturanın 2017’deki 73 milyar FCFA’dan 2025’te 153 milyar FCFA’ya ulaştığını bildiriyor. Bu rakamlar yapısal bir dönüşümün aciliyetini ortaya koyuyor.</p>
+<h2>Gelenekle şekillenen hayvancılık</h2>
+<p>Senegal süt sektörü hâlâ ağırlıklı olarak ekstansif göçebe-otlak sistemlerine dayanıyor. 2021’de üretimin %51’i yerli ırklara (Gobra, Maure, N’Dama) dayalı pastoral işletmelerden geliyordu; bu ırklar mevsime göre genellikle inek başına günde 1 ila 4 litre gibi düşük bir verimle karakterize ediliyor. Karma işletmeler (melez ırklar) %29’a, yoğun çiftlikler (ithal ırklar) ise yalnızca %9’a katkıda bulundu (MEPA, 2022). Tarımsal Analiz, Öngörü ve İstatistik Müdürlüğü’nün (DAPSA) 2022-2023 Yıllık Tarım Anketi’ne göre ana üretim bölgeleri Tambacounda (süt üreten hane halklarının %28’i), Kolda (%25) ve Matam’da (%17) yoğunlaşıyor.</p>
+<p>Bu geleneksel yapı, kendi tüketiminin önemli bir bölümünü (bazı pastoral sistemlerde %80’e kadar) sağlıyor ve kırsal haneler için bir gıda güvencesi ağı oluşturuyor. Ancak kentsel büyümeye ve ulusal tüketimin %50’sinden fazlasını oluşturan Dakar hane halklarının talebine yanıt vermekte zorlanıyor.</p>
+<h2>Değişen bir sektörün yapısal zorlukları</h2>
+<p>Bu kalıcı bağımlılığı birkaç kısıt açıklıyor. İlki, yerli ırkların düşük verimliliği; bu durum iklim değişikliği, azalan yem kaynakları ve suya erişim güçlükleriyle daha da ağırlaşıyor. Buna yetersiz bir soğuk zincir, yetersiz toplama altyapısı ve çoğu zaman yerel üretim maliyetinin altında satılan ithal süt tozlarının haksız rekabeti ekleniyor.</p>
+<p>Aktörlerin (yetiştiriciler, kooperatifler ve zanaatkâr işleyiciler) parçalı örgütlenmesi de yüksek katma değerli ürünlerin (yoğurt, peynir, pastörize süt) geliştirilmesini sınırlıyor. Son olarak finansmana, eğitime ve suni tohumlamaya erişim, özellikle işlemede çok yer alan gençler ve kadınlar için eşitsiz kalıyor.</p>
+<h2>Umut vadeden girişimler ve güçlü bir siyasi irade</h2>
+<p>Bu zorluklar karşısında cesaret verici işaretler beliriyor. Hükümet, 2024-2028 Ulusal Gıda Egemenliği Stratejisi’nin de gösterdiği gibi gıda egemenliğini ulusal öncelik haline getirdi. Strateji iddialı bir hedef koyuyor: süt ihtiyacının yerel üretimle karşılanma oranını bugünkü yaklaşık %30-38’den 2028’e kadar %80’e çıkarmak.</p>
+<p>Kullanılan araçlar arasında yüksek süt verimli ırkların (Guzera, Girolando, Holstein, Montbéliarde) sübvansiyonlu ithalatı yer alıyor. 2024’te 2.500 düve getirildi; Ocak 2026’da 1,45 milyar FCFA tutarında 1.050 başlık yeni bir ithal sığır partisi teslim alındı. Mobil toplama ve mini süt tesislerine yapılan yatırımlarla birleşen bu genetik iyileştirme programları meyve vermeye başlıyor.</p>
+<p>Laiterie du Berger örneği bu olumlu dinamiği çok iyi gösteriyor: Şirket, binlerce geleneksel yetiştiriciden süt toplayarak, kadınları ve gençleri eğiterek ve yerel ürünlerden oluşan bir yelpaze (“Kosam” yoğurtları, pastörize süt) geliştirerek pastoral gelenek ile modern işlemenin bir arada yürüyebileceğini kanıtlıyor.</p>
+<h2>Dirençli ve kapsayıcı bir sektöre doğru</h2>
+<p>Bu geçişi hızlandırmak için birkaç öneri öne çıkıyor. Öncelikle, yerel süt kullanan işleyicilere yönelik akıllı tarife önlemleri ve vergi teşvikleriyle ulusal tercih güçlendirilmelidir. Soğuk zincirin modernizasyonu ve kırsal alanlarda toplama merkezlerinin kurulması altyapı önceliğidir. Son olarak, özellikle kadınları ve gençleri hedefleyen sürekli bir eğitim ve finansman çabası sektörü profesyonelleştirecek ve kırsal alanda kalıcı istihdam yaratacaktır.</p>
+<h2>Onur ve egemenlik için bir kaldıraç</h2>
+<p>Süt sektörü yalnızca ekonomik bir mesele değildir. Yetiştiricilerin onuruna, hanelerin beslenme güvenliğine ve bir ulusun gıda egemenliğine dokunur. MEPA ve ANSD verilerinin gösterdiği gibi Senegal, eğilimi tersine çevirmek için gerekli güçlere sahiptir: büyük bir sürü, atalardan kalan bilgi birikimi ve siyasi irade. Genetik iyileştirmeye yönelik yeni yatırımlar ve Ulusal Gıda Egemenliği Stratejisi’nin uygulanmasıyla öne çıkan 2026 yılı, belirleyici bir dönüm noktası olabilir.</p>
+<blockquote>
+<p><strong>Yerel süt bir lüks değil, bir haktır ve toplumsal bir projedir. Üretimini desteklemek, Senegal’in kırsal geleceğine yatırım yapmaktır.</strong></p>
+</blockquote>
+
+  </div>
+  </article>
+
+  <nav class="pn">
+    <a href="proteines-microbiennes-et-produits-laitiers.html"><small data-u="prev"></small>Protéines microbiennes et produits laitiers : une solution durable pour l’alimentation de demain ?</a>
+    <a href="la-revolution-silencieuse-de-l-industrie-laitiere.html"><small data-u="next"></small>La révolution silencieuse de l’Industrie Laitière : quand les Microbes et les Insectes s’invitent à nos assiettes</a>
+  </nav>
+</main>
+<footer data-u="foot"></footer>
+
 <script>
-document.querySelectorAll("em, .back").forEach(el => el.classList.add("notranslate"));
-function currentLang(){const m=document.cookie.match(/googtrans=\/fr\/(en|tr)/);return m?m[1]:"fr";}
-function setLang(lang){
-  const host=location.hostname;
-  if(lang==="fr"){const past="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";document.cookie=past;document.cookie=past+"; domain="+host;}
-  else{const v="googtrans=/fr/"+lang+"; path=/";document.cookie=v;document.cookie=v+"; domain="+host;}
-  location.reload();
+const U = {
+  fr: {back:'Tous les articles',cat:'Réflexions',by:'Par',min:'min de lecture',only:'Cet article est disponible en français uniquement.',pdf:'Télécharger en PDF (version française)',prev:'Article précédent',next:'Article suivant',foot:'© 2026 Kouna Sadiya Mbaye. Tous droits réservés.'},
+  en: {back:'All articles',cat:'Reflections',by:'By',min:'min read',only:'This article is currently available in French only.',pdf:'Download as PDF (French version)',prev:'Previous article',next:'Next article',foot:'© 2026 Kouna Sadiya Mbaye. All rights reserved.'},
+  tr: {back:'Tüm makaleler',cat:'Düşünceler',by:'Yazar',min:'dk okuma',only:'Bu makale şu anda yalnızca Fransızca olarak mevcuttur.',pdf:'PDF olarak indir (Fransızca sürüm)',prev:'Önceki makale',next:'Sonraki makale',foot:'© 2026 Kouna Sadiya Mbaye. Tüm hakları saklıdır.'}
+};
+const DATES = {"fr": "13 juillet 2026", "en": "July 13, 2026", "tr": "13 Temmuz 2026"};
+function setLang(l, save) {
+  const u = U[l];
+  const has = !!document.querySelector('article[data-lang="' + l + '"]');
+  const show = has ? l : 'fr';
+  document.documentElement.lang = show;
+  document.querySelectorAll('article').forEach(a => { a.hidden = a.dataset.lang !== show; });
+  const cur = document.querySelector('article[data-lang="' + show + '"]');
+  document.querySelectorAll('[data-u]').forEach(e => { e.textContent = u[e.dataset.u]; });
+  document.getElementById('date').textContent = DATES[l];
+  cur.querySelector('.rt').textContent = cur.dataset.min + ' ' + u.min;
+  cur.querySelector('.by').textContent = u.by + ' Kouna Sadiya Mbaye';
+  const n = document.getElementById('notice');
+  n.hidden = has; n.textContent = has ? '' : u.only;
+  ['fr','en','tr'].forEach(x => document.getElementById('b-' + x).classList.toggle('on', x === l));
+  document.title = cur.dataset.title + ' — Kouna Sadiya Mbaye';
+  if (save) {
+    const host = location.hostname;
+    if (l === 'fr') { const past = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'; document.cookie = past; document.cookie = past + '; domain=' + host; }
+    else { const v = 'googtrans=/fr/' + l + '; path=/'; document.cookie = v; document.cookie = v + '; domain=' + host; }
+  }
 }
-document.querySelectorAll(".lang button").forEach(b=>{
-  b.setAttribute("aria-pressed",String(b.dataset.lang===currentLang()));
-  b.addEventListener("click",()=>setLang(b.dataset.lang));
-});
-function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"fr",includedLanguages:"fr,en,tr",autoDisplay:false},"google_translate_element");}
+const m = document.cookie.match(/googtrans=\/fr\/(en|tr)/);
+setLang(m ? m[1] : 'fr', false);
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
