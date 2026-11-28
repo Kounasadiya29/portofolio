@@ -147,7 +147,7 @@ function setLang(l) {
   const u = U[l];
   const has = !!document.querySelector('article[data-lang="' + l + '"]');
   const show = has ? l : 'fr';          // sans traduction rédigée : français, traduit automatiquement par Google
-  document.documentElement.lang = l;
+  document.documentElement.lang = show;
   document.querySelectorAll('article').forEach(a => {
     a.hidden = a.dataset.lang !== show;
     a.translate = (show === 'fr');      // une traduction rédigée n'est jamais retraduite
