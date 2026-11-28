@@ -43,6 +43,9 @@ h1{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-weight:700;font-siz
 .pn a:last-child{text-align:right}
 .pn a:hover{color:var(--accent)}
 footer{text-align:center;font-size:.75rem;color:var(--muted);padding:2rem 1rem;border-top:1px solid var(--line)}
+.goog-te-banner-frame,#goog-gt-tt,.goog-te-balloon-frame,.skiptranslate iframe{display:none!important}
+.goog-text-highlight{background:none!important;box-shadow:none!important}
+body{top:0!important}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -50,17 +53,17 @@ footer{text-align:center;font-size:.75rem;color:var(--muted);padding:2rem 1rem;b
 <header><div class="bar">
   <a class="brand" href="../index.html">Kouna Sadiya Mbaye</a>
   <div class="lang">
-    <button id="b-fr" onclick="setLang('fr',true)">FR</button>
-    <button id="b-en" onclick="setLang('en',true)">EN</button>
-    <button id="b-tr" onclick="setLang('tr',true)">TR</button>
+    <button id="b-fr" onclick="chooseLang('fr')">FR</button>
+    <button id="b-en" onclick="chooseLang('en')">EN</button>
+    <button id="b-tr" onclick="chooseLang('tr')">TR</button>
   </div>
 </div></header>
 
+<div id="google_translate_element" style="display:none"></div>
 <main>
   <a class="back" href="../index.html#publications">← <span data-u="back"></span></a>
   <hr class="rule">
   <div class="meta"><span class="cat" data-u="cat"></span><span id="date"></span></div>
-  <div id="notice" class="notice" hidden></div>
   <article data-lang="fr" data-min="5" data-title="Le lait sans chaleur : 8 technologies révolutionnaires qui tuent les microbes sans traitement thermique">
   <h1>Le lait sans chaleur : 8 technologies révolutionnaires qui tuent les microbes sans traitement thermique</h1>
   <p class="by"></p>
@@ -140,29 +143,37 @@ const U = {
   tr: {back:'Tüm makaleler',cat:'Düşünceler',by:'Yazar',min:'dk okuma',only:'Bu makale şu anda yalnızca Fransızca olarak mevcuttur.',pdf:'PDF olarak indir (Fransızca sürüm)',prev:'Önceki makale',next:'Sonraki makale',foot:'© 2026 Kouna Sadiya Mbaye. Tüm hakları saklıdır.'}
 };
 const DATES = {"fr": "29 mai 2026", "en": "May 29, 2026", "tr": "29 Mayıs 2026"};
-function setLang(l, save) {
+function setLang(l) {
   const u = U[l];
   const has = !!document.querySelector('article[data-lang="' + l + '"]');
-  const show = has ? l : 'fr';
-  document.documentElement.lang = show;
-  document.querySelectorAll('article').forEach(a => { a.hidden = a.dataset.lang !== show; });
+  const show = has ? l : 'fr';          // sans traduction rédigée : français, traduit automatiquement par Google
+  document.documentElement.lang = l;
+  document.querySelectorAll('article').forEach(a => {
+    a.hidden = a.dataset.lang !== show;
+    a.translate = (show === 'fr');      // une traduction rédigée n'est jamais retraduite
+    a.classList.toggle('notranslate', show !== 'fr');
+  });
   const cur = document.querySelector('article[data-lang="' + show + '"]');
   document.querySelectorAll('[data-u]').forEach(e => { e.textContent = u[e.dataset.u]; });
   document.getElementById('date').textContent = DATES[l];
   cur.querySelector('.rt').textContent = cur.dataset.min + ' ' + u.min;
   cur.querySelector('.by').textContent = u.by + ' Kouna Sadiya Mbaye';
-  const n = document.getElementById('notice');
-  n.hidden = has; n.textContent = has ? '' : u.only;
   ['fr','en','tr'].forEach(x => document.getElementById('b-' + x).classList.toggle('on', x === l));
   document.title = cur.dataset.title + ' — Kouna Sadiya Mbaye';
-  if (save) {
-    const host = location.hostname;
-    if (l === 'fr') { const past = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'; document.cookie = past; document.cookie = past + '; domain=' + host; }
-    else { const v = 'googtrans=/fr/' + l + '; path=/'; document.cookie = v; document.cookie = v + '; domain=' + host; }
-  }
 }
+function chooseLang(l) {
+  const host = location.hostname;
+  if (l === 'fr') { const past = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'; document.cookie = past; document.cookie = past + '; domain=' + host; }
+  else { const v = 'googtrans=/fr/' + l + '; path=/'; document.cookie = v; document.cookie = v + '; domain=' + host; }
+  location.reload();
+}
+document.querySelectorAll('header, .back, .meta, .by, .read, .pn small, footer, .cat').forEach(e => e.classList.add('notranslate'));
 const m = document.cookie.match(/googtrans=\/fr\/(en|tr)/);
-setLang(m ? m[1] : 'fr', false);
+setLang(m ? m[1] : 'fr');
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({ pageLanguage: "fr", includedLanguages: "fr,en,tr", autoDisplay: false }, "google_translate_element");
+}
 </script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
