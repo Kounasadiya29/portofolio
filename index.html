@@ -41,6 +41,7 @@ header.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
 .meta li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 14px;font-size:.9rem}
 .btn{display:inline-block;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;border:2px solid var(--accent);margin:4px 8px 4px 0;cursor:pointer;font:inherit;font-weight:600}
 .btn.primary{background:var(--accent);color:var(--accent-ink)}
+.hero .cvlinks{margin:12px 0 0;font-size:.9rem}
 section{padding:56px 0 8px}
 section>.wrap>h2{font-size:1.9rem;margin-bottom:24px;padding-bottom:10px;border-bottom:3px solid var(--butter);display:inline-block}
 h3{font-size:1.15rem;margin:0 0 4px}
@@ -97,7 +98,12 @@ footer{margin-top:64px;padding:28px 0;border-top:1px solid var(--line);color:var
       <li>Ankara, Türkiye</li><li>Université d’Ankara</li><li>FR (natif)</li><li>EN (professionnel)</li><li>TR (C2)</li>
     </ul>
     <a class="btn primary" href="#contact">Me contacter par e-mail</a>
-    <a class="btn" href="https://drive.google.com/file/d/1d3q8jxZm9trnVkJXZIOAeBWfdxiPRRzc/view?usp=drive_link" target="_blank" rel="noopener">Télécharger mon CV</a>
+    <a class="btn" id="cv-btn" href="CV%20Kouna%20Sadiya%20Mbaye%20FR.pdf" target="_blank" rel="noopener">Télécharger mon CV</a>
+    <p class="cvlinks notranslate">CV :
+      <a href="CV%20Kouna%20Sadiya%20Mbaye%20FR.pdf" target="_blank" rel="noopener">Français</a> ·
+      <a href="CV%20Kouna%20Sadiya%20Mbaye%20English.pdf" target="_blank" rel="noopener">English</a> ·
+      <a href="CV%20Kouna%20Sadiya%20Mbaye%20Turk%C3%A7e.pdf" target="_blank" rel="noopener">Türkçe</a>
+    </p>
   </div>
 </header>
 
@@ -250,11 +256,11 @@ footer{margin-top:64px;padding:28px 0;border-top:1px solid var(--line);color:var
   <h2>Réflexions et ressources</h2>
   <p>Réflexions personnelles sur les filières agroalimentaires, la transformation laitière, les innovations technologiques et la souveraineté alimentaire.</p>
   <ul class="articles">
-    <li><div class="date">15 août 2026 · 3 min de lecture</div><h3>La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes</h3><a href="articles/la-revolution-silencieuse-de-l-industrie-laitiere.html">Lire l’article</a></li>
-    <li><div class="date">13 juillet 2026 · 4 min de lecture</div><h3>La filière laitière au Sénégal vers la souveraineté alimentaire</h3><a href="articles/la-filiere-laitiere-au-senegal-vers-la-souverainete-alimentaire.html">Lire l’article</a></li>
-    <li><div class="date">10 juillet 2026 · 7 min de lecture</div><h3>Protéines microbiennes et produits laitiers : une solution durable pour l’alimentation de demain ?</h3><a href="articles/proteines-microbiennes-et-produits-laitiers.html">Lire l’article</a></li>
-    <li><div class="date">29 mai 2026 · 5 min de lecture</div><h3>8 technologies émergentes pour remplacer les traitements thermiques dans l’industrie laitière</h3><a href="articles/8-technologies-revolutionnaires.html">Lire l’article</a></li>
-    <li><div class="date">15 août 2025 · 5 min de lecture</div><h3>Transformation stratégique de la filière laitière sénégalaise</h3><a href="articles/transformation-de-la-filiere-laitiere-senegalaise.html">Lire l’article</a></li>
+    <li><div class="date">15 août 2026 · 3 min de lecture</div><h3>La révolution silencieuse de l’industrie laitière : quand les microbes et les insectes s’invitent à nos assiettes</h3><a href="Articles/la-revolution-silencieuse-de-l-industrie-laitiere.html">Lire l’article</a></li>
+    <li><div class="date">13 juillet 2026 · 4 min de lecture</div><h3>La filière laitière au Sénégal vers la souveraineté alimentaire</h3><a href="Articles/la-filiere-laitiere-au-senegal-vers-la-souverainete-alimentaire.html">Lire l’article</a></li>
+    <li><div class="date">10 juillet 2026 · 7 min de lecture</div><h3>Protéines microbiennes et produits laitiers : une solution durable pour l’alimentation de demain ?</h3><a href="Articles/proteines-microbiennes-et-produits-laitiers.html">Lire l’article</a></li>
+    <li><div class="date">29 mai 2026 · 5 min de lecture</div><h3>8 technologies émergentes pour remplacer les traitements thermiques dans l’industrie laitière</h3><a href="Articles/8-technologies-revolutionnaires.html">Lire l’article</a></li>
+    <li><div class="date">15 août 2025 · 5 min de lecture</div><h3>Transformation stratégique de la filière laitière sénégalaise</h3><a href="Articles/transformation-de-la-filiere-laitiere-senegalaise.html">Lire l’article</a></li>
   </ul>
 </div></section>
 
@@ -403,6 +409,15 @@ function setLang(lang) {
   }
   location.reload();
 }
+
+/* ---- CV : le bouton ouvre le PDF de la langue choisie ---- */
+const cvFiles = {
+  fr: "CV%20Kouna%20Sadiya%20Mbaye%20FR.pdf",
+  en: "CV%20Kouna%20Sadiya%20Mbaye%20English.pdf",
+  tr: "CV%20Kouna%20Sadiya%20Mbaye%20Turk%C3%A7e.pdf"
+};
+document.getElementById("cv-btn").href = cvFiles[currentLang()];
+
 document.querySelectorAll(".lang button").forEach(b => {
   b.setAttribute("aria-pressed", String(b.dataset.lang === currentLang()));
   b.addEventListener("click", () => setLang(b.dataset.lang));
